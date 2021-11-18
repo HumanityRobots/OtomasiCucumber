@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Login>
+        <txtNoHandphone>//../android.widget.TextView[@text='Nomor handphone' or @text='No. Handphone']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtNoHandphone>
+    <btnLanjut>//../android.widget.TextView[@text='Lanjut']</btnLanjut>
+    <btnBack>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup</btnBack>
+    <txtOTP1>//../android.widget.ScrollView//../android.widget.TextView[contains(@text,'Verifikasi nomor')]/following-sibling::android.view.ViewGroup[1]</txtOTP1>
+    <txtOTP2>//../android.widget.EditText[2]</txtOTP2>
+    <txtOTP3>//../android.widget.EditText[3]</txtOTP3>
+    <txtOTP4>//../android.widget.EditText[4]</txtOTP4>
+    <btnKeluar>//../android.widget.TextView[@text='KELUAR' or @text='Keluar']</btnKeluar>
+    <btnLupaKataSandi>//../android.widget.TextView[@text='LUPA KATA SANDI' or @text='Lupa Kata Sandi']</btnLupaKataSandi>
+    <txtPassword>//../android.widget.TextView[@text='Password']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtPassword>
+    <btnMasuk>//../android.widget.TextView[@text='MASUK' or @text='Masuk']</btnMasuk>
+    <btnHidden>//../android.widget.TextView[contains(@text,'Kata sandi')]/parent::android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup</btnHidden>
+    <btnBatal>//../android.widget.TextView[@text='BATAL' or @text='Batal']</btnBatal>
+    <btnCobaLagi>//../android.widget.TextView[@text='COBA LAGI' or @text='Coba Lagi']</btnCobaLagi>
+    <btnLoginAkunLain>//../android.widget.TextView[@text='Password']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/parent::android.view.ViewGroup//android.widget.TextView[3]</btnLoginAkunLain>
+    <txtMsgPass>//../android.widget.TextView[contains(@text,'Password yang dimasukkan salah')]</txtMsgPass>
+</Login>

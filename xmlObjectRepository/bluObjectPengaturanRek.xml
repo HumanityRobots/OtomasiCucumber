@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PengaturanRekening>
+    <txtLimit>//../android.widget.TextView[@text='Limit transaksi harian']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtLimit>
+    <txtLimitNull>//../android.widget.TextView[@text='Limit transaksi harian']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText[@text='0']</txtLimitNull>
+    <btnSimpan>//../android.widget.TextView[contains(@text,'SIMPAN') or contains(@text,'Simpan')]</btnSimpan>
+    <lblSisaLimit>//../android.widget.TextView[contains(@text,'Sisa limit transaksi hari ini')]/following-sibling::android.widget.TextView</lblSisaLimit>
+</PengaturanRekening>

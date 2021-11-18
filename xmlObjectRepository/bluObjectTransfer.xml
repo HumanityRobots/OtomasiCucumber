@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Transfer>
+    <txtCari>//../android.widget.TextView[@text='Cari']/parent::android.view.ViewGroup/android.widget.EditText</txtCari>
+    <txtNominal>//../android.widget.TextView[@text='Jumlah']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtNominal>
+    <txtJumlah>//../android.widget.TextView[@text='Jumlah']/parent::android.view.ViewGroup/android.widget.TextView[3]</txtJumlah>
+    <txtPesan>//../android.widget.TextView[@text='Catatan (Opsional)']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtPesan>
+    <btnBatal>//../android.widget.TextView[@text='BATAL' or @text='Batal']</btnBatal>
+    <btnLanjut>//../android.widget.TextView[@text='LAYOUT' or @text='Lanjut']</btnLanjut>
+    <btnSelanjutnya>//../android.widget.TextView[@text='Selanjutnya']</btnSelanjutnya>
+    <btnTransfer>//../android.widget.TextView[@text='Transfer']</btnTransfer>
+    <btnKeBeranda>//../android.widget.TextView[contains(@text,'Kembali ke Beranda')]</btnKeBeranda>
+    <btnOKE>//../android.widget.TextView[@text='OKE']</btnOKE>
+    <btnKeBerandaOke>//../android.widget.TextView[@text='Kembali ke Beranda' or @text='OKE']</btnKeBerandaOke>
+    <btnReward>//../android.widget.TextView[contains(@text,'reward')]</btnReward>
+    <btnTambah>//../android.widget.TextView[@text='Daftar penerima']/parent::android.view.ViewGroup/parent::android.widget.ScrollView/preceding-sibling::android.view.ViewGroup[1]</btnTambah>
+    <cbxSimpanrek>//../android.widget.TextView[@text='']</cbxSimpanrek>
+    <cbxSimpanrek2>//../android.widget.TextView[@text='Simpan nomor rekening']/preceding-sibling::android.widget.TextView</cbxSimpanrek2>
+    <txtNamaAlias>//../android.widget.TextView[@text='Nama alias' or @text='Nama Alias']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtNamaAlias>
+    <lblDuplikatRek>//../android.widget.TextView[@text='Teman sudah terdaftar']</lblDuplikatRek>
+    <switchSimpanRek>//../android.widget.Switch</switchSimpanRek>
+    <lblSedangProses>//../android.widget.TextView[contains(@text,'Mohon menunggu')]</lblSedangProses>
+    <btnTransferBaru>//../android.widget.TextView[@text='Transfer Baru']</btnTransferBaru>
+    <lblWaktuTransfer>//../android.widget.TextView[@text='Transfer Berhasil']/following-sibling::android.widget.TextView</lblWaktuTransfer>
+    <lblTotal>//../android.widget.TextView[@text='Jumlah Total']/following-sibling::android.widget.TextView[2]</lblTotal>
+    <lblRewards>//../android.widget.TextView[@text='bluRewards']</lblRewards>
+    <lblNotUseReward>//../android.widget.TextView[@text='Makin Smart dengan bluRewards']</lblNotUseReward>
+    <lblBiayaTransaksi>//../android.widget.TextView[@text='Biaya Admin']/following-sibling::android.widget.TextView[2]</lblBiayaTransaksi>
+    <lblBiayaTransaksiGratis>//../android.widget.TextView[@text='Biaya Admin']/following-sibling::android.widget.TextView[@text='Gratis']</lblBiayaTransaksiGratis>
+    <lblNoReff>//../android.widget.TextView[@text='No. Ref']/following-sibling::android.widget.TextView[1]</lblNoReff>
+    <tabFav>//../android.widget.TextView[@text='Favorit']</tabFav>
+    <txtFav2>//../android.widget.TextView[contains(@text,'Cari')]/parent::android.view.ViewGroup/android.widget.EditText</txtFav2>
+    <txtFav>//../android.widget.EditText[contains(@text,'Cari')]</txtFav>
+    <btnTranferBaru>//../android.widget.TextView[@text='Buat Tranfer Baru']</btnTranferBaru>
+    <lblBelumFav>//../android.widget.TextView[contains(@text,'Kamu belum punya Daftar Favorit')]</lblBelumFav>
+    <btnTranferBaru>//../android.widget.TextView[@text='Buat Tranfer Baru']</btnTranferBaru>
+	<lblCekNoRek>//../android.widget.TextView[contains(@text,'Yakin udah bener no')]</lblCekNoRek>
+	<lblSaldoTidakCukup>//../android.widget.TextView[contains(@text,'Saldo kamu tidak cukup')]</lblSaldoTidakCukup>
+    <btnBuatTransferBaru>//../android.widget.TextView[@text='Buat Transfer Baru']</btnBuatTransferBaru>
+    <lblBerhasilFav>//../android.widget.TextView[contains(@text,'berhasil tersimpan di daftar')]</lblBerhasilFav>
+    <lblGagalFav>//../android.widget.TextView[contains(@text,'Pilih Nama Alias Lain')]</lblGagalFav>
+    <lblJumlahBukti>//../android.widget.TextView[contains(@text,'Jumlah')]</lblJumlahBukti>
+    <btnHapus>//../android.widget.TextView[contains(@text,'Hapus')]</btnHapus>
+    <elmRewards>//../android.widget.TextView[contains(@text,'bluRewards')]</elmRewards>
+    <txtSearchRewards>//../android.widget.TextView[contains(@text,'bluRewards')]/following-sibling::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtSearchRewards>
+    <txtKodeRewards>//../android.widget.TextView[contains(@text,'Ketik Kode Voucher')]/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtKodeRewards>
+    <lblRewardsTerpakai>//../android.widget.TextView[contains(@text,'bluRewards Kamu Terpakai')]</lblRewardsTerpakai>
+    <btnPakai>//../android.widget.TextView[contains(@text,'Pakai')]</btnPakai>
+    <txtSaldoErr>//../android.widget.TextView[contains(@text,'Saldo kamu tidak cukup')]</txtSaldoErr>
+    <txtMinTrfBlu>//../android.widget.TextView[contains(@text,'Transfer minimal')]</txtMinTrfBlu>
+    <txtMakTrf>//../android.widget.TextView[contains(@text,'Transfer maksimal')]</txtMakTrf>
+    <txtLimitGlb>//../android.widget.TextView[contains(@text,'pastikan lagi limit kamu')]</txtLimitGlb>
+    <lblBluDigital>//../android.widget.TextView[@text="BCA DIGITAL"]</lblBluDigital>
+</Transfer>

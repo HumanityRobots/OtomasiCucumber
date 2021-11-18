@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kontak>
+    <lblFavoritTransfer>//../android.widget.TextView[contains(@text,'Transfer Favorit')]</lblFavoritTransfer>
+    <lstFrekuensi>//../android.widget.TextView[contains(@text,'Frekuensi')]</lstFrekuensi>
+    <lstFrekuensiIngat>//../android.widget.TextView[contains(@text,'Ingatkan saya')]</lstFrekuensiIngat>
+    <btnSimpan>//../android.widget.TextView[contains(@text,'Simpan')]</btnSimpan>
+    <txtNamaAlias>//../android.widget.TextView[contains(@text,'Nama')]/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtNamaAlias>
+    <radioIngat>//../android.widget.ScrollView//../android.widget.TextView[contains(@text,'Ingatkan saya')]/following-sibling::android.widget.Switch[1]</radioIngat>
+    <elmTanggalBer>//../android.widget.ScrollView//../android.widget.TextView[contains(@text,'Tanggal berakhir')]</elmTanggalBer>
+    <txtTanggalBer>//../android.widget.TextView[contains(@text,'Tanggal berakhir')]/following-sibling::android.widget.TextView</txtTanggalBer>
+    <btnPilih>//../android.widget.TextView[contains(@text,'Pilih')]</btnPilih>
+    <btnPilih2>//../android.widget.TextView[contains(@text,'Pilih')]</btnPilih2>
+</kontak>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pengaturan>
+    <lblProfil>//../android.widget.TextView[@text='Profil']</lblProfil>
+    <lblInfoKontak>//../android.widget.TextView[@text='Info Kontak']</lblInfoKontak>
+    <elmnPP>//../android.widget.TextView[@text='Profil']/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup</elmnPP>
+    <elmnImageView>//../android.widget.TextView[@text='Profil']/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup//../android.widget.ImageView</elmnImageView>
+    <lblHapusFoto>//../android.widget.TextView[@text='Hapus Foto']</lblHapusFoto>
+    <lblAmbilFoto>//../android.widget.TextView[@text='Ambil Foto']</lblAmbilFoto>
+    <lblGalerryFoto>//../android.widget.TextView[@text='Ambil dari Gallery']</lblGalerryFoto>
+    <btnEditInfoKontak>//../android.widget.TextView[@text='Info Kontak']/following-sibling::android.view.ViewGroup</btnEditInfoKontak>
+    <txtNamaPanggilan>//../android.widget.TextView[@text='Nama Panggilan']/following-sibling::android.view.ViewGroup//../android.widget.EditText</txtNamaPanggilan>
+    <txtNoHP>//../android.widget.TextView[@text='No. Handphone']/following-sibling::android.view.ViewGroup//../android.widget.EditText</txtNoHP>
+    <txtEmail>//../android.widget.TextView[@text='Email']/following-sibling::android.view.ViewGroup//../android.widget.EditText</txtEmail>
+    <lblNamaPanggilan>//../android.widget.TextView[@text='Nama Panggilan']/following-sibling::android.view.ViewGroup/android.widget.TextView</lblNamaPanggilan>
+    <lblNoHP>//../android.widget.TextView[@text='No. Handphone']/following-sibling::android.view.ViewGroup/android.widget.TextView</lblNoHP>
+    <lblEmail>//../android.widget.TextView[@text='Email']/following-sibling::android.view.ViewGroup/android.widget.TextView</lblEmail>
+    <lblAlamatDom>//../android.widget.TextView[@text='Alamat Domisili']/following-sibling::android.view.ViewGroup/android.widget.TextView</lblAlamatDom>
+    <btnEditAlamatDom>//../android.widget.TextView[@text='Alamat Domisili']/following-sibling::android.view.ViewGroup/android.view.ViewGroup</btnEditAlamatDom>
+    <lblAlamatKantor>//../android.widget.TextView[@text='Alamat Kantor']/following-sibling::android.view.ViewGroup/android.widget.TextView</lblAlamatKantor>
+    <btnEditAlamatkantor>//../android.widget.TextView[@text='Alamat Kantor']/following-sibling::android.view.ViewGroup/android.view.ViewGroup</btnEditAlamatkantor>
+    <btnEditPekerjaan>//../android.widget.TextView[@text='Data Pekerjaan']/following-sibling::android.view.ViewGroup</btnEditPekerjaan>
+    <btnSearchAlamat>//../android.widget.TextView[@text='Alamat']/following-sibling::android.view.ViewGroup</btnSearchAlamat>
+    <txtAlamat>//../android.widget.TextView[@text='Alamat']/following-sibling::android.view.ViewGroup/android.widget.TextView</txtAlamat>
+    <btnSearchAddAlamat>//../android.widget.TextView[@text='Alamat']</btnSearchAddAlamat>
+    <txtRT>//../android.widget.TextView[@text='RT']/parent::android.view.ViewGroup//../android.widget.EditText</txtRT>
+    <txtRW>//../android.widget.TextView[@text='RW']/parent::android.view.ViewGroup//../android.widget.EditText</txtRW>
+    <errorRT>//../android.widget.TextView[@text='RT harus diisi 3 digit' or @text='RT Harus Diisi 3 Digit']</errorRT>
+    <errorRW>//../android.widget.TextView[@text='RW harus diisi 3 digit' or @text='RW Harus Diisi 3 Digit']</errorRW>
+    <txtSearchAlamat>//../android.widget.TextView[@text='Cari Lokasi']/following-sibling::android.view.ViewGroup//../android.widget.EditText</txtSearchAlamat>
+    <errorMsgJlnNotFound>//../android.widget.TextView[@text='Nama jalan tidak ditemukan nih. Cek lagi ejaan kamu atau tekan "Gunakan Lokasi Saat ini"']</errorMsgJlnNotFound>
+    <ElmnAlamatFirstLine>//../android.widget.TextView[@text='Cari Lokasi']/following-sibling::android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]</ElmnAlamatFirstLine>
+    <btnPilihLokasiIni>//../android.widget.TextView[@text='Pilih Lokasi Ini']</btnPilihLokasiIni>
+    <btnHapusAlamatKantor>//../android.widget.ScrollView/preceding-sibling::android.view.ViewGroup[1]</btnHapusAlamatKantor>
+    <btnTmbhAlamatKantor>//../android.widget.TextView[@text='Tambah Alamat Kantor']</btnTmbhAlamatKantor>
+    <lblPenghasilanPerTahun>//../android.widget.TextView[@text='Penghasilan per Tahun']</lblPenghasilanPerTahun>
+    <lblNamaPekerjaan>//../android.widget.TextView[@text='Pekerjaan']/following-sibling::android.view.ViewGroup/android.widget.TextView</lblNamaPekerjaan>
+    <lblSumberDana>//../android.widget.TextView[@text='Sumber Dana Penghasilan']/following-sibling::android.view.ViewGroup/android.widget.TextView</lblSumberDana>
+    <lblPenghasilanPerTahun>//../android.widget.TextView[@text='Penghasilan per Tahun']/following-sibling::android.view.ViewGroup/android.widget.TextView</lblPenghasilanPerTahun>
+    <dropDownPekerjaan>//../android.widget.TextView[@text='Pekerjaan']/following-sibling::android.widget.TextView</dropDownPekerjaan>
+    <txtSearchPekerjaan>//../android.widget.TextView[@text='Pekerjaan']/following-sibling::android.widget.ScrollView/preceding-sibling::android.view.ViewGroup/android.widget.EditText</txtSearchPekerjaan>
+    <elemenPertamaCariPekerjaan>//../android.widget.TextView[@text='Pekerjaan']/following-sibling::android.widget.ScrollView/android.view.ViewGroup</elemenPertamaCariPekerjaan>
+    <lblPernyataan>//../android.widget.TextView[@text='Saya menyatakan bahwa:']</lblPernyataan>
+    <lblSumberDanaPenghasilan>//../android.widget.TextView[@text='Sumber Dana Penghasilan']</lblSumberDanaPenghasilan>
+    <dropDownSumberDanaPenghasilan>//../android.widget.TextView[@text='Sumber Dana Penghasilan']/following-sibling::android.widget.TextView</dropDownSumberDanaPenghasilan>
+    <lblPenghasilanPertahunEdit>//../android.widget.TextView[@text='Penghasilan per Tahun']</lblPenghasilanPertahunEdit>
+    <dropDownPenghasilanPertahunEdit>//../android.widget.TextView[@text='Penghasilan per Tahun']/following-sibling::android.widget.TextView</dropDownPenghasilanPertahunEdit>
+    <lblTujuanPembukaanRek>//../android.widget.TextView[@text='Tujuan Pembukaan Rekening']</lblTujuanPembukaanRek>
+    <dropDownTujuanPembukaanRek>//../android.widget.TextView[@text='Tujuan Pembukaan Rekening']/following-sibling::android.widget.TextView</dropDownTujuanPembukaanRek>
+    <txtNamaPerusahaanInstansi>//../android.widget.TextView[@text='Nama Perusahaan/Instansi']/parent::android.view.ViewGroup//../android.widget.EditText</txtNamaPerusahaanInstansi>
+    <lblIndustriPekerjaan>//../android.widget.TextView[@text='Industri Pekerjaan']</lblIndustriPekerjaan>
+    <dropDownIndustriPekerjaan>//../android.widget.TextView[@text='Industri Pekerjaan']/following-sibling::android.widget.TextView</dropDownIndustriPekerjaan>
+    <txtSearchIndustriPekerjaan>//../android.widget.TextView[@text='Industri Pekerjaan']/following-sibling::android.widget.ScrollView/preceding-sibling::android.view.ViewGroup/android.widget.EditText</txtSearchIndustriPekerjaan>
+    <lblPosisi>//../android.widget.TextView[@text='Posisi']</lblPosisi>
+    <txtSearchPosisi>//../android.widget.TextView[@text='Posisi']/following-sibling::android.widget.ScrollView/preceding-sibling::android.view.ViewGroup/android.widget.EditText</txtSearchPosisi>
+    <lblJabatan>//../android.widget.TextView[@text='Jabatan']</lblJabatan>
+    <txtSearchJabatan>//../android.widget.TextView[@text='Jabatan']/following-sibling::android.widget.ScrollView/preceding-sibling::android.view.ViewGroup/android.widget.EditText</txtSearchJabatan>
+    <lblEDD>//../android.widget.TextView[contains(@text,'Isi data tambahan ini ya')]</lblEDD>
+    <lblQuestEDD1Y>//../android.widget.TextView[@text='Apakah kamu memiliki kartu kredit/rekening dari bank/institusi lain?']/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup[1]</lblQuestEDD1Y>
+    <lblQuestEDD1N>//../android.widget.TextView[@text='Apakah kamu memiliki kartu kredit/rekening dari bank/institusi lain?']/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup[2]</lblQuestEDD1N>
+    <lblQuestEDD2Y>//../android.widget.TextView[@text='Apakah kamu memiliki hubungan bisnis di luar negeri?']/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup[1]</lblQuestEDD2Y>
+    <lblQuestEDD2N>//../android.widget.TextView[@text='Apakah kamu memiliki hubungan bisnis di luar negeri?']/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup[2]</lblQuestEDD2N>
+    <lblQuestEDD3Y>//../android.widget.TextView[@text='Apakah kamu memiliki sumber kekayaan tambahan?']/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup[1]</lblQuestEDD3Y>
+    <lblQuestEDD3N>//../android.widget.TextView[@text='Apakah kamu memiliki sumber kekayaan tambahan?']/following-sibling::android.view.ViewGroup[1]/android.view.ViewGroup[2]</lblQuestEDD3N>
+    <lblNamaBankPenyediaEDD>//../android.widget.TextView[@text='Nama Bank/Institusi Penyedia']</lblNamaBankPenyediaEDD>
+    <txtNamaBankPenyediaEDD>//../android.widget.TextView[@text='Nama Bank/Institusi Penyedia']/parent::android.view.ViewGroup//../android.widget.EditText</txtNamaBankPenyediaEDD>
+    <lblWaktuDikeluarkanEDD>//../android.widget.TextView[@text='Waktu dikeluarkan']</lblWaktuDikeluarkanEDD>
+    <lblNegaraHubBisnisEDD>//../android.widget.TextView[@text='Negara Hubungan Bisnis']</lblNegaraHubBisnisEDD>
+</pengaturan>

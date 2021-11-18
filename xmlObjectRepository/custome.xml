@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<custome>
+    <objCustome>//../android.widget.TextView[contains(@text,'strValue')]</objCustome>
+    <objCustomeFix>//../android.widget.TextView[@text='strValue']</objCustomeFix>
+    <btnIconHapus>//../android.widget.TextView[contains(@text,'strValue')]/parent::android.view.ViewGroup/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup</btnIconHapus>
+    <btnIconHapusUndang>//../android.widget.TextView[contains(@text,'strValue')]/parent::android.view.ViewGroup/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup</btnIconHapusUndang>
+    <btnHapusIconDaftar>//../android.widget.TextView[contains(@text,'DIGITAL')]/parent::android.view.ViewGroup/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup</btnHapusIconDaftar>
+    <btnHapusIconDaftarStrip>//android.widget.TextView[contains(@text,'strValue')]/parent::android.view.ViewGroup/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup</btnHapusIconDaftarStrip>
+    <lblHargaTopupEmoney>//../android.widget.TextView[@text='strValue']/following-sibling::android.widget.TextView</lblHargaTopupEmoney>
+    <lblRahkmahNabila>//../android.widget.TextView[@text='Rahkmah Nabila' or @text='Wendy Hardynata']</lblRahkmahNabila>
+    <customePenghasilan>//../android.widget.TextView[@text='Penghasilan per Tahun']/following-sibling::android.widget.ScrollView//../android.widget.TextView[@text='strValue']</customePenghasilan>
+</custome>

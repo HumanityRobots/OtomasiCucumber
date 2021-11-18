@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" verbose="1">
+    <test name="Regression Tests">
+        <parameter name="appPackage" value="com.bcadigital.blu.uat" />
+        <parameter name="appActivity" value="com.bcadigital.blu.MainActivity" />
+        <parameter name="platformVersion" value="10"></parameter>
+<!--        <parameter name="udid" value="R9RN404QNMZ" />-->
+        <parameter name="udid" value="48a33036" />
+        <classes>
+            <class name="Runner.Runner">
+            </class>
+        </classes>
+    </test>
+</suite>

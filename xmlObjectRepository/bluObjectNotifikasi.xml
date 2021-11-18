@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Notifikasi>
+    <btnTolak>//../android.widget.TextView[contains(@text,'Tolak')]</btnTolak>
+    <btnTerima>//../android.widget.TextView[contains(@text,'Terima')]</btnTerima>
+    <lstFirst>//../android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]</lstFirst>
+    <lstSecond>//../android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]</lstSecond>
+    <lblFirstRow>//../android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.TextView[1]</lblFirstRow>
+    <lblSecondRow>//../android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.TextView[1]</lblSecondRow>
+    <lblLoginPrangkatLain1>//../android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.widget.TextView[@text='Anda telah melakukan login di perangkat lain']</lblLoginPrangkatLain1>
+    <lblNotifTransferKeFirstLine>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'Transfer ke')]</lblNotifTransferKeFirstLine>
+    <lblNotifTransferKeSecondLine>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[2]//../android.widget.TextView[contains(@text,'Transfer ke')]</lblNotifTransferKeSecondLine>
+    <lblNotifDanaMasukFirstLine>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'Ada dana masuk')]</lblNotifDanaMasukFirstLine>
+    <lblNotifDanaMasukSecLine>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[2]//../android.widget.TextView[contains(@text,'Ada dana masuk')]</lblNotifDanaMasukSecLine>
+    <lblNotifikasiPaid>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'Pembayaran tagihan pascabayar')]</lblNotifikasiPaid>
+    <lblNotifQR>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'Transaksi di')]</lblNotifQR>
+    <lblNotifikasiPembelian>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'Pembelian')]</lblNotifikasiPembelian>
+    <lblNotifikasiPembelianPaket>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'Pembelian paket data')]</lblNotifikasiPembelianPaket>
+    <lblNotifikasiTopUpEmoney>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'Topup')]</lblNotifikasiTopUpEmoney>
+    <lblNotifikasiPembayaran>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'Pembayaran')]</lblNotifikasiPembayaran>
+    <lblNotifikasiHariIni>//../android.widget.TextView[@text='Hari ini']</lblNotifikasiHariIni>
+    <lblNoReff>//../android.widget.TextView[@text='No. Ref']/following-sibling::android.widget.TextView[1]</lblNoReff>
+    <lblNotifikasiQR>//../android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView[contains(@text,'Pembayaran')]</lblNotifikasiQR>
+    <lblNotifBluGetherFirstLine>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'Kamu dapet undangan bluGether')]</lblNotifBluGetherFirstLine>
+    <lblNotifBluGetherSecLine>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[2]//../android.widget.TextView[contains(@text,'Kamu dapet undangan bluGether')]</lblNotifBluGetherSecLine>
+    <btnLihatDaftar>//../android.widget.TextView[contains(@text,'Lihat daftar bluGether')]</btnLihatDaftar>
+    <btnOK>//../android.widget.TextView[@text='OKE']</btnOK>
+    <lblNotifCairDepoFirstLine>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[1]//../android.widget.TextView[contains(@text,'bluDeposit')]</lblNotifCairDepoFirstLine>
+    <lblNotifCairDepoSecondLine>//../android.widget.TextView[@text='Hari ini']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup[2]//../android.widget.TextView[contains(@text,'bluDeposit')]</lblNotifCairDepoSecondLine>
+</Notifikasi>

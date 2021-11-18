@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LoginBlu>
+    <txtLimit>//../android.widget.TextView[contains(@text,'Limit Transaksi')][1]</txtLimit>
+    <btnAllow>//./android.widget.Button[@text='Allow']</btnAllow>
+    <imgAlbum>com.sec.android.gallery3d:id/thumbnail</imgAlbum>
+    <btnCloseKonfirmasi>//../android.widget.TextView[@text='Konfirmasi']/parent::android.view.ViewGroup/parent::android.widget.ScrollView/parent::android.view.ViewGroup/android.view.ViewGroup[2]</btnCloseKonfirmasi>
+    <txtCari>//../android.widget.EditText[contains(@text,'Cari')]</txtCari>
+    <lblReward>//../android.widget.TextView[@text='Cek bluRewards kamu']</lblReward>
+    <lblNominalReward>//../android.widget.TextView[@text='bluRewards']/following-sibling::android.widget.TextView[3]</lblNominalReward>
+    <btnCekMutasiRekening>//../android.widget.TextView[@text='Cek Mutasi Rekening']</btnCekMutasiRekening>
+    <btnOKE>//../android.widget.TextView[@text='OKE']</btnOKE>
+    <lblGagalSaldoTidakCukup>//../android.widget.TextView[contains(@text,'pastikan lagi saldo kamu')]</lblGagalSaldoTidakCukup>
+    <lblProviderTidakDitemukan>//../android.widget.TextView[contains(@text,'Provider tidak ditemukan')]</lblProviderTidakDitemukan>
+    <lblGagalLimit>//../android.widget.TextView[contains(@text,'pastikan lagi limit kamu')]</lblGagalLimit>
+    <btnHapus>//../android.widget.TextView[@text='Hapus']</btnHapus>
+    <btnSimpan>//../android.widget.TextView[@text='Simpan']</btnSimpan>
+    <btnYakin>//../android.widget.TextView[@text='Yakin']</btnYakin>
+</LoginBlu>

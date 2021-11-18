@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DaftarFavoritSetting>
+        <lblTrxFav>//../android.widget.TextView[contains(@text,'Transaksi Favorit')]</lblTrxFav>
+        <lblTrfFav>//../android.widget.TextView[contains(@text,'Transfer Favorit')]</lblTrfFav>
+        <btnTransfer>//../android.widget.TextView[contains(@text,'Transfer')]</btnTransfer>
+        <btnBeli>//../android.widget.TextView[contains(@text,'Bayar/Beli')]</btnBeli>
+        <btnMoney>//../android.widget.TextView[contains(@text,'E-Money')]</btnMoney>
+        <btnTambah>//../android.widget.TextView[contains(@text,'Tambah Favorit')]</btnTambah>
+        <lstNamaBank>//../android.widget.TextView[contains(@text,'Nama Bank')]</lstNamaBank>
+        <txtCariBank>//../android.widget.TextView[@text='Bank' or @text='Nama Bank']/following-sibling::android.view.ViewGroup/android.widget.EditText</txtCariBank>
+        <txtNoRek>//../android.widget.TextView[contains(@text,'Nomor rekening penerima') or contains(@text,'No. Rekening')]/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtNoRek>
+        <imgKontak>//../android.widget.TextView[contains(@text,'Nomor rekening penerima') or contains(@text,'No. Rekening')]/parent::android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup</imgKontak>
+        <imgKontakPulsa>//../android.widget.TextView[contains(@text,'No. Handphone')]/parent::android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup</imgKontakPulsa>
+        <txtNominal>//../android.widget.TextView[@text='Jumlah']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtNominal>
+        <txtNominalTf>//../android.widget.TextView[@text='Nominal Transfer']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtNominalTf>
+        <txtNominalPulsa>//../android.widget.TextView[@text='Nominal Pulsa']</txtNominalPulsa>
+        <txtNominalPaket>//../android.widget.TextView[@text='Jenis Paket Data']</txtNominalPaket>
+        <txtNominalEmoney>//../android.widget.TextView[@text='Nominal E-Money']</txtNominalEmoney>
+        <txtPesan>//../android.widget.TextView[@text='Catatan (Opsional)']/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtPesan>
+        <btnLanjut>//../android.widget.TextView[@text='LANJUT' or @text='Lanjut']</btnLanjut>
+        <btnPilihRekExist>//../android.widget.TextView[contains(@text,'Pilih dari Daftar Rekening')]</btnPilihRekExist>
+        <lblYakin>//../android.widget.TextView[contains(@text,'Yakin udah bener')]</lblYakin>
+        <btnUbah>//../android.widget.ScrollView/preceding-sibling::android.view.ViewGroup[1]</btnUbah>
+        <btnHapusHome>//../android.widget.TextView[@text='Transaksi Favorit']/preceding-sibling::android.view.ViewGroup[1]</btnHapusHome>
+        <txtNomor>//../android.widget.TextView[contains(@text,'No. Handphone')]/parent::android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</txtNomor>
+        <txtNoHpTerdaftarEmoney>//../android.widget.TextView[@text='No. Handphone Terdaftar']/preceding-sibling::android.view.ViewGroup/android.widget.EditText</txtNoHpTerdaftarEmoney>
+        <txtSaldoErr>//../android.widget.TextView[contains(@text,'Saldo kamu tidak cukup')]</txtSaldoErr>
+        <txtMinTrfBlu>//../android.widget.TextView[contains(@text,'Transfer minimal')]</txtMinTrfBlu>
+        <txtMakTrf>//../android.widget.TextView[contains(@text,'Transfer maksimal')]</txtMakTrf>
+        <txtLimitGlb>//../android.widget.TextView[contains(@text,'pastikan lagi limit kamu')]</txtLimitGlb>
+        <txtProvider>//../android.widget.TextView[contains(@text,'Provider tidak ditemukan')]</txtProvider>
+        <txtAwalAngka>//../android.widget.TextView[contains(@text,'Harus diawali angka')]</txtAwalAngka>
+        <txtMinimum>//../android.widget.TextView[contains(@text,'Harus diisi minimum')]</txtMinimum>
+        <txtMaksimum>//../android.widget.TextView[contains(@text,'diisi maksimum 13')]</txtMaksimum>
+
+</DaftarFavoritSetting>
