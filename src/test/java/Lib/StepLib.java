@@ -419,10 +419,10 @@ public class StepLib extends Runner {
         }
 
         if(ubah == true) {
-            System.out.println("====> Klik tombol ubah");
+            System.out.println("====> Klik tombol ubah goal");
             driver.findElement(pars.getbjectLocator("btnUbahGoal")).click();
         } else {
-            System.out.println("Klik tombol button");
+            System.out.println("Klik tombol radio button goal");
             driver.findElement(pars.getbjectLocator("btnRadioButtonAturGoal")).click();
         }
     }
@@ -431,18 +431,25 @@ public class StepLib extends Runner {
         Boolean ubah;
 
         try {
-            ubah = driver.findElement(pars.getbjectLocator("btnUbahGoal")).isDisplayed();
+            ubah = driver.findElement(pars.getbjectLocator("btnUbahDebit")).isDisplayed();
         } catch (Exception e) {
             ubah = false;
         }
 
         if(ubah == true) {
-            System.out.println("====> Klik tombol ubah");
-            driver.findElement(pars.getbjectLocator("btnUbahGoal")).click();
+            System.out.println("====> Klik tombol ubah debit");
+            driver.findElement(pars.getbjectLocator("btnUbahDebit")).click();
         } else {
-            System.out.println("Klik tombol button");
-            driver.findElement(pars.getbjectLocator("btnRadioButtonAturGoal")).click();
+            System.out.println("Klik tombol radio button debit");
+            driver.findElement(pars.getbjectLocator("btnRadioButtonAutoDebit")).click();
         }
+    }
+
+    // percobaan
+
+    public static void click(String strValue) throws Throwable {
+        System.out.println("====> Klik tombol : " + strValue);
+        driver.findElement(pars.getbjectLocator("")).click();
     }
 
     public static void logout(String out) throws Throwable {

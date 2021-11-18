@@ -33,7 +33,7 @@ public class FunctionalLib extends Runner {
 
         TakesScreenshot scrShot =(driver);
         File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-        File DestFile=new File(folderName+"\\"+intSceNum+"_"+timestamp.toString().replace(":","")+".png");
+        File DestFile=new File(folderName+"\\"+intSceNum+"_"+timestamp.toString().replace(":",""+intSceNum)+".jpeg");
         FileUtils.copyFile(SrcFile, DestFile);
         Thread.sleep(2000);
     }
@@ -49,6 +49,4 @@ public class FunctionalLib extends Runner {
             System.err.println("====> Failed to create directory!" + e.getMessage());
         }
     }
-
-
 }

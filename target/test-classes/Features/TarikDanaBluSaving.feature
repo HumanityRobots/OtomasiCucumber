@@ -30,4 +30,4 @@ Feature: Tarik Dana BluSaving
 
     Examples:
       | no | nomorHandphone | password    | search | testing      |  jumlahTarikDana | logout          |
-      | 1  | 082211220045   | Password123!| limit  | bluSaving    |       100000     | Keluar Aplikasi |
+      | 1  | 082211220045   | Password123!| limit  | bluSaving    |       5000     | Keluar Aplikasi |

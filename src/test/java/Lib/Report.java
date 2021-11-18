@@ -36,7 +36,7 @@ public class Report {
 
             File[] matchingFiles = f.listFiles(new FilenameFilter() {
                 public boolean accept(File dir, String name) {
-                    return name.endsWith("png");
+                    return name.endsWith("jpeg");
 //                return name.startsWith("xxx") && name.endsWith("jpeg");
                 }
             });

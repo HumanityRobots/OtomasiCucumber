@@ -188,8 +188,7 @@ public class BluSaving extends Runner {
 
     @When("^Halaman detail blusaving$")
     public void halaman_blusaving() throws Throwable {
-        System.out.println("====> Berada dihalaman blusaving");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTarikDanaBluSaving");
+
     }
 
     // Tambah dana
@@ -225,144 +224,152 @@ public class BluSaving extends Runner {
     }
 
     // Update Blusaving
+
+    @When("^Lakukan update (.*) saat update detail input nama (.*) Atur goal baru (.*) jumlah atur goal (.*) tanggal pencapaian (.*) Atur debit (.*) atur frekuensi (.*) atur jumlah yang didebit (.*) (.*) kalau update teman input nomor rekening (.*)$")
+    public void lakukan_update_saat_update_detail_input_nama_atur_goal_baru_jumlah_atur_goal_tanggal_pencapaian_atur_debit_atur_frekuensi_atur_jumlah_yang_didebit_kalau_update_teman_input_nomor_rekening(
+            String update,
+            String namablusavingbaru,
+            int aturGoal,
+            String jumlahGoal,
+            int tanggal,
+            int aturDebit,
+            int FrekuensiDebit,
+            int aturJumlahDebit,
+            String jumlahDebit,
+            String nomorRekening
+    ) throws Throwable {
+        System.out.println("UPDATE : " + update);
+        switch (update) {
+            case "Detail":
+                // input nama blusaving
+                StepLib.swipePopDown();
+                StepLib.swipePopDown();
+                System.out.println("====> Input nama blusaving baru : " + namablusavingbaru);
+                FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+                driver.findElement(pars.getbjectLocator("lblEditNamaBlusaving")).clear();
+                driver.findElement(pars.getbjectLocator("lblEditNamaBlusaving")).sendKeys(namablusavingbaru);
+                FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+
+                // Atur Goal
+                if (aturGoal == 1) {
+                    System.out.println("ATUR GOAL");
+                    StepLib.ubahGoal();
+                    System.out.println("====> Jumlah atur goal :" + jumlahGoal);
+                    driver.findElement(pars.getbjectLocator("lblInputAturGoal")).clear();
+                    driver.findElement(pars.getbjectLocator("lblInputAturGoal")).sendKeys(jumlahGoal);
+                    FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+
+                    if (tanggal == 1) {
+                        System.out.println("====> Tentukan tanggal pencapaian");
+                        driver.findElement(pars.getbjectLocator("lblTanggalPencapaian")).click();
+                        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPilih");
+
+                        System.out.println("====> Tekan tombol pilih");
+                        driver.findElement(pars.getbjectLocator("btnPilih")).click();
+                    } else if (tanggal != 1) {
+                        System.out.println("Tidak atur tangal pencapaian");
+                    }
+
+                    System.out.println("====> Klik tombol simpan");
+                    FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+                    driver.findElement(pars.getbjectLocator("btnSimpan")).click();
+
+                } else if (aturGoal != 1) {
+                    System.out.println("====> Tidak update atur goal");
+                }
+
+                // Atur Debit
+                if (aturDebit == 1) {
+                    System.out.println("ATUR DEBIT");
+                    StepLib.ubahDebit();
+
+                    // FrekuensiDebit
+                    if (FrekuensiDebit == 1) {
+                        System.out.println("====> Pilih Frekuensi");
+                        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnFrekuensi");
+                        driver.findElement(pars.getbjectLocator("btnFrekuensi")).click();
+                        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPilih");
+                        driver.findElement(pars.getbjectLocator("btnPilih")).click();
+                    } else if (FrekuensiDebit != 1) {
+                        System.out.println("====> Tidak Update Frekuensi");
+                    }
+
+                    // JumlahDebit
+                    if (aturJumlahDebit == 1) {
+                        System.out.println("====> Input jumlah yang akan di debit");
+                        driver.findElement(pars.getbjectLocator("lblJumlahDebit")).clear();
+                        driver.findElement(pars.getbjectLocator("lblJumlahDebit")).sendKeys(jumlahDebit);
+                        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblJumlahDebit");
+                    } else if (aturJumlahDebit != 1) {
+                        System.out.println("====> Tidak Update Jumlah Debit");
+                    }
+
+                    System.out.println("====> Klik tombol simpan");
+                    FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+                    driver.findElement(pars.getbjectLocator("btnSimpan")).click();
+
+                } else if (aturDebit != 1) {
+                    System.out.println("====> Tidak Update Debit");
+                }
+
+                // klik tombol simpan
+                StepLib.loadPage("lblEditNamaBlusaving");
+                System.out.println("====> Klik tombol simpan");
+                FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+                driver.findElement(pars.getbjectLocator("btnSimpan")).click();
+
+                // Halaman detail blusaving
+                System.out.println("====> Berada dihalaman blusaving :" + namablusavingbaru);
+                FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTarikDanaBluSaving");
+                StepLib.back();
+
+                // Halaman list blusaving
+                System.out.println("====> Berada dihalaman list blusaving");
+                FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanDaftarBluSaving");
+                StepLib.goToDashboard();
+
+                break;
+            case "Teman":
+                // Klik tombol undang teman (blugether)
+                   // driver.findelement
+                   // foto
+                   // driver lanjut
+                   // foto
+                // Tambah Teman
+                   // foto
+                   // cari norek
+                   // foto
+                   // pilih norek
+                   // foto
+                   // klik undang
+                   // foto
+                   // klik lanjut
+                // klik tombol kembali
+                   // foto
+                   // klik tombol kembali
+                // Berada dihalaman detail blugether
+                  // foot
+                  // lihat member
+                  // foto
+                  // cari norek
+                  // foto
+                  // back
+                // Berada dihalaman list blugether
+                  // foto
+                  // go to dashboard
+                break;
+            default:
+                System.out.println("Keyword Tidak Ada!");
+                break;
+        }
+    }
+
     @When("^Klik tombol pengaturan blusaving$")
     public void klik_tombol_pengaturn_blusaving() throws Throwable {
         System.out.println("====> Klik tombol pengaturan");
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBlusaving");
         driver.findElement(pars.getbjectLocator("lblPengaturanBlusaving")).click();
     }
-
-    @When("^Input nama blusaving baru (.*)$")
-    public void input_nama_blusaving_baru(String namablusavingbaru) throws Throwable {
-        StepLib.swipePopDown();
-        StepLib.swipePopDown();
-        System.out.println("====> Input nama blusaving baru : " + namablusavingbaru);
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
-        driver.findElement(pars.getbjectLocator("lblEditNamaBlusaving")).clear();
-        driver.findElement(pars.getbjectLocator("lblEditNamaBlusaving")).sendKeys(namablusavingbaru);
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
-    }
-
-    @When("^Atur goal baru (.*) jumlah atur goal (.*) tanggal pencapaian (.*)$")
-    public void atur_goal_baru_jumlahaturgoal_tanggalpencapaian(int aturGoal, String jumlahGoal, int tanggal) throws Throwable {
-
-        if (aturGoal == 1) {
-            StepLib.ubahGoal();
-            System.out.println("ATUR GOAL");
-            System.out.println("====> Jumlah atur goal");
-            driver.findElement(pars.getbjectLocator("lblInputAturGoal")).clear();
-            driver.findElement(pars.getbjectLocator("lblInputAturGoal")).sendKeys(jumlahGoal);
-            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
-
-            if (tanggal == 1) {
-                System.out.println("====> Tentukan tanggal pencapaian");
-                driver.findElement(pars.getbjectLocator("lblTanggalPencapaian")).click();
-                FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPilih");
-
-                System.out.println("====> Tekan tombol pilih");
-                driver.findElement(pars.getbjectLocator("btnPilih")).click();
-            } else if (tanggal != 1) {
-                System.out.println("Tidak atur tangal pencapaian");
-            }
-
-            System.out.println("====> Klik tombol simpan");
-            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
-            driver.findElement(pars.getbjectLocator("btnSimpan")).click();
-
-        } else if (aturGoal != 1) {
-            System.out.println("====> Tidak update atur goal");
-        }
-    }
-//        switch (aturGoal) {
-//            case "Y" :
-//                System.out.println("====> Atur goal");
-//                driver.findElement(pars.getbjectLocator("btnRadioButtonAturGoal")).click();
-//                System.out.println("====> Jumlah atur goal");
-//                driver.findElement(pars.getbjectLocator("lblInputAturGoal")).clear();
-//                driver.findElement(pars.getbjectLocator("lblInputAturGoal")).sendKeys(jumlahGoal);
-//                FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnSimpan");
-//
-//                // Tanggal pencapaian
-//                switch (tanggal) {
-//                    case "Y" :
-//                        System.out.println("====> Tentukan tanggal pencapaian");
-//                        driver.findElement(pars.getbjectLocator("lblTanggalPencapaian")).click();
-//                        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnPilih");
-//
-//                        System.out.println("====> Tekan tombol pilih");
-//                        driver.findElement(pars.getbjectLocator("btnPilih")).click();
-//                        break;
-//                    case "N" :
-//                        System.out.println("Tidak atur tangal pencapaian");
-//                        break;
-//                    default:
-//                        System.out.println("Tidak ada keyword");
-//                        break;
-//                }
-//
-//                //Klik tombol simpan
-//                System.out.println("====> Klik tombol simpan");
-//                FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnSimpan");
-//                driver.findElement(pars.getbjectLocator("btnSimpan")).click();
-//                break;
-//            case "N" :
-//                System.out.println("====> Tidak update atur goal");
-//                break;
-//        }
-//    }
-
-    @When("^Atur debit (.*) atur frekuensi (.*) atur jumlah yang didebit (.*) (.*)$")
-    public void atur_debit_aturfrekuensi_aturjumlahyangdidebit_(String aturDebit, String FrekuensiDebit,String aturJumlahDebit, String jumlahDebit) throws Throwable {
-        switch (aturDebit) {
-            case "Y" :
-                // Frekuensi
-                switch (FrekuensiDebit) {
-                    case "Y" :
-                        System.out.println("====> Update debit");
-                        driver.findElement(pars.getbjectLocator("btnRadioButtonAutoDebit")).click();
-
-                        System.out.println("====> Pilih Frekuensi");
-                        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnFrekuensi");
-                        driver.findElement(pars.getbjectLocator("btnFrekuensi")).click();
-                        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPilih");
-                        driver.findElement(pars.getbjectLocator("btnPilih")).click();
-                        break;
-                    case "N" :
-                        System.out.println("====> Tidak atur frekuensi");
-                        break;
-                }
-
-                // input jumlah yang didebit
-                switch (aturJumlahDebit) {
-                    case "Y" :
-                        System.out.println("====> Input jumlah yang akan di debit");
-                        driver.findElement(pars.getbjectLocator("lblJumlahDebit")).clear();
-                        driver.findElement(pars.getbjectLocator("lblJumlahDebit")).sendKeys(jumlahDebit);
-                        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblJumlahDebit");
-                        break;
-                    case "N" :
-                        System.out.println("====> Debit otomatis terisi");
-                        break;
-                }
-
-                //Klik tombol simpan
-                System.out.println("====> Klik tombol simpan");
-                FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnSimpan");
-                driver.findElement(pars.getbjectLocator("btnSimpan")).click();
-                break;
-            case "N" :
-                System.out.println("Tidak update debit");
-                break;
-        }
-    }
-
-    @When("^Klik tombol simpan$")
-    public void klik_tombol_simpan() throws Throwable {
-        System.out.println("====> Klik tombol simpan");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
-        driver.findElement(pars.getbjectLocator("btnSimpan")).click();
-    }
-
 
     // Close blusaving
     @When("^Klik tombol tutup blusaving$")

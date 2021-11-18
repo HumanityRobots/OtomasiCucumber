@@ -31,8 +31,8 @@ import java.util.concurrent.TimeUnit;
 //          tags={"@ExistingLogin"},
 
 //        BluSaving
-        tags = { "@CreateBluSaving" },
-//        tags = { "@UpdateBluSaving" },
+//        tags = { "@CreateBluSaving" },
+        tags = { "@UpdateBluSaving" },
 //        tags = { "@TarikDanaBluSaving" },
 //        tags = { "@TambahDanaBluSaving" },
 //        tags = { "@CloseBluSaving" },
@@ -87,8 +87,7 @@ public class Runner extends AbstractTestNGCucumberTests {
         String now = LocalDate.now().toString();
         String[] strDateNow = LocalDateTime.now().toString().split("[.]");//(dtf.format(now).toString());
         String strDate = strDateNow[0].replace(":","-");
-        //capturePath = "/Users/gdis/Documents/AutomationCapture/"+strDate;
-        capturePath = "C:\\CaptureScreen\\ScreenShoot\\" + strDate;
+        capturePath = "C:\\CaptureScreen\\ScreenShoot\\" + strDate + "_" + currentFeature;
     }
 
     @DataProvider

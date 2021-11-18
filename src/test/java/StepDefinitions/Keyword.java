@@ -44,6 +44,20 @@ public class Keyword extends Runner {
         StepLib.loginNoCapture(nomor, password);
     }
 
+    // ............... LOGIN .................
+    @Given("^Login akun 2 test (.*) \"([^\"]*)\" no - (.*) blu nomor (.*) dan password (.*)$")
+    public void loginAkun2Blu(String test, String feature, String no, String nomor, String password) throws Throwable {
+        driver.resetApp();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+//        intScenarioNum++;
+        System.out.println("=============== START TESTING - " + feature + " " + test + " ===============");
+        System.out.println("LOGIN scenario - " + no);
+//        StepLib.connectionError();
+        StepLib.ExistingLoginNoCapture();
+        StepLib.ExistingOTP();
+        StepLib.loginNoCapture(nomor, password);
+    }
+
 
 
     // ............... Homescreen ...........

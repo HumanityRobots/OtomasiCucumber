@@ -29,6 +29,6 @@ Feature: Tambah Dana BluSaving
 
     Examples:
       | no | nomorHandphone | password    | search | testing      |  namaBlusaving |  jumlahTambahDana | logout          |
-      | 1  | 082211220045   | Password123!| limit  | bluSaving    |   Blusaving 1  |        100000     | Keluar Aplikasi |
-#      | 2  | 082211220045   | Password123!| limit  | bluSaving    |   Blusaving 2  |        100000     | Keluar Aplikasi |
+#      | 1  | 082211220045   | Password123!| limit  | bluSaving    |   Blusaving 1  |        100000     | Keluar Aplikasi |
+      | 2  | 082211220045   | Password123!| limit  | bluSaving    |   Blusaving 2  |        100000     | Keluar Aplikasi |
 #      | 3  | 082211220045   | Password123!| limit  | bluSaving    |   Blusaving 3  |        100000     | Keluar Aplikasi |
