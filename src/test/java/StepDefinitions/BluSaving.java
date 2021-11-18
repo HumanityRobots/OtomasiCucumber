@@ -86,8 +86,8 @@ public class BluSaving extends Runner {
     }
 
     // Atur debit dan tanggal pencapaian
-    @When("^Atur autodebit (.*) dan jumlah debit (.*)$")
-    public void atur_autodebit(int frekuensi, int jmlDebit) throws Throwable {
+    @When("^Atur autodebit (.*) dan (.*) jumlah debit (.*)$")
+    public void atur_autodebit(int frekuensi, int aturDebit, String jumlahDebit) throws Throwable {
         StepLib.loadPage("btnFrekuensi");
 
         // Frekuensi
@@ -97,16 +97,16 @@ public class BluSaving extends Runner {
             driver.findElement(pars.getbjectLocator("btnFrekuensi")).click();
             FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPilih");
             driver.findElement(pars.getbjectLocator("btnPilih")).click();
+            StepLib.loadPage("lblJumlahDebit");
         } else if (frekuensi != 1) {
             System.out.println("Tidak atur frekuensi");
         }
 
          // input jumlah yang didebit
-        if (jmlDebit == 0) {
+        if (aturDebit == 0) {
             System.out.println("====> Tidak atur jumlah debit");
-        } else if (jmlDebit != 0) {
+        } else if (aturDebit != 0) {
             System.out.println("====> Input jumlah yang akan di debit");
-            String jumlahDebit = Integer.toString(jmlDebit);
             driver.findElement(pars.getbjectLocator("lblJumlahDebit")).sendKeys(jumlahDebit);
         }
 

@@ -84,7 +84,7 @@ formatter.step({
 });
 formatter.step({
   "line": 17,
-  "name": "Atur autodebit \u003cFrekuensiDebit\u003e dan jumlah debit \u003cJumlahAutoDebit\u003e # progress",
+  "name": "Atur autodebit \u003cFrekuensiDebit\u003e dan \u003cAturJumlahDebit\u003e jumlah debit \u003cJumlahAutoDebit\u003e # progress",
   "keyword": "And "
 });
 formatter.step({
@@ -167,6 +167,7 @@ formatter.examples({
         "jumlahAturGoal",
         "tanggal",
         "FrekuensiDebit",
+        "AturJumlahDebit",
         "JumlahAutoDebit",
         "logout"
       ],
@@ -184,6 +185,7 @@ formatter.examples({
         "100000",
         "1000000",
         "1",
+        "1",
         "0",
         "0",
         "Masuk dengan Akun Lain"
@@ -199,11 +201,12 @@ formatter.examples({
         "limit",
         "bluSaving",
         "Blusaving 2",
-        "60000",
-        "0",
-        "0",
+        "6000",
+        "1500000",
         "1",
-        "100000",
+        "1",
+        "1",
+        "0",
         "Masuk dengan Akun Lain"
       ],
       "line": 35,
@@ -216,16 +219,55 @@ formatter.examples({
         "Password123!",
         "limit",
         "bluSaving",
-        "Blusaving 3",
-        "10000",
-        "100000",
+        "No Autodebet",
         "0",
         "0",
-        "100000",
-        "Keluar Aplikasi"
+        "0",
+        "0",
+        "0",
+        "0",
+        "Masuk dengan Akun Lain"
       ],
       "line": 36,
       "id": "create-blusaving;create-blusaving;;4"
+    },
+    {
+      "cells": [
+        "4",
+        "082211220045",
+        "Password123!",
+        "limit",
+        "bluSaving",
+        "AutoDebet Nominal",
+        "0",
+        "40000",
+        "0",
+        "1",
+        "0",
+        "10000",
+        "Masuk dengan Akun Lain"
+      ],
+      "line": 37,
+      "id": "create-blusaving;create-blusaving;;5"
+    },
+    {
+      "cells": [
+        "5",
+        "082211220045",
+        "Password123!",
+        "limit",
+        "bluSaving",
+        "AutoDebet Goal",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "10000",
+        "Keluar Aplikasi"
+      ],
+      "line": 38,
+      "id": "create-blusaving;create-blusaving;;6"
     }
   ],
   "keyword": "Examples"
@@ -326,10 +368,11 @@ formatter.step({
 });
 formatter.step({
   "line": 17,
-  "name": "Atur autodebit 0 dan jumlah debit 0 # progress",
+  "name": "Atur autodebit 1 dan 0 jumlah debit 0 # progress",
   "matchedColumns": [
     9,
-    10
+    10,
+    11
   ],
   "keyword": "And "
 });
@@ -387,7 +430,7 @@ formatter.step({
   "line": 28,
   "name": "Logout blu Masuk dengan Akun Lain",
   "matchedColumns": [
-    11
+    12
   ],
   "keyword": "And "
 });
@@ -417,14 +460,14 @@ formatter.match({
   "location": "Keyword.loginBlu(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 49731137600,
+  "duration": 58819086300,
   "status": "passed"
 });
 formatter.match({
   "location": "Keyword.homescreenBlu()"
 });
 formatter.result({
-  "duration": 5020188200,
+  "duration": 6416461100,
   "status": "passed"
 });
 formatter.match({
@@ -437,7 +480,7 @@ formatter.match({
   "location": "Keyword.cek_saldo_awal(String)"
 });
 formatter.result({
-  "duration": 5346746000,
+  "duration": 3987419000,
   "status": "passed"
 });
 formatter.match({
@@ -454,14 +497,14 @@ formatter.match({
   "location": "Keyword.cek_limit_awal(String,String)"
 });
 formatter.result({
-  "duration": 21226142200,
+  "duration": 20061836400,
   "status": "passed"
 });
 formatter.match({
   "location": "Keyword.cekBluaccountSebelum()"
 });
 formatter.result({
-  "duration": 12914689200,
+  "duration": 11311393600,
   "status": "passed"
 });
 formatter.match({
@@ -474,21 +517,21 @@ formatter.match({
   "location": "Keyword.pockets(String)"
 });
 formatter.result({
-  "duration": 6395358200,
+  "duration": 5467474000,
   "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.berada_dihalaman_list_blusaving()"
 });
 formatter.result({
-  "duration": 4410145600,
+  "duration": 4719227400,
   "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.tambahBlusaving()"
 });
 formatter.result({
-  "duration": 286973100,
+  "duration": 240642700,
   "status": "passed"
 });
 formatter.match({
@@ -505,7 +548,7 @@ formatter.match({
   "location": "BluSaving.inputNamaSetoranAwal(String,String)"
 });
 formatter.result({
-  "duration": 12389176200,
+  "duration": 11667088500,
   "status": "passed"
 });
 formatter.match({
@@ -522,52 +565,56 @@ formatter.match({
   "location": "BluSaving.aturGoal(String,int)"
 });
 formatter.result({
-  "duration": 20287028800,
+  "duration": 19990601400,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "0",
+      "val": "1",
       "offset": 15
     },
     {
+      "val": "0",
+      "offset": 21
+    },
+    {
       "val": "0 # progress",
-      "offset": 34
+      "offset": 36
     }
   ],
-  "location": "BluSaving.atur_autodebit(int,int)"
+  "location": "BluSaving.atur_autodebit(int,int,String)"
 });
 formatter.result({
-  "duration": 4685547600,
+  "duration": 13533555900,
   "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.berada_dihalaman_berhasil_membuat_blusaving()"
 });
 formatter.result({
-  "duration": 12437655400,
+  "duration": 11572348000,
   "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.berada_dihalaman_list_blusaving()"
 });
 formatter.result({
-  "duration": 3194282500,
+  "duration": 3094752900,
   "status": "passed"
 });
 formatter.match({
   "location": "Keyword.klik_card_blusaving()"
 });
 formatter.result({
-  "duration": 359391600,
+  "duration": 242713700,
   "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.cek_riwayat_transaksi_blusaving()"
 });
 formatter.result({
-  "duration": 18077080200,
+  "duration": 16802950400,
   "status": "passed"
 });
 formatter.match({
@@ -580,14 +627,14 @@ formatter.match({
   "location": "Keyword.cek_saldo_akhir(String)"
 });
 formatter.result({
-  "duration": 13316195400,
+  "duration": 12119967800,
   "status": "passed"
 });
 formatter.match({
   "location": "Keyword.cekBluaccountAkhir()"
 });
 formatter.result({
-  "duration": 10867157500,
+  "duration": 9918776600,
   "status": "passed"
 });
 formatter.match({
@@ -604,7 +651,7 @@ formatter.match({
   "location": "Keyword.cek_limit_awal(String,String)"
 });
 formatter.result({
-  "duration": 21691055400,
+  "duration": 19855933100,
   "status": "passed"
 });
 formatter.match({
@@ -617,7 +664,7 @@ formatter.match({
   "location": "Keyword.logout_blu(String)"
 });
 formatter.result({
-  "duration": 18346108700,
+  "duration": 15705511800,
   "status": "passed"
 });
 formatter.scenario({
@@ -698,7 +745,7 @@ formatter.step({
 });
 formatter.step({
   "line": 15,
-  "name": "Input nama Blusaving 2 dan setoran awal 60000",
+  "name": "Input nama Blusaving 2 dan setoran awal 6000",
   "matchedColumns": [
     5,
     6
@@ -707,7 +754,7 @@ formatter.step({
 });
 formatter.step({
   "line": 16,
-  "name": "Atur Goal 0 dan tanggal 0",
+  "name": "Atur Goal 1500000 dan tanggal 1",
   "matchedColumns": [
     7,
     8
@@ -716,10 +763,11 @@ formatter.step({
 });
 formatter.step({
   "line": 17,
-  "name": "Atur autodebit 1 dan jumlah debit 100000 # progress",
+  "name": "Atur autodebit 1 dan 1 jumlah debit 0 # progress",
   "matchedColumns": [
     9,
-    10
+    10,
+    11
   ],
   "keyword": "And "
 });
@@ -777,7 +825,7 @@ formatter.step({
   "line": 28,
   "name": "Logout blu Masuk dengan Akun Lain",
   "matchedColumns": [
-    11
+    12
   ],
   "keyword": "And "
 });
@@ -807,14 +855,14 @@ formatter.match({
   "location": "Keyword.loginBlu(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 45591675600,
+  "duration": 72589638100,
   "status": "passed"
 });
 formatter.match({
   "location": "Keyword.homescreenBlu()"
 });
 formatter.result({
-  "duration": 7250332300,
+  "duration": 7502593600,
   "status": "passed"
 });
 formatter.match({
@@ -827,7 +875,7 @@ formatter.match({
   "location": "Keyword.cek_saldo_awal(String)"
 });
 formatter.result({
-  "duration": 4849286400,
+  "duration": 3754830900,
   "status": "passed"
 });
 formatter.match({
@@ -844,14 +892,14 @@ formatter.match({
   "location": "Keyword.cek_limit_awal(String,String)"
 });
 formatter.result({
-  "duration": 20785389300,
+  "duration": 19036891200,
   "status": "passed"
 });
 formatter.match({
   "location": "Keyword.cekBluaccountSebelum()"
 });
 formatter.result({
-  "duration": 11505717000,
+  "duration": 11941944100,
   "status": "passed"
 });
 formatter.match({
@@ -864,21 +912,21 @@ formatter.match({
   "location": "Keyword.pockets(String)"
 });
 formatter.result({
-  "duration": 6344428900,
+  "duration": 5368284800,
   "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.berada_dihalaman_list_blusaving()"
 });
 formatter.result({
-  "duration": 3188064500,
+  "duration": 4274008200,
   "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.tambahBlusaving()"
 });
 formatter.result({
-  "duration": 328178000,
+  "duration": 238493800,
   "status": "passed"
 });
 formatter.match({
@@ -888,31 +936,31 @@ formatter.match({
       "offset": 11
     },
     {
-      "val": "60000",
+      "val": "6000",
       "offset": 40
     }
   ],
   "location": "BluSaving.inputNamaSetoranAwal(String,String)"
 });
 formatter.result({
-  "duration": 12293793700,
+  "duration": 12206945500,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "0",
+      "val": "1500000",
       "offset": 10
     },
     {
-      "val": "0",
-      "offset": 24
+      "val": "1",
+      "offset": 30
     }
   ],
   "location": "BluSaving.aturGoal(String,int)"
 });
 formatter.result({
-  "duration": 14663428700,
+  "duration": 19972226600,
   "status": "passed"
 });
 formatter.match({
@@ -922,40 +970,47 @@ formatter.match({
       "offset": 15
     },
     {
-      "val": "100000 # progress",
-      "offset": 34
+      "val": "1",
+      "offset": 21
+    },
+    {
+      "val": "0 # progress",
+      "offset": 36
     }
   ],
-  "location": "BluSaving.atur_autodebit(int,int)"
+  "location": "BluSaving.atur_autodebit(int,int,String)"
 });
 formatter.result({
-  "duration": 10882347400,
-  "error_message": "org.openqa.selenium.InvalidElementStateException: Cannot set the element to \u0027100000\u0027. Did you interact with the correct element?\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-2138S88\u0027, ip: \u0027172.17.123.241\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {appActivity: com.bcadigital.blu.MainActi..., appPackage: com.bcadigital.blu.uat, autoWebView: true, chromedriverExecutable: C:\\Users\\NB01\\OneDrive\\Docu..., databaseEnabled: false, desired: {appActivity: com.bcadigital.blu.MainActi..., appPackage: com.bcadigital.blu.uat, autoWebView: true, chromedriverExecutable: C:\\Users\\NB01\\OneDrive\\Docu..., deviceName: Realme, noReset: true, platformName: android, udid: 48a33036}, deviceApiLevel: 30, deviceManufacturer: realme, deviceModel: RMX1971, deviceName: 48a33036, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: 48a33036, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 96, takesScreenshot: true, udid: 48a33036, viewportRect: {height: 2036, left: 0, top: 96, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: cf66b9bd-10ba-4b8f-8dc7-559a46f2a114\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)\r\n\tat io.appium.java_client.MobileElement.execute(MobileElement.java:1)\r\n\tat io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)\r\n\tat StepDefinitions.BluSaving.atur_autodebit(BluSaving.java:110)\r\n\tat ✽.And Atur autodebit 1 dan jumlah debit 100000 # progress(CreateBluSaving.feature:17)\r\n",
-  "status": "failed"
+  "duration": 15334626500,
+  "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.berada_dihalaman_berhasil_membuat_blusaving()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 15985813800,
+  "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.berada_dihalaman_list_blusaving()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 3141500800,
+  "status": "passed"
 });
 formatter.match({
   "location": "Keyword.klik_card_blusaving()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 531764300,
+  "status": "passed"
 });
 formatter.match({
   "location": "BluSaving.cek_riwayat_transaksi_blusaving()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 16681416300,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -967,13 +1022,15 @@ formatter.match({
   "location": "Keyword.cek_saldo_akhir(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 12203828300,
+  "status": "passed"
 });
 formatter.match({
   "location": "Keyword.cekBluaccountAkhir()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 10223882900,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -989,7 +1046,8 @@ formatter.match({
   "location": "Keyword.cek_limit_awal(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 20740076600,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -1001,7 +1059,8 @@ formatter.match({
   "location": "Keyword.logout_blu(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 13875574500,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 36,
@@ -1081,7 +1140,7 @@ formatter.step({
 });
 formatter.step({
   "line": 15,
-  "name": "Input nama Blusaving 3 dan setoran awal 10000",
+  "name": "Input nama No Autodebet dan setoran awal 0",
   "matchedColumns": [
     5,
     6
@@ -1090,7 +1149,7 @@ formatter.step({
 });
 formatter.step({
   "line": 16,
-  "name": "Atur Goal 100000 dan tanggal 0",
+  "name": "Atur Goal 0 dan tanggal 0",
   "matchedColumns": [
     7,
     8
@@ -1099,10 +1158,801 @@ formatter.step({
 });
 formatter.step({
   "line": 17,
-  "name": "Atur autodebit 0 dan jumlah debit 100000 # progress",
+  "name": "Atur autodebit 0 dan 0 jumlah debit 0 # progress",
   "matchedColumns": [
     9,
-    10
+    10,
+    11
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "Berada dihalaman berhasil membuat blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "Berada dihalaman list blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "Klik card blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 21,
+  "name": "Cek riwayat transaksi blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 23,
+  "name": "Cek saldo akhir \"saldo akhir\"",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 24,
+      "value": "#    And      Cek notifikasi"
+    }
+  ],
+  "line": 25,
+  "name": "Cek bluaccount akhir",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 26,
+      "value": "#    And      Cek riwayat akhir"
+    }
+  ],
+  "line": 27,
+  "name": "Cek limit limit \"limit akhir\"",
+  "matchedColumns": [
+    3
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 28,
+  "name": "Logout blu Masuk dengan Akun Lain",
+  "matchedColumns": [
+    12
+  ],
+  "keyword": "And "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "bluSaving",
+      "offset": 11
+    },
+    {
+      "val": "Create",
+      "offset": 22
+    },
+    {
+      "val": "3",
+      "offset": 35
+    },
+    {
+      "val": "082211220045",
+      "offset": 47
+    },
+    {
+      "val": "Password123!",
+      "offset": 73
+    }
+  ],
+  "location": "Keyword.loginBlu(String,String,String,String,String)"
+});
+formatter.result({
+  "duration": 44986349600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.homescreenBlu()"
+});
+formatter.result({
+  "duration": 6510324200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "saldo awal",
+      "offset": 16
+    }
+  ],
+  "location": "Keyword.cek_saldo_awal(String)"
+});
+formatter.result({
+  "duration": 3942945800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "limit",
+      "offset": 10
+    },
+    {
+      "val": "limit awal",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_limit_awal(String,String)"
+});
+formatter.result({
+  "duration": 21734301600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.cekBluaccountSebelum()"
+});
+formatter.result({
+  "duration": 11265681400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "bluSaving",
+      "offset": 8
+    }
+  ],
+  "location": "Keyword.pockets(String)"
+});
+formatter.result({
+  "duration": 4836785100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.berada_dihalaman_list_blusaving()"
+});
+formatter.result({
+  "duration": 4655939000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.tambahBlusaving()"
+});
+formatter.result({
+  "duration": 287388900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "No Autodebet",
+      "offset": 11
+    },
+    {
+      "val": "0",
+      "offset": 41
+    }
+  ],
+  "location": "BluSaving.inputNamaSetoranAwal(String,String)"
+});
+formatter.result({
+  "duration": 12256243500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "0",
+      "offset": 10
+    },
+    {
+      "val": "0",
+      "offset": 24
+    }
+  ],
+  "location": "BluSaving.aturGoal(String,int)"
+});
+formatter.result({
+  "duration": 13456740400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "0",
+      "offset": 15
+    },
+    {
+      "val": "0",
+      "offset": 21
+    },
+    {
+      "val": "0 # progress",
+      "offset": 36
+    }
+  ],
+  "location": "BluSaving.atur_autodebit(int,int,String)"
+});
+formatter.result({
+  "duration": 4799219100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.berada_dihalaman_berhasil_membuat_blusaving()"
+});
+formatter.result({
+  "duration": 8105048300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.berada_dihalaman_list_blusaving()"
+});
+formatter.result({
+  "duration": 3074565100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.klik_card_blusaving()"
+});
+formatter.result({
+  "duration": 252518800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.cek_riwayat_transaksi_blusaving()"
+});
+formatter.result({
+  "duration": 15358200900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "saldo akhir",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_saldo_akhir(String)"
+});
+formatter.result({
+  "duration": 13059492200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.cekBluaccountAkhir()"
+});
+formatter.result({
+  "duration": 10108519300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "limit",
+      "offset": 10
+    },
+    {
+      "val": "limit akhir",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_limit_awal(String,String)"
+});
+formatter.result({
+  "duration": 19857760400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Masuk dengan Akun Lain",
+      "offset": 11
+    }
+  ],
+  "location": "Keyword.logout_blu(String)"
+});
+formatter.result({
+  "duration": 13542801900,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 37,
+  "name": "Create BluSaving",
+  "description": "",
+  "id": "create-blusaving;create-blusaving;;5",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@CreateBluSaving"
+    },
+    {
+      "line": 3,
+      "name": "@BluSavingRegression"
+    }
+  ]
+});
+formatter.step({
+  "line": 5,
+  "name": "Login test bluSaving \"Create\" no - 4 blu nomor 082211220045 dan password Password123!",
+  "matchedColumns": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "Homescreen blu",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "Cek saldo awal \"saldo awal\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "Cek limit limit \"limit awal\"",
+  "matchedColumns": [
+    3
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "Cek bluaccount sebelum",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 10,
+      "value": "#    And      Cek riwayat awal"
+    }
+  ],
+  "line": 12,
+  "name": "Pockets bluSaving",
+  "matchedColumns": [
+    4
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "Berada dihalaman list blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "Tambah blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "Input nama AutoDebet Nominal dan setoran awal 0",
+  "matchedColumns": [
+    5,
+    6
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Atur Goal 40000 dan tanggal 0",
+  "matchedColumns": [
+    7,
+    8
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "Atur autodebit 1 dan 0 jumlah debit 10000 # progress",
+  "matchedColumns": [
+    9,
+    10,
+    11
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "Berada dihalaman berhasil membuat blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "Berada dihalaman list blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "Klik card blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 21,
+  "name": "Cek riwayat transaksi blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 23,
+  "name": "Cek saldo akhir \"saldo akhir\"",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 24,
+      "value": "#    And      Cek notifikasi"
+    }
+  ],
+  "line": 25,
+  "name": "Cek bluaccount akhir",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 26,
+      "value": "#    And      Cek riwayat akhir"
+    }
+  ],
+  "line": 27,
+  "name": "Cek limit limit \"limit akhir\"",
+  "matchedColumns": [
+    3
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 28,
+  "name": "Logout blu Masuk dengan Akun Lain",
+  "matchedColumns": [
+    12
+  ],
+  "keyword": "And "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "bluSaving",
+      "offset": 11
+    },
+    {
+      "val": "Create",
+      "offset": 22
+    },
+    {
+      "val": "4",
+      "offset": 35
+    },
+    {
+      "val": "082211220045",
+      "offset": 47
+    },
+    {
+      "val": "Password123!",
+      "offset": 73
+    }
+  ],
+  "location": "Keyword.loginBlu(String,String,String,String,String)"
+});
+formatter.result({
+  "duration": 46077614100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.homescreenBlu()"
+});
+formatter.result({
+  "duration": 4836459100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "saldo awal",
+      "offset": 16
+    }
+  ],
+  "location": "Keyword.cek_saldo_awal(String)"
+});
+formatter.result({
+  "duration": 3944001800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "limit",
+      "offset": 10
+    },
+    {
+      "val": "limit awal",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_limit_awal(String,String)"
+});
+formatter.result({
+  "duration": 19860243500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.cekBluaccountSebelum()"
+});
+formatter.result({
+  "duration": 10120872900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "bluSaving",
+      "offset": 8
+    }
+  ],
+  "location": "Keyword.pockets(String)"
+});
+formatter.result({
+  "duration": 5844712400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.berada_dihalaman_list_blusaving()"
+});
+formatter.result({
+  "duration": 4280555100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.tambahBlusaving()"
+});
+formatter.result({
+  "duration": 235388400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "AutoDebet Nominal",
+      "offset": 11
+    },
+    {
+      "val": "0",
+      "offset": 46
+    }
+  ],
+  "location": "BluSaving.inputNamaSetoranAwal(String,String)"
+});
+formatter.result({
+  "duration": 12246091100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "40000",
+      "offset": 10
+    },
+    {
+      "val": "0",
+      "offset": 28
+    }
+  ],
+  "location": "BluSaving.aturGoal(String,int)"
+});
+formatter.result({
+  "duration": 14534095900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 15
+    },
+    {
+      "val": "0",
+      "offset": 21
+    },
+    {
+      "val": "10000 # progress",
+      "offset": 36
+    }
+  ],
+  "location": "BluSaving.atur_autodebit(int,int,String)"
+});
+formatter.result({
+  "duration": 13067818600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.berada_dihalaman_berhasil_membuat_blusaving()"
+});
+formatter.result({
+  "duration": 19050528000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.berada_dihalaman_list_blusaving()"
+});
+formatter.result({
+  "duration": 3077871100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.klik_card_blusaving()"
+});
+formatter.result({
+  "duration": 786125700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.cek_riwayat_transaksi_blusaving()"
+});
+formatter.result({
+  "duration": 16089590000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "saldo akhir",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_saldo_akhir(String)"
+});
+formatter.result({
+  "duration": 12408039100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.cekBluaccountAkhir()"
+});
+formatter.result({
+  "duration": 10065632200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "limit",
+      "offset": 10
+    },
+    {
+      "val": "limit akhir",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_limit_awal(String,String)"
+});
+formatter.result({
+  "duration": 21454244500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Masuk dengan Akun Lain",
+      "offset": 11
+    }
+  ],
+  "location": "Keyword.logout_blu(String)"
+});
+formatter.result({
+  "duration": 15192004200,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 38,
+  "name": "Create BluSaving",
+  "description": "",
+  "id": "create-blusaving;create-blusaving;;6",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@CreateBluSaving"
+    },
+    {
+      "line": 3,
+      "name": "@BluSavingRegression"
+    }
+  ]
+});
+formatter.step({
+  "line": 5,
+  "name": "Login test bluSaving \"Create\" no - 5 blu nomor 082211220045 dan password Password123!",
+  "matchedColumns": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "Homescreen blu",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "Cek saldo awal \"saldo awal\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "Cek limit limit \"limit awal\"",
+  "matchedColumns": [
+    3
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "Cek bluaccount sebelum",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 10,
+      "value": "#    And      Cek riwayat awal"
+    }
+  ],
+  "line": 12,
+  "name": "Pockets bluSaving",
+  "matchedColumns": [
+    4
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "Berada dihalaman list blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "Tambah blusaving",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "Input nama AutoDebet Goal dan setoran awal 0",
+  "matchedColumns": [
+    5,
+    6
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Atur Goal 0 dan tanggal 1",
+  "matchedColumns": [
+    7,
+    8
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "Atur autodebit 1 dan 1 jumlah debit 10000 # progress",
+  "matchedColumns": [
+    9,
+    10,
+    11
   ],
   "keyword": "And "
 });
@@ -1160,7 +2010,7 @@ formatter.step({
   "line": 28,
   "name": "Logout blu Keluar Aplikasi",
   "matchedColumns": [
-    11
+    12
   ],
   "keyword": "And "
 });
@@ -1175,7 +2025,7 @@ formatter.match({
       "offset": 22
     },
     {
-      "val": "3",
+      "val": "5",
       "offset": 35
     },
     {
@@ -1188,4 +2038,213 @@ formatter.match({
     }
   ],
   "location": "Keyword.loginBlu(String,String,String,String,String)"
+});
+formatter.result({
+  "duration": 44891721300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.homescreenBlu()"
+});
+formatter.result({
+  "duration": 6361851900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "saldo awal",
+      "offset": 16
+    }
+  ],
+  "location": "Keyword.cek_saldo_awal(String)"
+});
+formatter.result({
+  "duration": 4223697500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "limit",
+      "offset": 10
+    },
+    {
+      "val": "limit awal",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_limit_awal(String,String)"
+});
+formatter.result({
+  "duration": 19547418300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.cekBluaccountSebelum()"
+});
+formatter.result({
+  "duration": 11175771300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "bluSaving",
+      "offset": 8
+    }
+  ],
+  "location": "Keyword.pockets(String)"
+});
+formatter.result({
+  "duration": 5617147000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.berada_dihalaman_list_blusaving()"
+});
+formatter.result({
+  "duration": 4416497300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.tambahBlusaving()"
+});
+formatter.result({
+  "duration": 732464100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "AutoDebet Goal",
+      "offset": 11
+    },
+    {
+      "val": "0",
+      "offset": 43
+    }
+  ],
+  "location": "BluSaving.inputNamaSetoranAwal(String,String)"
+});
+formatter.result({
+  "duration": 12221774800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "0",
+      "offset": 10
+    },
+    {
+      "val": "1",
+      "offset": 24
+    }
+  ],
+  "location": "BluSaving.aturGoal(String,int)"
+});
+formatter.result({
+  "duration": 20356778000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 15
+    },
+    {
+      "val": "1",
+      "offset": 21
+    },
+    {
+      "val": "10000 # progress",
+      "offset": 36
+    }
+  ],
+  "location": "BluSaving.atur_autodebit(int,int,String)"
+});
+formatter.result({
+  "duration": 14151863900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.berada_dihalaman_berhasil_membuat_blusaving()"
+});
+formatter.result({
+  "duration": 8137072900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.berada_dihalaman_list_blusaving()"
+});
+formatter.result({
+  "duration": 3578186700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.klik_card_blusaving()"
+});
+formatter.result({
+  "duration": 226088500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluSaving.cek_riwayat_transaksi_blusaving()"
+});
+formatter.result({
+  "duration": 15594822100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "saldo akhir",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_saldo_akhir(String)"
+});
+formatter.result({
+  "duration": 13436133700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.cekBluaccountAkhir()"
+});
+formatter.result({
+  "duration": 9949842600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "limit",
+      "offset": 10
+    },
+    {
+      "val": "limit akhir",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_limit_awal(String,String)"
+});
+formatter.result({
+  "duration": 20220524900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Keluar Aplikasi",
+      "offset": 11
+    }
+  ],
+  "location": "Keyword.logout_blu(String)"
+});
+formatter.result({
+  "duration": 14177500000,
+  "status": "passed"
+});
 });
