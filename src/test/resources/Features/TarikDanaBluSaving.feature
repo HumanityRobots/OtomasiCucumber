@@ -8,8 +8,6 @@ Feature: Tarik Dana BluSaving
     And      Cek limit <search> "limit awal"
     And      Cek bluaccount sebelum
     And      Cek riwayat awal
-
-
     And      Pockets <testing>
     And      Klik card blusaving
     And      Klik tombol tarik dana
@@ -18,8 +16,6 @@ Feature: Tarik Dana BluSaving
     And      Berada dihalaman berhasil tarik dana
     And      Berada dihalaman detail blusaving
     And      Cek riwayat transaksi blusaving
-
-
     And      Cek saldo akhir "saldo akhir"
     And      Cek notifikasi
     And      Cek bluaccount akhir
