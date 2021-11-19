@@ -31,8 +31,8 @@ import java.util.concurrent.TimeUnit;
 //          tags={"@ExistingLogin"},
 
 //        BluSaving
-        tags = { "@CreateBluSaving" },
-//        tags = { "@UpdateBluSaving" },
+//        tags = { "@CreateBluSaving" },
+        tags = { "@UpdateBluSaving" },
 //        tags = { "@TarikDanaBluSaving" },
 //        tags = { "@TambahDanaBluSaving" },
 //        tags = { "@CloseBluSaving" },

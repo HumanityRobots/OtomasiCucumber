@@ -8,14 +8,12 @@ Feature: Close BluSaving
     And      Cek limit <search> "limit awal"
     And      Cek bluaccount sebelum
     And      Cek riwayat awal
-
     And      Pockets <testing>
     And      Klik card blusaving
     And      Klik tombol setting
     And      Klik tombol tutup blusaving
     And      Berada dihalaman berhasil tutup blusaving
     And      Berada dihalaman list blusaving
-
     And      Cek saldo akhir "saldo akhir"
     And      Cek notifikasi
     And      Cek bluaccount akhir
