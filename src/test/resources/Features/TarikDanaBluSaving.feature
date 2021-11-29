@@ -1,4 +1,3 @@
-@TarikDanaBluSaving
 Feature: Tarik Dana BluSaving
   @BluSavingRegression
   Scenario Outline: Tarik Dana BluSaving

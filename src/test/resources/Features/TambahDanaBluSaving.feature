@@ -1,4 +1,3 @@
-@TambahDanaBluSaving
 Feature: Tambah Dana BluSaving
 
   @BluSavingRegression

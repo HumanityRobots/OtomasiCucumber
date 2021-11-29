@@ -1,4 +1,3 @@
-@CloseBluSaving
 Feature: Close BluSaving
   @BluSavingRegression
   Scenario Outline: Close BluSaving

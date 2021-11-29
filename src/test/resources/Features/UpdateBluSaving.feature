@@ -1,4 +1,3 @@
-@UpdateBluSaving
 Feature: Update BluSaving
 
 #Scenario 2

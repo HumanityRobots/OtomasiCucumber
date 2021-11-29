@@ -27,13 +27,13 @@ import java.util.concurrent.TimeUnit;
         features = {"src/test/resources/Features"},
 //        Greeting & Existing login
 //          tags={"@GreetingRegression"},
-          tags={"@ExistingLogin"},
+//          tags={"@ExistingLogin"},
 
 //        BluSaving
 //        tags = { "@CreateBluSaving" },
 //        tags = { "@UpdateBluSaving" },
 //        tags = { "@TarikDanaBluSaving" },
-//        tags = { "@TambahDanaBluSaving" },
+        tags = { "@TambahDanaBluSaving" },
 //        tags = { "@CloseBluSaving" },
 
 //        BluGether
