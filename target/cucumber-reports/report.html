@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Nov 19, 2021 02:55:09 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Nov 26, 2021 02:47:03 PM</span>
 				</a>
 			</li>
 			<li>
@@ -85,8 +85,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@UpdateBluSaving</a></li>
-					<li><a href='#'>@BluSavingRegression</a></li>
+					<li><a href='#'>@ExistingLogin</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -164,7 +163,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>15</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -183,31 +182,30 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Update BluSaving</span>
-						<span class='test-time'>Nov 19, 2021 02:55:09 PM</span>
+						<span class='test-name'>Existing Login</span>
+						<span class='test-time'>Nov 26, 2021 02:47:03 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 3m 11s+227ms</span>
+	<span class='duration right label'>0h 2m 48s+843ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">Update Teman Blusaving</span>
+		<span class="desc-text">Existing Login</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class='category-list'>
-				<span class='category label white-text'>@UpdateBluSaving</span>
-				<span class='category label white-text'>@BluSavingRegression</span>
+				<span class='category label white-text'>@ExistingLogin</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Update Teman Blusaving</span>
+			<span class="bdd-step-name">Existing Login</span>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given Login test bluSaving "Update" no - 2 blu nomor 082211220045 dan password Password123!</span>
+						<span class="bdd-step-name">Given Login test Existing login "Run" no - 1 blu nomor 082211220045 dan password Password123!</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='5' class='node when pass' status='pass'><b>When</b>
@@ -215,55 +213,19 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='6' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Cek saldo awal "saldo awal"</span>
+						<span class="bdd-step-name">And Logout blu Keluar Aplikasi</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='7' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Pockets bluSaving</span>
+					<li test-id='7' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then Berada dihalaman existing login Password123!</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='8' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Klik card blusaving</span>
+						<span class="bdd-step-name">And Homescreen blu</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='9' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Klik tombol setting</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='10' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Klik tombol undang teman blugether</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='11' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Berada dihalaman tambah teman</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='12' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Cari teman yang akan ditambahkan 000000004373</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='13' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Klik tombol undang</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='14' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Berada dihalaman berhasil tambahkan teman</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='15' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Berada dihalaman detail blugether update</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='16' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Berada dihalaman list blugether</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='17' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Cek saldo akhir "saldo akhir"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='18' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Logout blu Masuk dengan Akun Lain</span>
+						<span class="bdd-step-name">And Logout blu Keluar Aplikasi</span>
 							<div class='pre'>passed</div>
 					</li>
 				</ul>
@@ -324,46 +286,7 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@UpdateBluSaving</span>
-						<span class='category-status right'>
-							<span class='label pass'>2</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 2</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Nov 19, 2021 02:55:09 PM</td>
-										<td class='linked' test-id='1'>Update BluSaving</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Nov 19, 2021 02:55:09 PM</td>
-										<td class='linked' test-id='3'>Update BluSaving.Update Teman Blusaving.Update Teman Blusaving</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@BluSavingRegression</span>
+						<span class='category-name'>@ExistingLogin</span>
 						<span class='category-status right'>
 							<span class='label pass'>1</span>
 						</span>
@@ -386,8 +309,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 19, 2021 02:55:09 PM</td>
-										<td class='linked' test-id='3'>Update BluSaving.Update Teman Blusaving.Update Teman Blusaving</td>
+										<td>Nov 26, 2021 02:47:03 PM</td>
+										<td class='linked' test-id='3'>Existing Login.Existing Login.Existing Login</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -428,25 +351,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>15</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 19, 2021 02:55:09 PM</div>
+					<div class='panel-lead'>Nov 26, 2021 02:47:03 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 19, 2021 02:58:23 PM</div>
+			 		<div class='panel-lead'>Nov 26, 2021 02:49:53 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>194,293ms</div>
+					<div class='panel-lead'>170,673ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -462,16 +385,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@UpdateBluSaving</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@BluSavingRegression</td>
+							<td>@ExistingLogin</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -509,7 +423,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 15,
+				passGrandChild: 6,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

@@ -26,13 +26,12 @@ import java.util.concurrent.TimeUnit;
 @CucumberOptions(
         features = {"src/test/resources/Features"},
 //        Greeting & Existing login
-//        tags={"@Greeting, @ExistingLogin"},
-//          tags={"@Greeting"},
-//          tags={"@ExistingLogin"},
+//          tags={"@GreetingRegression"},
+          tags={"@ExistingLogin"},
 
 //        BluSaving
 //        tags = { "@CreateBluSaving" },
-        tags = { "@UpdateBluSaving" },
+//        tags = { "@UpdateBluSaving" },
 //        tags = { "@TarikDanaBluSaving" },
 //        tags = { "@TambahDanaBluSaving" },
 //        tags = { "@CloseBluSaving" },

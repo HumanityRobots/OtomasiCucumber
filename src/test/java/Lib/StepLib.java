@@ -470,10 +470,10 @@ public class StepLib extends Runner {
                 StepLib.Profile();
                 StepLib.swipeinto(out);
                 System.out.println("====> Foto tombol Masuk dengan akun lain");
-                FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnPindahAkun");
-                driver.findElement(pars.getbjectLocator("btnPindahAkun")).click();
-                FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnPilihPindahAkun");
-                driver.findElement(pars.getbjectLocator("btnPilihPindahAkun")).click();
+                FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnAkunLain");
+                driver.findElement(pars.getbjectLocator("btnAkunLain")).click();
+                FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnLanjut");
+                driver.findElement(pars.getbjectLocator("btnLanjut")).click();
                 break;
             default :
                 System.out.println("Perintah tidak ada");

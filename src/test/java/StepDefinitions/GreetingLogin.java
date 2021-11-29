@@ -27,17 +27,8 @@ public class GreetingLogin extends Runner {
         StepLib.allow();
     }
 
-    @Given("^Berada dihalaman nomor telepon$")
-    public void berada_dihalaman_nomor_telepon() throws Throwable {
-        intScenarioNum++;
-    }
-
-    @Given("^Berada dihalaman password$")
-    public void berada_dihalaman_password() throws Throwable {
-        intScenarioNum++;
-    }
-
     // -----------WHEN----------------
+
     @When("^Klik tombol Yuk Mulai$")
     public void klik_tombol_Yuk_Mulai() throws Throwable {
         System.out.println("LOGIN");
@@ -46,6 +37,13 @@ public class GreetingLogin extends Runner {
         System.out.println("====> Clik Yuk Mulai");
         driver.findElement(pars.getbjectLocator("login_btnYukMulai")).click();
         StepLib.loadPage("login_btnLanjut");
+    }
+
+    @When("^Berada dihalaman nomor telepon$")
+    public void berada_dihalaman_nomor_telepon() throws Throwable {
+        System.out.println("====> Foto greeting");
+        FunctionalLib.takeSnapShot(driver,CapturePath,featureName,intScenarioNum, "login_btnLanjut");
+        assert driver.findElement(pars.getbjectLocator("login_btnLanjut")).isDisplayed() == true;
     }
 
     @When("^Input nomor handphone dengan nomor (.*)$")
@@ -65,12 +63,20 @@ public class GreetingLogin extends Runner {
     public void input_nomor_otp() throws Throwable {
         System.out.println("INPUT NOMOR OTP");
         System.out.println("====> Click OTP");
+        StepLib.loadPage("login_btn1");
         driver.findElement(pars.getbjectLocator("login_btn1")).click();
         driver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
         driver.pressKey(new KeyEvent(AndroidKey.DIGIT_2));
         driver.pressKey(new KeyEvent(AndroidKey.DIGIT_3));
         FunctionalLib.takeSnapShot(driver,CapturePath,featureName,intScenarioNum, "login_btn1");
         driver.pressKey(new KeyEvent(AndroidKey.DIGIT_4));
+    }
+
+    @When("^Berada dihalaman password$")
+    public void berada_dihalaman_password() throws Throwable {
+        System.out.println("====> Foto greeting");
+        assert driver.findElement(pars.getbjectLocator("lblGreeting")).isDisplayed() == true;
+        FunctionalLib.takeSnapShot(driver,CapturePath,featureName,intScenarioNum, "lblGreeting");
     }
 
     @When("^Input password (.*)$")
@@ -80,24 +86,9 @@ public class GreetingLogin extends Runner {
         driver.findElement(pars.getbjectLocator("login_txtPassword")).sendKeys(password);
         System.out.println("====> Click tombol masuk");
         driver.findElement(pars.getbjectLocator("login_btnMasuk")).click();
-//        StepLib.loadPage("lblDashboard");
     }
 
-    // -----------THEN----------------
-    @Then("^Tampil layar input nomor handphone")
-    public void tampil_layar_input_nomor_handphone() throws Throwable {
-        System.out.println("====> Foto greeting");
-        FunctionalLib.takeSnapShot(driver,CapturePath,featureName,intScenarioNum, "login_btnLanjut");
-        assert driver.findElement(pars.getbjectLocator("login_btnLanjut")).isDisplayed() == true;
-    }
-
-    @Then("^Tampil customer greeting")
-    public void tampil_customer_greeting() throws Throwable {
-        assert driver.findElement(pars.getbjectLocator("lblGreeting")).isDisplayed() == true;
-        FunctionalLib.takeSnapShot(driver,CapturePath,featureName,intScenarioNum, "lblGreeting");
-    }
-
-    @Then("^Tampil dashboard home$")
+    @When("^Tampil dashboard home$")
     public void tampil_dashboard_home() throws Throwable {
         StepLib.ketentuan();
         assert driver.findElement(pars.getbjectLocator("lblDashboard")).isDisplayed() == true;
