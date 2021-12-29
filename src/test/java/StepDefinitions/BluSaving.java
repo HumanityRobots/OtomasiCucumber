@@ -36,9 +36,12 @@ public class BluSaving extends Runner {
         driver.findElement(pars.getbjectLocator("lblTambahBlusaving")).click();
     }
 
+
     // Input nama  dan setor awal
     @When("^Input nama (.*) dan setoran awal (.*)$")
     public void inputNamaSetoranAwal(String nama, String setor) throws Throwable {
+        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnLanjut");
+
         // Input nama
         System.out.println("====> Input nama blusaving");
         driver.findElement(pars.getbjectLocator("lblNamaBluSaving")).sendKeys(nama);
@@ -60,9 +63,9 @@ public class BluSaving extends Runner {
     public void aturGoal(String goal, int tanggal) throws Throwable {
         // Jumlah atur goal
         StepLib.loadPage("lblInputAturGoal");
+        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblInputAturGoal");
         System.out.println("====> Jumlah atur goal : " + goal);
         driver.findElement(pars.getbjectLocator("lblInputAturGoal")).sendKeys(goal);
-        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblInputAturGoal");
         StepLib.timePage("lblInputAturGoal");
 
         // Tanggal pencapaian
@@ -70,7 +73,6 @@ public class BluSaving extends Runner {
             System.out.println("====> Tentukan tanggal pencapaian");
             StepLib.loadPage("lblTanggalPencapaian");
             driver.findElement(pars.getbjectLocator("lblTanggalPencapaian")).click();
-            FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnPilih");
 
             System.out.println("====> Tekan tombol pilih");
             driver.findElement(pars.getbjectLocator("btnPilih")).click();
@@ -88,14 +90,13 @@ public class BluSaving extends Runner {
     // Atur debit dan tanggal pencapaian
     @When("^Atur autodebit (.*) dan (.*) jumlah debit (.*)$")
     public void atur_autodebit(int frekuensi, int aturDebit, String jumlahDebit) throws Throwable {
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnBukaBluSaving");
         StepLib.loadPage("btnFrekuensi");
 
         // Frekuensi
         if (frekuensi == 1) {
             System.out.println("====> Pilih Frekuensi");
-            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnFrekuensi");
             driver.findElement(pars.getbjectLocator("btnFrekuensi")).click();
-            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPilih");
             driver.findElement(pars.getbjectLocator("btnPilih")).click();
             StepLib.loadPage("lblJumlahDebit");
         } else if (frekuensi != 1) {
@@ -107,6 +108,7 @@ public class BluSaving extends Runner {
             System.out.println("====> Tidak atur jumlah debit");
         } else if (aturDebit != 0) {
             System.out.println("====> Input jumlah yang akan di debit");
+            driver.findElement(pars.getbjectLocator("lblJumlahDebit")).clear();
             driver.findElement(pars.getbjectLocator("lblJumlahDebit")).sendKeys(jumlahDebit);
         }
 
@@ -154,6 +156,14 @@ public class BluSaving extends Runner {
 
 
     // Tarik dana
+    // card blusaving
+    @When("^Klik card blusaving$")
+    public void klik_card_blusaving() throws Throwable {
+        System.out.println("====> Klik card blusaving");
+        driver.findElement(pars.getbjectLocator("cardBluSaving")).click();
+
+    }
+
     @When("^Klik tombol tarik dana$")
     public void klik_tombol_tarik_dana() throws Throwable {
         System.out.println("====> Klik tombol tarik dana");
@@ -184,45 +194,6 @@ public class BluSaving extends Runner {
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnKembali");
         driver.findElement(pars.getbjectLocator("btnKembali")).click();
     }
-
-    @When("^Halaman detail blusaving$")
-    public void halaman_blusaving() throws Throwable {
-
-    }
-
-    // Tambah dana
-    @When("^Klik tombol tambah dana$")
-    public void klik_tombol_tambah_dana() throws Throwable {
-        System.out.println("TAMBAH DANA BLUSAVING");
-        System.out.println("====> Klik tombol tambah dana");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahDanaBluSaving");
-        driver.findElement(pars.getbjectLocator("lblTambahDanaBluSaving")).click();
-    }
-
-    @When("^Input jumlah tambah dana (.*)$")
-    public void input_jumlah_tambah_dana(String jmlTambahdana) throws Throwable {
-        System.out.println("====> Input jumlah Tambah dana");
-        driver.findElement(pars.getbjectLocator("lblInputJumlahTambahDana")).sendKeys(jmlTambahdana);
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
-        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
-    }
-
-    @When("^Berada dihalaman konfirmasi tambah dana$")
-    public void berada_dihalmaan_konfirmasi_tambah_dana() throws Throwable {
-        System.out.println("====> Halaman konfirmasi tambah dana");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
-        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
-    }
-
-    @When("^Berada dihalaman berhasil tambah dana$")
-    public void berada_dihalama_berhasil_tambah_dana() throws Throwable {
-        StepLib.loadPage("btnKembali");
-        System.out.println("====> Berada dihalaman berhasil tambah dana");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnKembali");
-        driver.findElement(pars.getbjectLocator("btnKembali")).click();
-    }
-
-
 
 
 
@@ -416,14 +387,6 @@ public class BluSaving extends Runner {
         StepLib.back();
     }
 
-    // nnti pindah ke blugether file
-    @When("^Berada dihalaman list blugether$")
-    public void berada_dihalaman_list_blugether() throws Throwable {
-        System.out.println("=====> Berada dihalaman daftar member");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanDaftarBlugether");
-        StepLib.goToDashboard();
-    }
-
 
 
 
@@ -466,8 +429,6 @@ public class BluSaving extends Runner {
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnDetail");
 
         // klik download e statement
-        System.out.println("====> Klik tombol download e-statement");
-        driver.findElement(pars.getbjectLocator("btnDownloadEStatement")).click();
         StepLib.downloaEStatement();
 
         // klik tombol ke daftar blusaving

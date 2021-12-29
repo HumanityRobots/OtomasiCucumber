@@ -29,15 +29,16 @@ import java.util.concurrent.TimeUnit;
 //          tags={"@GreetingRegression"},
 //          tags={"@ExistingLogin"},
 
+
 //        BluSaving
 //        tags = { "@CreateBluSaving" },
 //        tags = { "@UpdateBluSaving" },
 //        tags = { "@TarikDanaBluSaving" },
-        tags = { "@TambahDanaBluSaving" },
+//        tags = { "@TambahDanaBluSaving" },
 //        tags = { "@CloseBluSaving" },
 
 //        BluGether
-//        tags = { "@CreateBluGether" },
+        tags = { "@CreateBluGether" },
 //        tags = { "@UpdateBluGether" },
 //        tags = { "@TarikDanaBluGether" },
 //        tags = { "@TransferDanaBluGether" },
@@ -47,7 +48,7 @@ import java.util.concurrent.TimeUnit;
 //        tags = { "@Transfer" }
 
 //        BluDeposit
-//        tags = { "@CreateBluSaving" },
+//        tags = { "@CreateBluDeposit" },
 //        tags = { "@UpdateBluSaving" },
 //        tags = { "@TarikDanaBluSaving" },
 //        tags = { "@TransferDanaBluSaving" },

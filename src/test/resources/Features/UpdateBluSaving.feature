@@ -1,7 +1,6 @@
 Feature: Update BluSaving
 
-#Scenario 2
-  @BluSavingRegression
+  @UpdateBluSaving
   Scenario Outline: Update Detail BluSaving
     Given    Login test <testing> "Update" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
@@ -18,14 +17,14 @@ Feature: Update BluSaving
     And      Berada dihalaman list blusaving baru
     And      Cek saldo akhir "saldo akhir"
     And      Logout blu <logout>
-#        Then     Check saldo awal berkurang, limit awal berkurang
-
+        Then     Check saldo awal berkurang, limit awal berkurang
+#
     Examples:
       | no | nomorHandphone | password    | testing      |   namaBlusaving      |  aturgoal | aturdebit |  jumlahAturGoal |    tanggal    | frekuensiDebit |  aturJumlahDebit |     jumlahDebit       | logout                 |
       | 1  | 082211220045   | Password123!| bluSaving    |   Sepatu Vans        |     1     |    1      |    110000       |       1       |        1       |       1          |       10000          | Masuk dengan Akun Lain |
 
 
-  @BluSavingRegression
+  @UpdateBluSaving
   Scenario Outline: Update Teman Blusaving
     Given    Login test <testing> "Update" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu

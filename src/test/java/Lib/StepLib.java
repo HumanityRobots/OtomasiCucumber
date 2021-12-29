@@ -2,6 +2,7 @@ package Lib;
 
 import Runner.Runner;
 import com.sun.javafx.scene.traversal.Direction;
+import gherkin.ast.Step;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
@@ -23,6 +24,8 @@ import io.cucumber.java.an.E;
 import io.cucumber.java.sl.In;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Rectangle;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class StepLib extends Runner {
@@ -455,24 +458,22 @@ public class StepLib extends Runner {
     public static void logout(String out) throws Throwable {
         switch (out) {
             case "Keluar Aplikasi" :
+                timePage("btnProfile");
                 System.out.println(out);
                 StepLib.Profile();
                 StepLib.swipeinto(out);
                 System.out.println("====> Foto tombol keluar");
-                FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnKeluar");
                 driver.findElement(pars.getbjectLocator("btnKeluar")).click();
                 StepLib.loadPage("btnPilihKeluar");
-                FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPilihKeluar");
                 driver.findElement(pars.getbjectLocator("btnPilihKeluar")).click();
                 break;
             case "Masuk dengan Akun Lain" :
+                timePage("btnProfile");
                 System.out.println(out);
                 StepLib.Profile();
                 StepLib.swipeinto(out);
                 System.out.println("====> Foto tombol Masuk dengan akun lain");
-                FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnAkunLain");
                 driver.findElement(pars.getbjectLocator("btnAkunLain")).click();
-                FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnLanjut");
                 driver.findElement(pars.getbjectLocator("btnLanjut")).click();
                 break;
             default :
@@ -563,7 +564,7 @@ public class StepLib extends Runner {
         } while(boolData == false);
     }
 
-    public static void timePage(String time) throws InterruptedException {
+    public static void timePage(String time) throws Exception {
         do {
             Thread.sleep(5000);
         }while(driver.findElement(pars.getbjectLocator(time)).isDisplayed() == false);
@@ -682,42 +683,57 @@ public class StepLib extends Runner {
                 .release().perform();
     }
 
-    public static void pinTransaksi(String PIN) throws InterruptedException {
-        try {
-            switch (PIN) {
-                case "1" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn1")).click();
-                    break;
-                case "2" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn2")).click();
-                    break;
-                case "3" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn3")).click();
-                    break;
-                case "4" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn4")).click();
-                    break;
-                case "5" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn5")).click();
-                    break;
-                case "6" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn6")).click();
-                    break;
-                case "7" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn7")).click();
-                    break;
-                case "8" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn8")).click();
-                    break;
-                case "9" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn9")).click();
-                    break;
-                case "0" :
-                    driver.findElement(pars.getbjectLocator("PIN_btn0")).click();
-                    break;
-            }
-        } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("Gagal");
+    public static void pinTransaksi(int PIN) throws Exception {
+
+        if (driver.findElement(pars.getbjectLocator("PIN_btn1")).isDisplayed() == true) {
+            String num = String.valueOf(PIN);
+            int i = 0;
+            int j = Character.digit(num.charAt(i), 10);
+            do {
+                driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+                switch (j) {
+                    case 1:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn1")).click();
+                        break;
+                    case 2:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn2")).click();
+                        break;
+                    case 3:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn3")).click();
+                        break;
+                    case 4:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn4")).click();
+                        break;
+                    case 5:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn5")).click();
+                        break;
+                    case 6:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn6")).click();
+                        break;
+                    case 7:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn7")).click();
+                        break;
+                    case 8:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn8")).click();
+                        break;
+                    case 9:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn9")).click();
+                        break;
+                    case 0:
+                        System.out.println("====> " + j);
+                        driver.findElement(pars.getbjectLocator("PIN_btn0")).click();
+                        break;
+                }
+            }  while (i <= num.length());
         }
     }
 
@@ -734,19 +750,19 @@ public class StepLib extends Runner {
     public static void downloaEStatement() throws Throwable {
         Boolean office = false;
 
-        allow();
-
         System.out.println("====> Klik tombol download e-statement");
         driver.findElement(pars.getbjectLocator("btnDownloadEStatement")).click();
+        allow();
+        loadPage("btnOffice");
+
         System.out.println("====> Klik office pdf");
-        driver.findElement(pars.getbjectLocator("btnOffice")).click();;
+        driver.findElement(pars.getbjectLocator("btnOffice")).click();
+
         System.out.println("====> Foto laporan pdf");
-        StepLib.loadPage("lblPdf");
-        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblPdf");
+        timePage("lblPdfDownloadEStatement");
+        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblPdfDownloadEStatement");
         System.out.println("====> Kembali dari office pdf");
         StepLib.back();
-        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnBackOffice");
-        driver.findElement(pars.getbjectLocator("btnBackOffice")).click();
         StepLib.back();
     }
 

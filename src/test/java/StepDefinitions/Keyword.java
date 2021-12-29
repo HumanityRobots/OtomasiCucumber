@@ -38,24 +38,22 @@ public class Keyword extends Runner {
         intScenarioNum++;
         System.out.println("=============== START TESTING - " + feature + " " + test + " ===============");
         System.out.println("LOGIN scenario - " + no);
-//        StepLib.connectionError();
+        StepLib.connectionError();
         StepLib.ExistingLoginNoCapture();
         StepLib.ExistingOTP();
         StepLib.loginNoCapture(nomor, password);
     }
 
-    // ............... LOGIN .................
-    @Given("^Login akun 2 test (.*) \"([^\"]*)\" no - (.*) blu nomor (.*) dan password (.*)$")
-    public void loginAkun2Blu(String test, String feature, String no, String nomor, String password) throws Throwable {
+    @Given("^Login member undangan dengan nomor handphone (.*) dan password (.*)$")
+    public void loginUndanganMember(String nomorHandphone, String password) throws Throwable {
         driver.resetApp();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-//        intScenarioNum++;
-        System.out.println("=============== START TESTING - " + feature + " " + test + " ===============");
-        System.out.println("LOGIN scenario - " + no);
-//        StepLib.connectionError();
+        System.out.println("=============== START TESTING ===============");
+        System.out.println("LOGIN AKUN MEMBER - " + nomorHandphone);
+        StepLib.connectionError();
         StepLib.ExistingLoginNoCapture();
         StepLib.ExistingOTP();
-        StepLib.loginNoCapture(nomor, password);
+        StepLib.loginNoCapture(nomorHandphone, password);
     }
 
 
@@ -114,10 +112,8 @@ public class Keyword extends Runner {
     public void cek_limit_awal(String limit, String limitKet) throws Throwable {
         System.out.println("LIMIT AWAL");
         StepLib.Profile();
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "txtCari");
         System.out.println("====> Search limit");
         driver.findElement(pars.getbjectLocator("txtCari")).sendKeys("limit");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLimitTransaksi");
         System.out.println("====> Click Tombol Limit");
         driver.findElement(pars.getbjectLocator("btnLimitTransaksi")).click();
         System.out.println("====> Foto halaman limit transaksi");
@@ -147,9 +143,9 @@ public class Keyword extends Runner {
         // ambil total saldo
         System.out.println("====> Klik bluaccount");
         driver.findElement(pars.getbjectLocator("btnBluAcc")).click();
-        StepLib.loadPage("btnPindahkanDana");
         System.out.println("====> Foto halaman bluaccount");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPindahkanDana");
+        StepLib.loadPage("lblBluAccount");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblBluAccount");
         StepLib.back();
         driver.findElement(pars.getbjectLocator("btnHome")).click();
     }
@@ -258,6 +254,7 @@ public class Keyword extends Runner {
         driver.findElement(pars.getbjectLocator("lblInbox")).isDisplayed();
         FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblInbox");
         System.out.println("====> Klik notifikasi");
+        StepLib.loadPage("btnNotifikasiBlugetherBaru");
         driver.findElement(pars.getbjectLocator("btnNotifikasiBlugetherBaru")).click();
 
         try {
@@ -316,20 +313,30 @@ public class Keyword extends Runner {
     // .......... SHARE PDF .............
     @When("^Klik tombol share$")
     public void klik_tombol_share() throws Throwable {
-        System.out.println("====> Klik tombol share");
-        driver.findElement(pars.getbjectLocator("btnShare")).click();
-        StepLib.loadPage("btnPDF");
-        System.out.println("====> Klik office pdf");
-        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnPDF");
-        driver.findElement(pars.getbjectLocator("btnPDF")).click();;
-        System.out.println("====> Foto laporan pdf");
-        StepLib.loadPage("lblPDF");
-        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblPDF");
-        System.out.println("====> Kembali dari office pdf");
-        StepLib.back();
-        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnBackOffice");
-        driver.findElement(pars.getbjectLocator("btnBackOffice")).click();
-        StepLib.back();
+        Boolean share;
+
+        try {
+            share = driver.findElement(pars.getbjectLocator("btnShare")).isDisplayed() == true;
+        } catch(Exception e) {
+            share = false;
+        }
+
+        if (share == true) {
+            System.out.println("====> Klik tombol share");
+            driver.findElement(pars.getbjectLocator("btnShare")).click();
+            StepLib.loadPage("btnPDF");
+            System.out.println("====> Klik office pdf");
+            driver.findElement(pars.getbjectLocator("btnPDF")).click();;
+            System.out.println("====> Foto laporan pdf");
+            StepLib.loadPage("lblPDF");
+            FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblPDF");
+            System.out.println("====> Kembali dari office pdf");
+            StepLib.back();
+            driver.findElement(pars.getbjectLocator("btnBackOffice")).click();
+            StepLib.back();
+        } else {
+            System.out.println("Tidah ada share");
+        }
     }
 
     // .......... Download E-STATEMENT .............
@@ -398,6 +405,40 @@ public class Keyword extends Runner {
         StepLib.pockets(pocket);
     }
 
+    // ..........TAMBAH DANA POCKET BLUSAVING & BLUGETHER
+    // Tambah dana
+    @When("^Klik tombol tambah dana (.*)$")
+    public void klik_tombol_tambah_dana(String tambahDana) throws Throwable {
+        System.out.println("TAMBAH DANA" + tambahDana);
+        System.out.println("====> Klik tombol tambah dana");
+        StepLib.loadPage("lblTambahDanaBluSaving");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahDanaBluSaving");
+        driver.findElement(pars.getbjectLocator("lblTambahDanaBluSaving")).click();
+    }
+
+    @When("^Input jumlah tambah dana (.*)$")
+    public void input_jumlah_tambah_dana(String jmlTambahdana) throws Throwable {
+        System.out.println("====> Input jumlah Tambah dana");
+        driver.findElement(pars.getbjectLocator("lblInputJumlahTambahDana")).sendKeys(jmlTambahdana);
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
+        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
+    }
+
+    @When("^Berada dihalaman konfirmasi tambah dana$")
+    public void berada_dihalmaan_konfirmasi_tambah_dana() throws Throwable {
+        System.out.println("====> Halaman konfirmasi tambah dana");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
+        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
+    }
+
+    @When("^Berada dihalaman berhasil tambah dana$")
+    public void berada_dihalama_berhasil_tambah_dana() throws Throwable {
+        StepLib.loadPage("btnKembali");
+        System.out.println("====> Berada dihalaman berhasil tambah dana");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnKembali");
+        driver.findElement(pars.getbjectLocator("btnKembali")).click();
+    }
+
     // .......... Setting ....................
     @When("^Klik tombol setting$")
     public void klik_tombol_setting() throws Throwable {
@@ -407,15 +448,12 @@ public class Keyword extends Runner {
         driver.findElement(pars.getbjectLocator("btnMore")).click();
     }
 
-    // card blusaving
-    @When("^Klik card blusaving$")
-    public void klik_card_blusaving() throws Throwable {
-        System.out.println("====> Klik card blusaving");
-//        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "cardBluSaving");
-        driver.findElement(pars.getbjectLocator("cardBluSaving")).click();
-
-        // berada dihalaman detail blusaving
-        System.out.println("====> Berada dihalaman detail blusaving");
+    // ......... PIN ..............
+    @When("^Masukkan pin (.*)$")
+    public void masukkan_pin(int pin) throws Throwable {
+        StepLib.timePage("PIN_btn1");
+        System.out.println("====> Masukkan Pin :" + pin);
+        StepLib.pinTransaksi(pin);
     }
 
 

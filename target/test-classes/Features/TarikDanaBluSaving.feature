@@ -1,6 +1,6 @@
-@TarikDanaBluSaving
 Feature: Tarik Dana BluSaving
-  @BluSavingRegression
+
+  @TarikDanaBluSaving
   Scenario Outline: Tarik Dana BluSaving
     Given    Login test <testing> "Tarik Dana" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
@@ -17,9 +17,9 @@ Feature: Tarik Dana BluSaving
     And      Berada dihalaman detail blusaving
     And      Cek riwayat transaksi blusaving
     And      Cek saldo akhir "saldo akhir"
-    And      Cek notifikasi
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
+    And      Cek notifikasi
     And      Cek limit <search> "limit akhir"
     And      Logout blu <logout>
     #    Then     Check saldo awal berkurang, limit awal berkurang

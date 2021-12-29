@@ -17,11 +17,12 @@ Feature: Create BluSaving
     And      Berada dihalaman berhasil membuat blusaving
     And      Berada dihalaman list blusaving
     And      Klik card blusaving
+    And      Berada dihalaman detail blusaving
     And      Cek riwayat transaksi blusaving
     And      Cek saldo akhir "saldo akhir"
-    And      Cek notifikasi
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
+    And      Cek notifikasi
     And      Cek limit <search> "limit akhir"
     And      Logout blu <logout>
 #    Then     Check saldo awal berkurang, limit awal berkurang
@@ -49,11 +50,12 @@ Feature: Create BluSaving
     And      Berada dihalaman berhasil membuat blusaving
     And      Berada dihalaman list blusaving
     And      Klik card blusaving
+    And      Berada dihalaman detail blusaving
     And      Cek riwayat transaksi blusaving
     And      Cek saldo akhir "saldo akhir"
-    And      Cek notifikasi
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
+    And      Cek notifikasi
     And      Cek limit <search> "limit akhir"
     And      Logout blu <logout>
 #    Then     Check saldo awal berkurang, limit awal berkurang
@@ -61,7 +63,7 @@ Feature: Create BluSaving
 
     Examples:
       | no | nomorHandphone | password    | search | testing      | namaBlusaving       | setoranAwal | jumlahAturGoal|    tanggal    | FrekuensiDebit | AturJumlahDebit | JumlahAutoDebit   | logout                 |
-      | 2  | 082211220045   | Password123!| limit  | bluSaving    | Blusaving 2         | 6000        |    1500000    |       1       |       1        |        1        |       0           | Masuk dengan Akun Lain |
+      | 2  | 082211220045   | Password123!| limit  | bluSaving    | Blusaving 2         | 6000        |    1500000    |       1       |       1        |        1        |     100000        | Masuk dengan Akun Lain |
 
   @CreateBluSaving
   Scenario Outline: Create BluSaving No Autodebet
@@ -80,11 +82,12 @@ Feature: Create BluSaving
     And      Berada dihalaman berhasil membuat blusaving
     And      Berada dihalaman list blusaving
     And      Klik card blusaving
+    And      Berada dihalaman detail blusaving
     And      Cek riwayat transaksi blusaving
     And      Cek saldo akhir "saldo akhir"
-    And      Cek notifikasi
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
+    And      Cek notifikasi
     And      Cek limit <search> "limit akhir"
     And      Logout blu <logout>
 #    Then     Check saldo awal berkurang, limit awal berkurang
@@ -111,11 +114,12 @@ Feature: Create BluSaving
     And      Berada dihalaman berhasil membuat blusaving
     And      Berada dihalaman list blusaving
     And      Klik card blusaving
+    And      Berada dihalaman detail blusaving
     And      Cek riwayat transaksi blusaving
     And      Cek saldo akhir "saldo akhir"
-    And      Cek notifikasi
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
+    And      Cek notifikasi
     And      Cek limit <search> "limit akhir"
     And      Logout blu <logout>
 #    Then     Check saldo awal berkurang, limit awal berkurang
@@ -142,11 +146,12 @@ Feature: Create BluSaving
     And      Berada dihalaman berhasil membuat blusaving
     And      Berada dihalaman list blusaving
     And      Klik card blusaving
+    And      Berada dihalaman detail blusaving
     And      Cek riwayat transaksi blusaving
     And      Cek saldo akhir "saldo akhir"
-    And      Cek notifikasi
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
+    And      Cek notifikasi
     And      Cek limit <search> "limit akhir"
     And      Logout blu <logout>
 #    Then     Check saldo awal berkurang, limit awal berkurang
