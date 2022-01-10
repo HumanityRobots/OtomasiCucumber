@@ -4,10 +4,10 @@ Feature: Create BluGether
   Scenario Outline: Create blugether 1
     Given    Login test <pocket> "Create" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
-    And      Cek saldo awal "saldo awal"
-    And      Cek limit <search> "limit awal"
-    And      Cek bluaccount sebelum
-    And      Cek riwayat awal
+#    And      Cek saldo awal "saldo awal"
+#    And      Cek limit <search> "limit awal"
+#    And      Cek bluaccount sebelum
+#    And      Cek riwayat awal
     And      Pockets <pocket>
     And      Berada dihalaman list blugether
 
@@ -16,10 +16,8 @@ Feature: Create BluGether
     And      Undang member masukkan nomor rekening <noRekUndangan>
     And      Klik tombol lanjut
     And      Atur goal jumlah yang ditabung <aturJumlahGoal>
-    And      Atur tanggal pencapaian <tanggalPencapaian>
     And      Klik tombol buka blugether
     And      Berada dihalaman berhasil membuat blugether
-    And      Klik tombol kembali ke daftar blugether
     And      Berada dihalaman list blugether
     And      Klik card blugether
     And      Berada dihalaman detail blugether
@@ -38,7 +36,7 @@ Feature: Create BluGether
 
     Examples:
       | no | nomorHandphone | password    | search | pocket      | namaBluGether   | setoranAwal | aturJumlahGoal | tanggalPencapaian | noRekUndangan  | nomorHandphoneUndangan | passwordUndangan | terimaUndangan |  logout                 |
-      | 1  | 082211220045   | Password123!| limit  | bluGether   | Blugether 1     |             |                |                   |                |                        |                  |                |  Masuk dengan Akun Lain |
+      | 1  | 082211220027   | Password123!| limit  | bluGether   | Blugether 1     |             |                |                   |                |                        |                  |                |  Masuk dengan Akun Lain |
 
 
   #@CreateBluGether

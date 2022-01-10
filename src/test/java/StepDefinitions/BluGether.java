@@ -55,16 +55,20 @@ public class BluGether extends Runner {
     // undang member
     @When("^Undang member masukkan nomor rekening (.*)$")
     public void undang_member_masukkan_nomor_rekening(String norek) throws Throwable {
+        System.out.println("====> Klik tombol tambah member");
         driver.findElement(pars.getbjectLocator("lblTambahMember")).click();
 
         // foto halaman tambah teman
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahTeman");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+        System.out.println("====> Pilih member");
         driver.findElement(pars.getbjectLocator("btnBaris1")).click();
 
         // foto saat undangan sudah di klik
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahTeman");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+        System.out.println("====> Klik undang member");
         driver.findElement(pars.getbjectLocator("btnUndang")).click();
 
+        klik_tombol_lanjut();
     }
 
     // undang member ke dua
@@ -76,54 +80,74 @@ public class BluGether extends Runner {
     // klik tombol lanjut
     @When("^Klik tombol lanjut$")
     public void klik_tombol_lanjut() throws Throwable {
-        // foto tombol lanjut
+        StepLib.timePage("btnLanjut");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
+        System.out.println("====> Klik tombol lanjut");
+        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
     }
 
     // atur goal yang ingin ditabung
     @When("^Atur goal jumlah yang ditabung (.*)$")
     public void atur_goal_jumlah_yang_ditabung(String jumlahGoal) throws Throwable {
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnBukaBlugether");
+        driver.findElement(pars.getbjectLocator("lblInputAturGoal")).sendKeys(jumlahGoal);
 
-    }
-
-    // atur tanggal pencapaian
-    @When("^Atur tanggal pencapaian (.*)$")
-    public void atur_tanggal_pencapaian(String tanggalPencapaian) throws Throwable {
-
+        StepLib.tanggalPencapaian();
     }
 
     // klik tombol buka blugether
     @When("^Klik tombol buka blugether$")
     public void klik_tombol_buka_blugether() throws Throwable {
-
+        System.out.println("====> Klik tombol buka blugether");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnBukaBlugether");
+        driver.findElement(pars.getbjectLocator("btnBukaBlugether")).click();
     }
 
     // berada dihalaman berhasil membuat blugether
     @When("^Berada dihalaman berhasil membuat blugether$")
     public void berada_dihalaman_berhasil_membuat_blugether() throws Throwable {
-
-    }
-
-    // klik tombol kembali ke daftar blugether
-    @When("^Klik tombol kembali ke daftar blugether$")
-    public void klik_tombol_kembali_ke_daftar_blugether() throws Throwable {
-
+        System.out.println("====> Berhasil membuat blugether");
+        StepLib.loadPage("btnKembaliKeDaftarBlugether");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnKembaliKeDaftarBlugether");
+        System.out.println("====> klik tombol kembali ke daftar blugether");
+        driver.findElement(pars.getbjectLocator("btnKembaliKeDaftarBlugether")).click();
     }
 
     // klik card blugether
     @When("^Klik card blugether$")
     public void klik_card_blugether() throws Throwable {
-
+        System.out.println("====> Klik Blugether yang baru dibuat");
+        driver.findElement(pars.getbjectLocator("btnCardBlugether")).click();
     }
 
     // berada dihalaman detail blugether
     @When("^Berada dihalaman detail blugether$")
     public void berada_dihalaman_detail_blugether() throws Throwable {
-
+        System.out.println("====> Berada di detail blugether");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnTambahDana");
+        
+        // lihat  member
+        System.out.println("====> Klik lihat member");
+        driver.findElement(pars.getbjectLocator("btnLihatMember")).click();
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblMemberBlugether");
+        StepLib.back();
     }
 
     // cek riwayat transaksi blugether
     @When("^Cek riwayat transaksi blugether$")
     public void cek_riwayat_transaksi_blugether() throws Throwable {
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnMore");
+
+        System.out.println("====> Cek riwayat blugether");
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
+
+        System.out.println("====> Klik tombol lihat riwayat transaksi");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblLihatRiwayatTransaksi");
+        driver.findElement(pars.getbjectLocator("lblLihatRiwayatTransaksi")).click();
+
+        System.out.println("====> Berada dihalaman riwayat transaksi");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanRiwayatTransaksi");
+        StepLib.goToDashboard();
 
     }
 
