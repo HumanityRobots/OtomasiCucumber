@@ -6,6 +6,7 @@ import Lib.FunctionalLib;
 import Lib.ReadObject;
 import Lib.StepLib;
 
+import gherkin.ast.Step;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
@@ -48,7 +49,6 @@ public class Keyword extends Runner {
     public void loginUndanganMember(String nomorHandphone, String password) throws Throwable {
         driver.resetApp();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        System.out.println("=============== START TESTING ===============");
         System.out.println("LOGIN AKUN MEMBER - " + nomorHandphone);
         StepLib.connectionError();
         StepLib.ExistingLoginNoCapture();
@@ -249,7 +249,7 @@ public class Keyword extends Runner {
         Boolean notif = false;
 
         System.out.println("====> KLik tombol notifikasi");
-        driver.findElement(pars.getbjectLocator("btnNotifikasi")).click();
+        driver.findElement(pars.getbjectLocator("btnNotifikasiDashboard")).click();
         System.out.println("====> Berada dihalaman inbox");
         driver.findElement(pars.getbjectLocator("lblInbox")).isDisplayed();
         FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblInbox");
@@ -275,6 +275,56 @@ public class Keyword extends Runner {
             FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblTotal");
             klik_tombol_share();
         }
+        StepLib.goToDashboard();
+    }
+
+    @When("^Cek undangan notifikasi (.*)$")
+    public void cek_undangan_notifikasi(String approve) throws Throwable {
+        System.out.println("CEK NOTIFIKASI");
+        Boolean notif = false;
+
+        System.out.println("====> KLik tombol notifikasi");
+        driver.findElement(pars.getbjectLocator("btnNotifikasiDashboard")).click();
+        System.out.println("====> Berada dihalaman inbox");
+        FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblInbox");
+
+        System.out.println("====> Klik notifikasi undangan");
+        StepLib.loadPage("lblUndanganMember");
+        driver.findElement(pars.getbjectLocator("lblUndanganMember")).click();
+
+        if (approve.equalsIgnoreCase("ya")) {
+            System.out.println("====> Berada dihalaman undangan member");
+            FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnApprove");
+
+            // klik tombol terima
+            System.out.println("====> Klik tombol terima");
+            driver.findElement(pars.getbjectLocator("btnApprove")).click();
+
+            // Halaman berhasil menjadi member
+            System.out.println("====> Berada dihalaman berhasil menjadi member");
+            FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnKembali");
+            System.out.println("====> Klik tombol Lihat daftar blugether");
+            driver.findElement(pars.getbjectLocator("btnLihatBluGether")).click();
+            StepLib.swipeinto("bluGether Member");
+            FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblBlugetherMember");
+            System.out.println("====> Klik card member");
+            driver.findElement(pars.getbjectLocator("btnCardBlugetherMember")).click();
+            FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblTambahDanaBluGether");
+        } else if (approve.equalsIgnoreCase("tidak")) {
+            System.out.println("====> Berada dihalaman undangan member");
+            FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnTolak");
+
+            // klik tombol tolak
+            System.out.println("====> Klik tombol tolak");
+            driver.findElement(pars.getbjectLocator("btnTolak")).click();
+
+            // Halaman tolak menjadi member
+            System.out.println("====> Berada dihalaman menolak menjadi member");
+            FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnKembali");
+            System.out.println("====> Klik tombol kembali");
+            driver.findElement(pars.getbjectLocator("btnKembali")).click();
+        }
+
         StepLib.goToDashboard();
     }
 

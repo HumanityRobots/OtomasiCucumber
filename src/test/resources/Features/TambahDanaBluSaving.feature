@@ -5,9 +5,9 @@ Feature: Tambah Dana BluSaving
     Given    Login test <testing> "Tambah dana" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
     And      Cek saldo awal "saldo awal"
-    And      Cek limit <search> "limit awal"
     And      Cek bluaccount sebelum
     And      Cek riwayat awal
+    And      Cek limit <search> "limit awal"
     And      Pockets <testing>
     And      Berada dihalaman list blusaving
     And      Klik card blusaving
@@ -20,7 +20,6 @@ Feature: Tambah Dana BluSaving
     And      Cek saldo akhir "saldo akhir"
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
-    And      Cek notifikasi
     And      Cek limit <search> "limit akhir"
     And      Logout blu <logout>
 #    Then     Check saldo awal berkurang, limit awal berkurang
@@ -34,9 +33,9 @@ Feature: Tambah Dana BluSaving
 #    Given    Login test <testing> "Tambah dana" no - <no> blu nomor <nomorHandphone> dan password <password>
 #    When     Homescreen blu
 #    And      Cek saldo awal "saldo awal"
-#    And      Cek limit <search> "limit awal"
 #    And      Cek bluaccount sebelum
 #    And      Cek riwayat awal
+#    And      Cek limit <search> "limit awal"
 #    And      Pockets <testing>
 #    And      Berada dihalaman list blugether
 #    And      Klik card blugether as creator
@@ -49,7 +48,6 @@ Feature: Tambah Dana BluSaving
 #    And      Cek saldo akhir "saldo akhir"
 #    And      Cek bluaccount akhir
 #    And      Cek riwayat akhir
-#    And      Cek notifikasi
 #    And      Cek limit <search> "limit akhir"
 #    And      Logout blu <logout>
 ##    Then     Check saldo awal berkurang, limit awal berkurang
@@ -63,9 +61,9 @@ Feature: Tambah Dana BluSaving
 #    Given    Login test <testing> "Tambah dana" no - <no> blu nomor <nomorHandphone> dan password <password>
 #    When     Homescreen blu
 ##    And      Cek saldo awal "saldo awal"
-##    And      Cek limit <search> "limit awal"
 ##    And      Cek bluaccount sebelum
 ##    And      Cek riwayat awal
+##    And      Cek limit <search> "limit awal"
 #    And      Pockets <testing>
 #    And      Berada dihalaman list blugether
 #    And      Klik card blugether as member
@@ -77,7 +75,6 @@ Feature: Tambah Dana BluSaving
 #    And      Berada dihalaman detail blugether
 #    And      Cek riwayat transaksi blugether
 ##    And      Cek saldo akhir "saldo akhir"
-##    And      Cek notifikasi
 ##    And      Cek bluaccount akhir
 ##    And      Cek riwayat akhir
 ##    And      Cek limit <search> "limit akhir"

@@ -17,7 +17,7 @@ Feature: Update BluSaving
     And      Berada dihalaman list blusaving baru
     And      Cek saldo akhir "saldo akhir"
     And      Logout blu <logout>
-        Then     Check saldo awal berkurang, limit awal berkurang
+#        Then     Check saldo awal berkurang, limit awal berkurang
 #
     Examples:
       | no | nomorHandphone | password    | testing      |   namaBlusaving      |  aturgoal | aturdebit |  jumlahAturGoal |    tanggal    | frekuensiDebit |  aturJumlahDebit |     jumlahDebit       | logout                 |

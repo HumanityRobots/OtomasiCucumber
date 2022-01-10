@@ -19,7 +19,6 @@ Feature: Tarik Dana BluSaving
     And      Cek saldo akhir "saldo akhir"
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
-    And      Cek notifikasi
     And      Cek limit <search> "limit akhir"
     And      Logout blu <logout>
     #    Then     Check saldo awal berkurang, limit awal berkurang

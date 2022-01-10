@@ -38,21 +38,14 @@ import java.util.concurrent.TimeUnit;
 //        tags = { "@CloseBluSaving" },
 
 //        BluGether
-        tags = { "@CreateBluGether" },
-//        tags = { "@UpdateBluGether" },
-//        tags = { "@TarikDanaBluGether" },
-//        tags = { "@TransferDanaBluGether" },
+//        tags = { "@CreateBluGether" },
+        tags = { "@UpdateBluGether" },
 //        tags = { "@CloseBluGether" },
-
-//        Transfer
-//        tags = { "@Transfer" }
 
 //        BluDeposit
 //        tags = { "@CreateBluDeposit" },
-//        tags = { "@UpdateBluSaving" },
-//        tags = { "@TarikDanaBluSaving" },
-//        tags = { "@TransferDanaBluSaving" },
-//        tags = { "@CloseBluSaving" },
+//        tags = { "@TopUpBluDeposit" },
+//        tags = { "@DisburseBluDeposit" },
 
         glue= {"StepDefinitions"},
         plugin = { "pretty","html:target/cucumber-reports", "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}

@@ -35,7 +35,6 @@ public class StepLib extends Runner {
     public static ReadObject pars = parser;
     public static String capturePath = Runner.capturePath;
     public static String featureName = Runner.currentFeature;
-//    pulbic static String noFeature = Runner.
 
     public StepLib(AndroidDriver driver) {
         this.AndroidDriver = driver;
@@ -94,19 +93,16 @@ public class StepLib extends Runner {
     public static void homescreenBlu() throws Exception {
 
         // pemberitahuan keamanan
-//        StepLib.keamanan();
-
-        // notif invalid
-        StepLib.notifValid();
+        StepLib.keamanan();
 
         // jika koneksi terputus
-//        StepLib.connectionLost();
+        StepLib.connectionLost();
 
         // syarat ketentuan
-//        StepLib.ketentuan();
+        StepLib.ketentuan();
 
         // BIOMETRIK
-//        StepLib.biometrik();
+        StepLib.biometrik();
 
         // DASHBOARD
         StepLib.loadPage("lblDashboard");
@@ -131,7 +127,7 @@ public class StepLib extends Runner {
             System.out.println("====> Click tombol nanti biometrik");
             driver.findElement(pars.getbjectLocator("btnBiometrik")).click();
         } else {
-            System.out.println("====> Bio sudah aktif");
+            System.out.println("====> Biometrik tidak muncul");
         }
     }
 
@@ -233,25 +229,6 @@ public class StepLib extends Runner {
             driver.findElement(pars.getbjectLocator("btnMengerti")).click();
         } else {
             System.out.println("====> Halaman keamanan tidak terdapat");
-        }
-    }
-
-    public static void notifValid() throws InterruptedException {
-        Boolean notif = false;
-
-        try {
-            notif = driver.findElement(pars.getbjectLocator("lblNotifInvalid")).isDisplayed();
-            System.out.println("====> Muncul notifikasi invalid");
-        } catch (Exception e) {
-            notif = false;
-        }
-
-        if(notif == true) {
-            System.out.println("====> Klik tombol oke");
-            driver.findElement(pars.getbjectLocator("btnOke")).click();
-            StepLib.goToDashboard();
-        } else {
-            System.out.println("====> Halaman notif invalid tidak ada");
         }
     }
 
@@ -766,7 +743,7 @@ public class StepLib extends Runner {
         StepLib.back();
     }
 
-    public static void tanggalPencapaian() throws InterruptedException {
+    public static void tanggalPencapaian(String tanggal) throws InterruptedException {
         System.out.println("====> Pilih tanggal pencapaian");
 
     }
