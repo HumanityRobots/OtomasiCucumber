@@ -46,63 +46,57 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "comments": [
-    {
-      "line": 11,
-      "value": "#    And      Tambah blugether"
-    },
-    {
-      "line": 12,
-      "value": "#    And      Masukkan nama blugether \u003cnamaBluGether\u003e dan setoran awal \u003csetoranAwal\u003e"
-    },
-    {
-      "line": 13,
-      "value": "#    And      Undang member masukkan nomor rekening \u003cnoRekUndangan\u003e"
-    },
-    {
-      "line": 14,
-      "value": "#    And      Klik tombol lanjut"
-    },
-    {
-      "line": 15,
-      "value": "#    And      Atur goal jumlah yang ditabung \u003caturJumlahGoal\u003e dan tanggal pencapaian \u003ctanggalPencapaian\u003e"
-    },
-    {
-      "line": 16,
-      "value": "#    And      Klik tombol buka blugether"
-    },
-    {
-      "line": 17,
-      "value": "#    And      Berada dihalaman berhasil membuat blugether"
-    },
-    {
-      "line": 18,
-      "value": "#    And      Berada dihalaman list blugether"
-    },
-    {
-      "line": 19,
-      "value": "#    And      Klik card blugether creator"
-    },
-    {
-      "line": 20,
-      "value": "#    And      Berada dihalaman detail blugether"
-    },
-    {
-      "line": 21,
-      "value": "#    And      Cek riwayat transaksi blugether"
-    }
-  ],
-  "line": 23,
+  "line": 10,
+  "name": "Klik card blugether creator",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "Update blugether",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "Update nama \u003cnamaBluGether\u003e blugether",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "Update daftar teman \u003cdaftarTeman\u003e dengan norek \u003cnoRekUndangan\u003e",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "Update atur goal \u003cgoal\u003e dan tambah jumlah goal \u003caturJumlahGoal\u003e dan tanggal pencapaian \u003ctanggalPencapaian\u003e",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Klik tombol simpan",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "Berada dihalaman update detail blugether",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "Berada dihalaman update list blugether",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
   "name": "Cek saldo akhir \"saldo akhir\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 24,
+  "line": 21,
   "name": "Logout blu \u003clogout\u003e",
   "keyword": "And "
 });
 formatter.examples({
-  "line": 26,
+  "line": 23,
   "name": "",
   "description": "",
   "id": "update-blugether;update-blugether-tambah-teman;",
@@ -112,19 +106,16 @@ formatter.examples({
         "no",
         "nomorHandphone",
         "password",
-        "search",
         "pocket",
         "namaBluGether",
-        "setoranAwal",
+        "goal",
         "aturJumlahGoal",
         "tanggalPencapaian",
+        "daftarTeman",
         "noRekUndangan",
-        "nomorHandphoneUndangan",
-        "passwordUndangan",
-        "terimaUndangan",
         "logout"
       ],
-      "line": 27,
+      "line": 24,
       "id": "update-blugether;update-blugether-tambah-teman;;1"
     },
     {
@@ -132,26 +123,23 @@ formatter.examples({
         "1",
         "082211220027",
         "Password123!",
-        "limit",
         "bluGether",
         "Blugether 1",
-        "",
-        "",
-        "",
-        "000000002983",
-        "082211220045",
-        "Password123!",
         "ya",
+        "100000",
+        "",
+        "ya",
+        "Y",
         "Masuk dengan Akun Lain"
       ],
-      "line": 28,
+      "line": 25,
       "id": "update-blugether;update-blugether-tambah-teman;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 28,
+  "line": 25,
   "name": "Update BluGether tambah teman",
   "description": "",
   "id": "update-blugether;update-blugether-tambah-teman;;2",
@@ -171,7 +159,7 @@ formatter.step({
     0,
     1,
     2,
-    4
+    3
   ],
   "keyword": "Given "
 });
@@ -189,7 +177,7 @@ formatter.step({
   "line": 8,
   "name": "Pockets bluGether",
   "matchedColumns": [
-    4
+    3
   ],
   "keyword": "And "
 });
@@ -199,61 +187,67 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "comments": [
-    {
-      "line": 11,
-      "value": "#    And      Tambah blugether"
-    },
-    {
-      "line": 12,
-      "value": "#    And      Masukkan nama blugether \u003cnamaBluGether\u003e dan setoran awal \u003csetoranAwal\u003e"
-    },
-    {
-      "line": 13,
-      "value": "#    And      Undang member masukkan nomor rekening \u003cnoRekUndangan\u003e"
-    },
-    {
-      "line": 14,
-      "value": "#    And      Klik tombol lanjut"
-    },
-    {
-      "line": 15,
-      "value": "#    And      Atur goal jumlah yang ditabung \u003caturJumlahGoal\u003e dan tanggal pencapaian \u003ctanggalPencapaian\u003e"
-    },
-    {
-      "line": 16,
-      "value": "#    And      Klik tombol buka blugether"
-    },
-    {
-      "line": 17,
-      "value": "#    And      Berada dihalaman berhasil membuat blugether"
-    },
-    {
-      "line": 18,
-      "value": "#    And      Berada dihalaman list blugether"
-    },
-    {
-      "line": 19,
-      "value": "#    And      Klik card blugether creator"
-    },
-    {
-      "line": 20,
-      "value": "#    And      Berada dihalaman detail blugether"
-    },
-    {
-      "line": 21,
-      "value": "#    And      Cek riwayat transaksi blugether"
-    }
+  "line": 10,
+  "name": "Klik card blugether creator",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "Update blugether",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "Update nama Blugether 1 blugether",
+  "matchedColumns": [
+    4
   ],
-  "line": 23,
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "Update daftar teman ya dengan norek Y",
+  "matchedColumns": [
+    8,
+    9
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "Update atur goal ya dan tambah jumlah goal 100000 dan tanggal pencapaian ",
+  "matchedColumns": [
+    5,
+    6,
+    7
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Klik tombol simpan",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "Berada dihalaman update detail blugether",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "Berada dihalaman update list blugether",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
   "name": "Cek saldo akhir \"saldo akhir\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 24,
+  "line": 21,
   "name": "Logout blu Masuk dengan Akun Lain",
   "matchedColumns": [
-    13
+    10
   ],
   "keyword": "And "
 });
@@ -283,14 +277,14 @@ formatter.match({
   "location": "Keyword.loginBlu(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 53085289200,
+  "duration": 124681364100,
   "status": "passed"
 });
 formatter.match({
   "location": "Keyword.homescreenBlu()"
 });
 formatter.result({
-  "duration": 16914790200,
+  "duration": 20505011500,
   "status": "passed"
 });
 formatter.match({
@@ -303,7 +297,7 @@ formatter.match({
   "location": "Keyword.cek_saldo_awal(String)"
 });
 formatter.result({
-  "duration": 7361402300,
+  "duration": 4154489100,
   "status": "passed"
 });
 formatter.match({
@@ -316,555 +310,108 @@ formatter.match({
   "location": "Keyword.pockets(String)"
 });
 formatter.result({
-  "duration": 10050442900,
-  "error_message": "org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-2138S88\u0027, ip: \u0027172.17.123.241\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {appActivity: com.bcadigital.blu.MainActi..., appPackage: com.bcadigital.blu.uat, autoWebView: true, chromedriverExecutable: C:\\Users\\NB01\\OneDrive\\Docu..., databaseEnabled: false, desired: {appActivity: com.bcadigital.blu.MainActi..., appPackage: com.bcadigital.blu.uat, autoWebView: true, chromedriverExecutable: C:\\Users\\NB01\\OneDrive\\Docu..., deviceName: Realme, noReset: true, platformName: android, udid: 48a33036}, deviceApiLevel: 30, deviceManufacturer: realme, deviceModel: RMX1971, deviceName: 48a33036, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: 48a33036, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 96, takesScreenshot: true, udid: 48a33036, viewportRect: {height: 2036, left: 0, top: 96, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: 97342ce1-520e-4c72-9cc4-380304c85b2d\n*** Element info: {Using\u003dxpath, value\u003d//../android.widget.TextView[@resource-id\u003d\"savings_sub_shared_label\"]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)\r\n\tat io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)\r\n\tat Lib.FunctionalLib.takeSnapShot(FunctionalLib.java:31)\r\n\tat Lib.StepLib.pockets(StepLib.java:325)\r\n\tat StepDefinitions.Keyword.pockets(Keyword.java:455)\r\n\tat ✽.And Pockets bluGether(UpdateBluGether.feature:8)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "BluGether.berada_dihalaman_list_blugether()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "saldo akhir",
-      "offset": 17
-    }
-  ],
-  "location": "Keyword.cek_saldo_akhir(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Masuk dengan Akun Lain",
-      "offset": 11
-    }
-  ],
-  "location": "Keyword.logout_blu(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.scenarioOutline({
-  "line": 31,
-  "name": "Update BluGether",
-  "description": "",
-  "id": "update-blugether;update-blugether",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 30,
-      "name": "@UpdateBluGether"
-    }
-  ]
-});
-formatter.step({
-  "line": 32,
-  "name": "Login test \u003cpocket\u003e \"Update\" no - \u003cno\u003e blu nomor \u003cnomorHandphone\u003e dan password \u003cpassword\u003e",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 33,
-  "name": "Homescreen blu",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 34,
-  "name": "Cek saldo awal \"saldo awal\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 35,
-  "name": "Cek bluaccount sebelum",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 36,
-  "name": "Cek riwayat awal",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 37,
-  "name": "Pockets \u003cpocket\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 38,
-  "name": "Berada dihalaman list blugether",
-  "keyword": "And "
-});
-formatter.step({
-  "comments": [
-    {
-      "line": 40,
-      "value": "#    And      Tambah blugether"
-    },
-    {
-      "line": 41,
-      "value": "#    And      Masukkan nama blugether \u003cnamaBluGether\u003e dan setoran awal \u003csetoranAwal\u003e"
-    },
-    {
-      "line": 42,
-      "value": "#    And      Undang member masukkan nomor rekening \u003cnoRekUndangan\u003e"
-    },
-    {
-      "line": 43,
-      "value": "#    And      Klik tombol lanjut"
-    },
-    {
-      "line": 44,
-      "value": "#    And      Atur goal jumlah yang ditabung \u003caturJumlahGoal\u003e dan tanggal pencapaian \u003ctanggalPencapaian\u003e"
-    },
-    {
-      "line": 45,
-      "value": "#    And      Klik tombol buka blugether"
-    },
-    {
-      "line": 46,
-      "value": "#    And      Berada dihalaman berhasil membuat blugether"
-    },
-    {
-      "line": 47,
-      "value": "#    And      Berada dihalaman list blugether"
-    },
-    {
-      "line": 48,
-      "value": "#    And      Klik card blugether creator"
-    },
-    {
-      "line": 49,
-      "value": "#    And      Berada dihalaman detail blugether"
-    },
-    {
-      "line": 50,
-      "value": "#    And      Cek riwayat transaksi blugether"
-    }
-  ],
-  "line": 52,
-  "name": "Cek saldo akhir \"saldo akhir\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 53,
-  "name": "Cek bluaccount akhir",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 54,
-  "name": "Cek riwayat akhir",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 55,
-  "name": "Logout blu \u003clogout\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 56,
-  "name": "Login member undangan dengan nomor handphone \u003cnomorHandphoneUndangan\u003e dan password \u003cpasswordUndangan\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 57,
-  "name": "Homescreen blu",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 58,
-  "name": "Cek saldo awal \"saldo awal\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 59,
-  "name": "Cek undangan notifikasi \u003cterimaUndangan\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 60,
-  "name": "Logout blu \u003clogout\u003e",
-  "keyword": "And "
-});
-formatter.examples({
-  "line": 62,
-  "name": "",
-  "description": "",
-  "id": "update-blugether;update-blugether;",
-  "rows": [
-    {
-      "cells": [
-        "no",
-        "nomorHandphone",
-        "password",
-        "search",
-        "pocket",
-        "namaBluGether",
-        "setoranAwal",
-        "aturJumlahGoal",
-        "tanggalPencapaian",
-        "noRekUndangan",
-        "nomorHandphoneUndangan",
-        "passwordUndangan",
-        "terimaUndangan",
-        "logout"
-      ],
-      "line": 63,
-      "id": "update-blugether;update-blugether;;1"
-    },
-    {
-      "cells": [
-        "1",
-        "082211220027",
-        "Password123!",
-        "limit",
-        "bluGether",
-        "Blugether 1",
-        "",
-        "",
-        "",
-        "000000002983",
-        "082211220045",
-        "Password123!",
-        "ya",
-        "Masuk dengan Akun Lain"
-      ],
-      "line": 64,
-      "id": "update-blugether;update-blugether;;2"
-    }
-  ],
-  "keyword": "Examples"
-});
-formatter.scenario({
-  "line": 64,
-  "name": "Update BluGether",
-  "description": "",
-  "id": "update-blugether;update-blugether;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 30,
-      "name": "@UpdateBluGether"
-    }
-  ]
-});
-formatter.step({
-  "line": 32,
-  "name": "Login test bluGether \"Update\" no - 1 blu nomor 082211220027 dan password Password123!",
-  "matchedColumns": [
-    0,
-    1,
-    2,
-    4
-  ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 33,
-  "name": "Homescreen blu",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 34,
-  "name": "Cek saldo awal \"saldo awal\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 35,
-  "name": "Cek bluaccount sebelum",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 36,
-  "name": "Cek riwayat awal",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 37,
-  "name": "Pockets bluGether",
-  "matchedColumns": [
-    4
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 38,
-  "name": "Berada dihalaman list blugether",
-  "keyword": "And "
-});
-formatter.step({
-  "comments": [
-    {
-      "line": 40,
-      "value": "#    And      Tambah blugether"
-    },
-    {
-      "line": 41,
-      "value": "#    And      Masukkan nama blugether \u003cnamaBluGether\u003e dan setoran awal \u003csetoranAwal\u003e"
-    },
-    {
-      "line": 42,
-      "value": "#    And      Undang member masukkan nomor rekening \u003cnoRekUndangan\u003e"
-    },
-    {
-      "line": 43,
-      "value": "#    And      Klik tombol lanjut"
-    },
-    {
-      "line": 44,
-      "value": "#    And      Atur goal jumlah yang ditabung \u003caturJumlahGoal\u003e dan tanggal pencapaian \u003ctanggalPencapaian\u003e"
-    },
-    {
-      "line": 45,
-      "value": "#    And      Klik tombol buka blugether"
-    },
-    {
-      "line": 46,
-      "value": "#    And      Berada dihalaman berhasil membuat blugether"
-    },
-    {
-      "line": 47,
-      "value": "#    And      Berada dihalaman list blugether"
-    },
-    {
-      "line": 48,
-      "value": "#    And      Klik card blugether creator"
-    },
-    {
-      "line": 49,
-      "value": "#    And      Berada dihalaman detail blugether"
-    },
-    {
-      "line": 50,
-      "value": "#    And      Cek riwayat transaksi blugether"
-    }
-  ],
-  "line": 52,
-  "name": "Cek saldo akhir \"saldo akhir\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 53,
-  "name": "Cek bluaccount akhir",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 54,
-  "name": "Cek riwayat akhir",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 55,
-  "name": "Logout blu Masuk dengan Akun Lain",
-  "matchedColumns": [
-    13
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 56,
-  "name": "Login member undangan dengan nomor handphone 082211220045 dan password Password123!",
-  "matchedColumns": [
-    10,
-    11
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 57,
-  "name": "Homescreen blu",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 58,
-  "name": "Cek saldo awal \"saldo awal\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 59,
-  "name": "Cek undangan notifikasi ya",
-  "matchedColumns": [
-    12
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 60,
-  "name": "Logout blu Masuk dengan Akun Lain",
-  "matchedColumns": [
-    13
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "bluGether",
-      "offset": 11
-    },
-    {
-      "val": "Update",
-      "offset": 22
-    },
-    {
-      "val": "1",
-      "offset": 35
-    },
-    {
-      "val": "082211220027",
-      "offset": 47
-    },
-    {
-      "val": "Password123!",
-      "offset": 73
-    }
-  ],
-  "location": "Keyword.loginBlu(String,String,String,String,String)"
-});
-formatter.result({
-  "duration": 47500415800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Keyword.homescreenBlu()"
-});
-formatter.result({
-  "duration": 11886949600,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "saldo awal",
-      "offset": 16
-    }
-  ],
-  "location": "Keyword.cek_saldo_awal(String)"
-});
-formatter.result({
-  "duration": 8302657000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Keyword.cekBluaccountSebelum()"
-});
-formatter.result({
-  "duration": 12322249800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Keyword.cek_riwayat_awal()"
-});
-formatter.result({
-  "duration": 13020265200,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "bluGether",
-      "offset": 8
-    }
-  ],
-  "location": "Keyword.pockets(String)"
-});
-formatter.result({
-  "duration": 10057923000,
+  "duration": 8729492300,
   "status": "passed"
 });
 formatter.match({
   "location": "BluGether.berada_dihalaman_list_blugether()"
 });
 formatter.result({
-  "duration": 4732198200,
+  "duration": 5125141600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluGether.klik_card_blugether_creator()"
+});
+formatter.result({
+  "duration": 319290200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluGether.update_blugether()"
+});
+formatter.result({
+  "duration": 20153964000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "saldo akhir",
-      "offset": 17
+      "val": "Blugether 1",
+      "offset": 12
     }
   ],
-  "location": "Keyword.cek_saldo_akhir(String)"
+  "location": "BluGether.update_nama_blugether(String)"
 });
 formatter.result({
-  "duration": 7919314600,
+  "duration": 89000,
   "status": "passed"
-});
-formatter.match({
-  "location": "Keyword.cekBluaccountAkhir()"
-});
-formatter.result({
-  "duration": 5953574600,
-  "error_message": "org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-2138S88\u0027, ip: \u0027172.17.123.241\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {appActivity: com.bcadigital.blu.MainActi..., appPackage: com.bcadigital.blu.uat, autoWebView: true, chromedriverExecutable: C:\\Users\\NB01\\OneDrive\\Docu..., databaseEnabled: false, desired: {appActivity: com.bcadigital.blu.MainActi..., appPackage: com.bcadigital.blu.uat, autoWebView: true, chromedriverExecutable: C:\\Users\\NB01\\OneDrive\\Docu..., deviceName: Realme, noReset: true, platformName: android, udid: 48a33036}, deviceApiLevel: 30, deviceManufacturer: realme, deviceModel: RMX1971, deviceName: 48a33036, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: 48a33036, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 96, takesScreenshot: true, udid: 48a33036, viewportRect: {height: 2036, left: 0, top: 96, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: 97342ce1-520e-4c72-9cc4-380304c85b2d\n*** Element info: {Using\u003dxpath, value\u003d//../android.widget.TextView[@text\u003d\"bluAccount\"]/following-sibling::android.view.ViewGroup}\r\n\tat sun.reflect.GeneratedConstructorAccessor14.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)\r\n\tat io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)\r\n\tat StepDefinitions.Keyword.cekBluaccountAkhir(Keyword.java:215)\r\n\tat ✽.And Cek bluaccount akhir(UpdateBluGether.feature:53)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "Keyword.cek_riwayat_akhir()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Masuk dengan Akun Lain",
-      "offset": 11
-    }
-  ],
-  "location": "Keyword.logout_blu(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "082211220045",
-      "offset": 45
-    },
-    {
-      "val": "Password123!",
-      "offset": 71
-    }
-  ],
-  "location": "Keyword.loginUndanganMember(String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Keyword.homescreenBlu()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "saldo awal",
-      "offset": 16
-    }
-  ],
-  "location": "Keyword.cek_saldo_awal(String)"
-});
-formatter.result({
-  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
       "val": "ya",
-      "offset": 24
+      "offset": 20
+    },
+    {
+      "val": "Y",
+      "offset": 36
     }
   ],
-  "location": "Keyword.cek_undangan_notifikasi(String)"
+  "location": "BluGether.update_daftar_teman_dengan_norek(String,String)"
+});
+formatter.result({
+  "duration": 84800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ya",
+      "offset": 17
+    },
+    {
+      "val": "100000",
+      "offset": 43
+    },
+    {
+      "val": "",
+      "offset": 73
+    }
+  ],
+  "location": "BluGether.update_atur_goal_dan_tambah_jumlah_goal_dan_tanggal_pencapaian()"
+});
+formatter.result({
+  "duration": 375300,
+  "error_message": "cucumber.runtime.CucumberException: Arity mismatch: Step Definition \u0027StepDefinitions.BluGether.update_atur_goal_dan_tambah_jumlah_goal_dan_tanggal_pencapaian() in file:/C:/Users/NB01/OneDrive/Documents/SQA/Work/Otomasi/Project/OtomasiCucumber/target/test-classes/\u0027 with pattern [^Update atur goal (.*) dan tambah jumlah goal (.*) dan tanggal pencapaian (.*)$] is declared with 0 parameters. However, the gherkin step has 3 arguments [ya, 100000, ]. \nStep: And Update atur goal ya dan tambah jumlah goal 100000 dan tanggal pencapaian \r\n\tat cucumber.runtime.StepDefinitionMatch.arityMismatch(StepDefinitionMatch.java:102)\r\n\tat cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:60)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.model.CucumberScenarioOutline.run(CucumberScenarioOutline.java:46)\r\n\tat cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)\r\n\tat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)\r\n\tat Runner.Runner.feature(Runner.java:114)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)\r\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\r\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\r\n\tat java.util.ArrayList.forEach(ArrayList.java:1257)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:766)\r\n\tat org.testng.TestRunner.run(TestRunner.java:587)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\r\n\tat org.testng.TestNG.run(TestNG.java:1007)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)\r\n",
+  "status": "failed"
+});
+formatter.match({
+  "location": "BluGether.klik_tombol_simpan()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "BluGether.berada_dihalaman_update_detail_blugether()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "BluGether.berada_dihalaman_update_list_blugether()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "saldo akhir",
+      "offset": 17
+    }
+  ],
+  "location": "Keyword.cek_saldo_akhir(String)"
 });
 formatter.result({
   "status": "skipped"

@@ -14,8 +14,8 @@ Feature: Update BluGether
     And      Update daftar teman <daftarTeman> dengan norek <noRekUndangan>
     And      Update atur goal <goal> dan tambah jumlah goal <aturJumlahGoal> dan tanggal pencapaian <tanggalPencapaian>
     And      Klik tombol simpan
-    And      Berada dihalaman detail blugether
-    And      Berada dihalaman list blugether
+    And      Berada dihalaman update detail blugether
+    And      Berada dihalaman update list blugether
 
     And      Cek saldo akhir "saldo akhir"
     And      Logout blu <logout>
@@ -39,8 +39,8 @@ Feature: Update BluGether
     And      Update daftar teman <daftarTeman> dengan norek <noRekUndangan>
     And      Update atur goal <goal> dan tambah jumbal goal <aturJumlahGoal> dan tanggal pencapaian <tanggalPencapaian>
     And      Klik tombol simpan
-    And      Berada dihalaman detail blugether
-    And      Berada dihalaman list blugether
+    And      Berada dihalaman update detail blugether
+    And      Berada dihalaman update list blugether
 
     And      Cek saldo akhir "saldo akhir"
     And      Logout blu <logout>

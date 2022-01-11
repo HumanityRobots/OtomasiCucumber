@@ -186,35 +186,39 @@ public class BluGether extends Runner {
 
     }
 
-    // cek notifikasi undangan
-    @When("^Cek notifikasi undangan (.*)$")
-    public void cek_notifikasi_undangan(String terimaUndangan) throws Throwable {
-
-    }
-
-    // cek notifikasi undangan
-    @When("^Cek notifikasi undangan1 (.*) dan undangan2 (.*)$")
-    public void cek_notifikasi_undangan(String terimaUndangan1, String terimaUndangan2) throws Throwable {
-
-    }
-
-
-
 
 //  update blugether
 @When("^Update blugether$")
 public void update_blugether() throws Throwable {
         // foto tambah dana
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahDana");
+
         // lihat member & foto member
+        System.out.println("====> Klik lihat member dan tambah member");
+        driver.findElement(pars.getbjectLocator("lblLihatMember")).click();
+
+        // foto halaman tambah teman
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+        StepLib.back();
+
         // Klik more & foto pengaturan
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPengaturanBlugether");
+
         // Klik pengaturan
+        driver.findElement(pars.getbjectLocator("btnPengaturanBlugether")).click();
+
         // Foto halaman pengaturan blugether
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturan");
 }
 
 @When("^Update nama (.*) blugether$")
 public void update_nama_blugether(String namaBlugetherBaru) throws Throwable {
         // hapus nama blugether
+        driver.findElement(pars.getbjectLocator("lblTambahNamaBlugether")).clear();
+
        // set nama blugether
+        driver.findElement(pars.getbjectLocator("lblTambahNamaBlugether")).sendKeys(namaBlugetherBaru);
 }
 
 @When("^Update daftar teman (.*) dengan norek (.*)$")
@@ -241,15 +245,15 @@ public void klik_tombol_simpan() throws Throwable {
         // klik tombol simpan
 }
 
-@When("^Berada dihalaman detail blugether update$")
-public void berada_dihalaman_detail_blugether_update() throws Throwable {
+@When("^Berada dihalaman update detail blugether")
+public void berada_dihalaman_update_detail_blugether() throws Throwable {
     // foto halaman
     // lihat member
     // back
 }
 
-@When("^Berada dihalaman list blugether update$")
-public void berada_dihalaman_list_blugether_update() throws Throwable {
+@When("^Berada dihalaman update list blugether$")
+public void berada_dihalaman_update_list_blugether() throws Throwable {
         // foto halaman
         // kembali ke dashboard
 }
