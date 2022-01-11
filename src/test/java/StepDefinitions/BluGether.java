@@ -202,7 +202,61 @@ public class BluGether extends Runner {
 
 
 //  update blugether
-    
+@When("^Update blugether$")
+public void update_blugether() throws Throwable {
+        // foto tambah dana
+        // lihat member & foto member
+        // Klik more & foto pengaturan
+        // Klik pengaturan
+        // Foto halaman pengaturan blugether
+}
+
+@When("^Update nama (.*) blugether$")
+public void update_nama_blugether(String namaBlugetherBaru) throws Throwable {
+        // hapus nama blugether
+       // set nama blugether
+}
+
+@When("^Update daftar teman (.*) dengan norek (.*)$")
+public void update_daftar_teman_dengan_norek(String daftarTeman, String norek) throws Throwable {
+        // cek kondisi daftar teman atau tidak
+        // lihat member
+        // Foto halaman member
+        // cari norek & foto
+        // pilih member & foto
+        // klik tombol undang
+        // klik lanjut & foto
+}
+
+@When("^Update atur goal (.*) dan tambah jumlah goal (.*) dan tanggal pencapaian (.*)$")
+public void update_atur_goal_dan_tambah_jumlah_goal_dan_tanggal_pencapaian() throws Throwable {
+        // cek kondisi atur goal
+        // atur jumlah goal
+        // atur tanggal
+        // klik tombol simpan
+}
+
+@When("^Klik tombol simpan$")
+public void klik_tombol_simpan() throws Throwable {
+        // klik tombol simpan
+}
+
+@When("^Berada dihalaman detail blugether update$")
+public void berada_dihalaman_detail_blugether_update() throws Throwable {
+    // foto halaman
+    // lihat member
+    // back
+}
+
+@When("^Berada dihalaman list blugether update$")
+public void berada_dihalaman_list_blugether_update() throws Throwable {
+        // foto halaman
+        // kembali ke dashboard
+}
+
+
+
+
 
 
 //  close blugeter
