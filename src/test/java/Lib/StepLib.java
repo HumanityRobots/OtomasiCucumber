@@ -268,16 +268,18 @@ public class StepLib extends Runner {
         Boolean symbol;
 
         try {
-            symbol = driver.findElement(pars.getbjectLocator("imgSymbolSaldo")).isDisplayed();
-        } catch (Exception e) {
+            symbol = driver.findElement(pars.getbjectLocator("imgHidden")).isDisplayed();
+         } catch (Exception e) {
             symbol = false;
         }
 
-        if (symbol == false) {
-            System.out.println("====> Saldo masih hidden");
-            driver.findElement(pars.getbjectLocator("mataBluAccount")).click();
-        } else {
+        if (symbol == true) {
+//            System.out.println("Ya");
             System.out.println("====> Saldo sudah tampil");
+        } else if (symbol == false){
+//            System.out.println("Tidak");
+            System.out.println("====> Saldo masih hidden");
+            driver.findElement(pars.getbjectLocator("btnEyes")).click();
         }
     }
 

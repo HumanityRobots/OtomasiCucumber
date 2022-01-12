@@ -26,7 +26,6 @@ public class BluGether extends Runner {
     @When("^Berada dihalaman list blugether$")
     public void berada_dihalaman_list_blugether() throws Throwable {
         System.out.println("====> Berada dihalaman list blugether");
-        StepLib.loadPage("lblHalamanListBlugether");
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
     }
 
@@ -190,16 +189,29 @@ public class BluGether extends Runner {
 //  update blugether
 @When("^Update blugether$")
 public void update_blugether() throws Throwable {
+        Boolean lihatMember = false;
+
         // foto tambah dana
+        StepLib.loadPage("lblTambahDana");
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahDana");
 
         // lihat member & foto member
-        System.out.println("====> Klik lihat member dan tambah member");
-        driver.findElement(pars.getbjectLocator("lblLihatMember")).click();
+        try {
+            lihatMember = driver.findElement(pars.getbjectLocator("lblLihatMember")).isDisplayed() == true;
+        } catch (Exception e) {
+            lihatMember = false;
+        }
 
-        // foto halaman tambah teman
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
-        StepLib.back();
+        if (lihatMember == true) {
+            System.out.println("====> Klik lihat member dan tambah member");
+            driver.findElement(pars.getbjectLocator("lblLihatMember")).click();
+
+            // foto halaman tambah teman
+            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+            StepLib.back();
+        } else {
+            System.out.println("====> Belum mempunyai member");
+        }
 
         // Klik more & foto pengaturan
         driver.findElement(pars.getbjectLocator("btnMore")).click();
@@ -223,39 +235,134 @@ public void update_nama_blugether(String namaBlugetherBaru) throws Throwable {
 
 @When("^Update daftar teman (.*) dengan norek (.*)$")
 public void update_daftar_teman_dengan_norek(String daftarTeman, String norek) throws Throwable {
+        Boolean tambahTeman = false;
+
         // cek kondisi daftar teman atau tidak
-        // lihat member
-        // Foto halaman member
-        // cari norek & foto
-        // pilih member & foto
-        // klik tombol undang
-        // klik lanjut & foto
+        if (daftarTeman.equalsIgnoreCase("ya")) {
+            try {
+                tambahTeman = driver.findElement(pars.getbjectLocator("btnTambahMember")).isDisplayed();
+            } catch (Exception e) {
+                tambahTeman = false;
+            }
+
+            if (tambahTeman == true) {
+                System.out.println("====> Klik tombol tambah member");
+                driver.findElement(pars.getbjectLocator("btnTambahMember")).click();
+            } else if (tambahTeman == false) {
+                System.out.println("====> Klik lihat member");
+                // lihat member
+                System.out.println("====> Klik tombol lihat member");
+                driver.findElement(pars.getbjectLocator("btnLihat")).click();
+            }
+
+            // Foto halaman member
+            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+
+            // cari member
+            System.out.println("====> cari member dengan nomor rekening : " + norek);
+            driver.findElement(pars.getbjectLocator("lblCariMember")).sendKeys(norek);
+            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+
+            // pilih member
+            System.out.println("====> Pilih member");
+            driver.findElement(pars.getbjectLocator("btnBaris1")).click();
+
+            // foto saat undangan sudah di klik
+            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+            System.out.println("====> Klik undang member");
+            driver.findElement(pars.getbjectLocator("btnUndang")).click();
+
+            klik_tombol_lanjut();
+        } else {
+            System.out.println("====> Tidak tambah member");
+        }
 }
 
 @When("^Update atur goal (.*) dan tambah jumlah goal (.*) dan tanggal pencapaian (.*)$")
-public void update_atur_goal_dan_tambah_jumlah_goal_dan_tanggal_pencapaian() throws Throwable {
+public void update_atur_goal_dan_tambah_jumlah_goal_dan_tanggal_pencapaian(String goal, String jumlahGoal, String tanggal) throws Throwable {
         // cek kondisi atur goal
-        // atur jumlah goal
-        // atur tanggal
-        // klik tombol simpan
+        if (goal.equalsIgnoreCase("ya")) {
+            Boolean btnUbah = false;
+            try {
+                btnUbah = driver.findElement(pars.getbjectLocator("btnUbahGoal")).isDisplayed();
+            } catch (Exception e) {
+                btnUbah = false;
+            }
+
+            if (btnUbah == true) {
+                System.out.println("====> Klik tombol ubah");
+                driver.findElement(pars.getbjectLocator("btnUbahGoal")).click();
+            } else {
+                System.out.println("====> Klik tombol radio button");
+                driver.findElement(pars.getbjectLocator("btnRadioButtonAturGoal")).click();
+            }
+
+            // atur jumlah goal
+            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+            System.out.println("====> Atur jumlah goal" + jumlahGoal);
+            driver.findElement(pars.getbjectLocator("lblJumlahGoal")).clear();
+            driver.findElement(pars.getbjectLocator("lblJumlahGoal")).sendKeys(jumlahGoal);
+
+            // atur tanggal
+            // empty
+
+            // klik tombol simpan
+            StepLib.swipePopDown();
+            FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+            driver.findElement(pars.getbjectLocator("btnSimpan")).click();
+
+        } else {
+            System.out.println("====> Tidak atur goal");
+        }
 }
 
 @When("^Klik tombol simpan$")
 public void klik_tombol_simpan() throws Throwable {
         // klik tombol simpan
+        StepLib.timePage("btnSimpan");
+        StepLib.swipePopDown();
+        System.out.println("====> Klik tombol simpan");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+        driver.findElement(pars.getbjectLocator("btnSimpan")).click();
 }
 
 @When("^Berada dihalaman update detail blugether")
 public void berada_dihalaman_update_detail_blugether() throws Throwable {
     // foto halaman
+    System.out.println("====> Berada dihalaman detail blugether");
+    StepLib.loadPage("lblUbahPage");
+    FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblUbahPage");
+
     // lihat member
-    // back
+    System.out.println("====> Lihat member");
+    Boolean tambahTeman = false;
+    try {
+        tambahTeman = driver.findElement(pars.getbjectLocator("btnTambahMember")).isDisplayed();
+    } catch (Exception e) {
+        tambahTeman = false;
+    }
+
+    if (tambahTeman == true) {
+        System.out.println("====> Member belum ada yang terdaftar");
+    } else if (tambahTeman == false) {
+        System.out.println("====> Klik lihat member");
+        // lihat member
+        System.out.println("====> Klik tombol lihat member");
+        driver.findElement(pars.getbjectLocator("btnLihat")).click();
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblMemberBlugether");
+        StepLib.back();
+        StepLib.back();
+    }
 }
 
 @When("^Berada dihalaman update list blugether$")
 public void berada_dihalaman_update_list_blugether() throws Throwable {
         // foto halaman
+        System.out.println("====> Berada dihalaman list blugether");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
+
         // kembali ke dashboard
+        StepLib.goToDashboard();
 }
 
 

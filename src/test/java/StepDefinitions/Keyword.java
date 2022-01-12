@@ -83,7 +83,7 @@ public class Keyword extends Runner {
         }
 
         System.out.println("====> Foto saldo");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "mataBluAccount");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnEyes");
     }
 
     @When("^Cek saldo akhir \"([^\"]*)\"$")
@@ -102,7 +102,7 @@ public class Keyword extends Runner {
         }
 
         System.out.println("====> Foto saldo");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "mataBluAccount");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnEyes");
     }
 
 
