@@ -1,7 +1,7 @@
-Feature: Disburse BluDeposit
+Feature: Update Type Deposit
 
-  @DisburseBluDeposit
-  Scenario Outline: Disburse BluDeposit
+  @UpdateTypeDeposit
+  Scenario Outline: Update type deposit
     Given    Login test <pocket> "Create" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
     And      Cek saldo awal "saldo awal"

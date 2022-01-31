@@ -1,7 +1,7 @@
-Feature: Disburse BluDeposit
+Feature: Topup Deposit
 
-  @DisburseBluDeposit
-  Scenario Outline: Disburse BluDeposit
+  @TopupDeposit
+  Scenario Outline: Topup Deposit
     Given    Login test <pocket> "Create" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
     And      Cek saldo awal "saldo awal"

@@ -42,11 +42,12 @@ import java.util.concurrent.TimeUnit;
 //        tags = { "@UpdateBluGether" },
 //        tags = { "@TambahDanaBluGether" },
 //        tags = { "@TarikDanaBluGether" },
-        tags = { "@CloseBluGether" },
+//        tags = { "@CloseBluGether" },
 
 //        BluDeposit
-//        tags = { "@CreateBluDeposit" },
-//        tags = { "@TopUpBluDeposit" },
+        tags = { "@CreateBluDeposit" },
+//        tags = { "@UpdateTypeDeposit" },
+//        tags = { "@TopupDeposit" },
 //        tags = { "@DisburseBluDeposit" },
 
         glue= {"StepDefinitions"},

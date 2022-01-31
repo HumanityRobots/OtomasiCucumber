@@ -21,16 +21,59 @@ public class BluDeposit extends Runner {
     public String featureName = Runner.currentFeature;
 
 
-    // create bludeposit
+// create bludeposit
 
-    // Berada dihalaman list bludeposit
-    @When("^Berada dihalaman list bludeposit$")
-    public void berada_dihalaman_list_bludeposit() throws Throwable {
-        System.out.println("====> Berada dihalaman list bludeposit");
-        StepLib.loadPage("lblHalamanListBlugether");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
-    }
+// Update Type Deposit
 
+// Topup Deposit
+
+// Disburse Deposit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    // Berada dihalaman list bludeposit
+//    @When("^Berada dihalaman list bludeposit$")
+//    public void berada_dihalaman_list_bludeposit() throws Throwable {
+//        System.out.println("====> Berada dihalaman list bludeposit");
+//        StepLib.loadPage("lblHalamanListBlugether");
+//        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
+//    }
 //    //    Create
 //    @When("^Tambah blusaving$")
 //    public void tambahBlusaving() throws Throwable {
