@@ -373,46 +373,56 @@ public class BluGether extends Runner {
     @When("^Tambah dana blugether$")
     public void tambah_dana_blugether() throws Throwable {
         // foto halaman detail blugether
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblDanaSaatIni");
 
         // klik tombol tambah dana
-        driver.findElement(pars.getbjectLocator("")).click();
+        System.out.println("====> Klik tombol tambah dana");
+        driver.findElement(pars.getbjectLocator("lblTambahDana")).click();
 
         // foto halaman tambah dana
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahDana");
     }
 
-    @When("^Input jumlah tambah dana (.*)$")
-    public void input_jumlah_tambah_dana(String jumlahDana) throws Throwable {
+    @When("^Input nominal tambah dana (.*)$")
+    public void input_nominal_tambah_dana(String jumlahDana) throws Throwable {
         // input nominal tambah dana
-        driver.findElement(pars.getbjectLocator("")).sendKeys(jumlahDana);
+        System.out.println("====> Input nominal tambah dana : " + jumlahDana);
+        driver.findElement(pars.getbjectLocator("lblJumlah")).sendKeys(jumlahDana);
 
         // foto halaman tambah dana
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
-    }
-
-    @When("^Berada dihalaman konfirmasi tambah dana$")
-    public void berada_dihalaman_konfirmasi_tambah_dana() throws Throwable {
-        // foto halaman konfirmasi tambah dana
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
 
         // klik tombol lanjut
-        driver.findElement(pars.getbjectLocator("")).click();
+        System.out.println("====> Klik tombol lanjut");
+        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
     }
 
-    @When("^Berada dihalaman berhasil tambah dana$")
-    public void berada_dihalaman_berhasil_tambah_dana() throws Throwable {
-        // foto halaman berhasil tambah dana
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
+    @When("^Berada dihalaman konfirmasi tarik dana atau tambah dana$")
+    public void berada_dihalaman_konfirmasi_tarik_dana_atau_tambah_dana() throws Throwable {
+        // foto halaman konfirmasi tambah dana
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
+
+        // klik tombol lanjut
+        System.out.println("====> Klik tombol lanjut");
+        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
+        StepLib.loadPage("btnKembali");
+    }
+
+    @When("^Berada dihalaman berhasil tarik dana atau tambah dana$")
+    public void berada_dihalaman_berhasil_tarik_dana_atau_tambah_dana() throws Throwable {
+        // foto halaman berhasil tarik dana
+        System.out.println("====> Berada dihalaman berhasil tambah dana");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnKembali");
 
         // klik tombol kembali
-        driver.findElement(pars.getbjectLocator("")).click();
+        System.out.println("====> Klik tombol kembali");
+        driver.findElement(pars.getbjectLocator("btnKembali")).click();
     }
 
     @When("^Berada dihalaman detail blugether tambah dana$")
     public void berada_dihalaman_detail_blugether_tambah_dana() throws Throwable {
         // foto halaman detail
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnMore");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblDanaSaatIni");
 
         // foto riwayat transaksi
         System.out.println("====> Cek riwayat blugether");
@@ -425,6 +435,7 @@ public class BluGether extends Runner {
         System.out.println("====> Berada dihalaman riwayat transaksi");
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanRiwayatTransaksi");
 
+        StepLib.back();
         StepLib.back();
     }
 
@@ -446,33 +457,6 @@ public class BluGether extends Runner {
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
     }
 
-    @When("^Input jumlah tarik dana (.*)$")
-    public void input_jumlah_tarik_dana(String jumlahDana) throws Throwable {
-        // input nominal tarik dana
-        driver.findElement(pars.getbjectLocator("")).sendKeys(jumlahDana);
-
-        // foto halaman tarik dana
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
-    }
-
-    @When("^Berada dihalaman konfirmasi tarik dana$")
-    public void berada_dihalaman_konfirmasi_tarik_dana() throws Throwable {
-        // foto halaman konfirmasi tarik dana
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
-
-        // klik tombol lanjut
-        driver.findElement(pars.getbjectLocator("")).click();
-    }
-
-    @When("^Berada dihalaman berhasil tarik dana$")
-    public void berada_dihalaman_berhasil_tarik_dana() throws Throwable {
-        // foto halaman berhasil tarik dana
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
-
-        // klik tombol kembali
-        driver.findElement(pars.getbjectLocator("")).click();
-    }
-
     @When("^Berada dihalaman detail blugether tarik dana$")
     public void berada_dihalaman_detail_blugether_tarik_dana() throws Throwable {
         // foto halaman detail
@@ -489,6 +473,7 @@ public class BluGether extends Runner {
         System.out.println("====> Berada dihalaman riwayat transaksi");
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanRiwayatTransaksi");
 
+        StepLib.back();
         StepLib.back();
     }
 
