@@ -365,9 +365,11 @@ public class BluGether extends Runner {
         StepLib.goToDashboard();
     }
 
-    //
+    // Tambah dana blugether
 
-    //
+
+
+    // Tarik dana blugether
 
 
 //  close blugeter

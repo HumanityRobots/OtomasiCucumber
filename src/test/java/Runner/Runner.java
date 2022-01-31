@@ -33,15 +33,15 @@ import java.util.concurrent.TimeUnit;
 //        BluSaving
 //        tags = { "@CreateBluSaving" },
 //        tags = { "@UpdateBluSaving" },
-//        tags = { "@TarikDanaBluSaving" },
 //        tags = { "@TambahDanaBluSaving" },
+//        tags = { "@TarikDanaBluSaving" },
 //        tags = { "@CloseBluSaving" },
 
 //        BluGether
 //        tags = { "@CreateBluGether"},
 //        tags = { "@UpdateBluGether" }     ,
-//        tags = { "@TarikDanaBluGether" },
 //        tags = { "@TambahDanaBluGether" },
+//        tags = { "@TarikDanaBluGether" },
         tags = { "@CloseBluGether" },
 
 //        BluDeposit
