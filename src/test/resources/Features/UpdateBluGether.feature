@@ -1,6 +1,6 @@
 Feature: Update BluGether
 
-  @UpdateBluGether
+#  @UpdateBluGether
   Scenario Outline: Update BluGether tambah teman
     Given    Login test <pocket> "Update" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
@@ -46,4 +46,4 @@ Feature: Update BluGether
 
     Examples:
       | no | nomorHandphone | password    |  pocket      | namaBluGether   |   goal   | aturJumlahGoal | tanggalPencapaian | daftarTeman  |  noRekUndangan  |   logout                 |
-      | 2  | 082211220027   | Password123!|  bluGether   | Blugether 3     |    ya    |   150000       |                   |    tidak     |   000000002983  |   Masuk dengan Akun Lain |
+      | 2  | 082211220027   | Password123!|  bluGether   | Blugether 3     |    ya    |   150000       |                   |    tidak     |   000000004373  |   Masuk dengan Akun Lain |

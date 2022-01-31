@@ -37,7 +37,7 @@ Feature: Create BluGether
       | 1  | 082211220027   | Password123!| limit  | bluGether   | Blugether 1     |             |                |                   | 000000002983   |    082211220045        |  Password123!    |      ya        |  Masuk dengan Akun Lain |
 
 
-  @CreateBluGether
+#  @CreateBluGether
   Scenario Outline: Create blugether 1
     Given    Login test <pocket> "Create" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu

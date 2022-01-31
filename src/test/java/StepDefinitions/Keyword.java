@@ -213,9 +213,9 @@ public class Keyword extends Runner {
         // ambil total saldo
         System.out.println("====> Klik bluaccount");
         driver.findElement(pars.getbjectLocator("btnBluAcc")).click();
-        StepLib.loadPage("btnPindahkanDana");
+        StepLib.loadPage("btnPindahDana");
         System.out.println("====> Foto halaman bluaccount");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPindahkanDana");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnPindahDana");
         StepLib.back();
         driver.findElement(pars.getbjectLocator("btnHome")).click();
     }

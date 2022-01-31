@@ -38,9 +38,11 @@ import java.util.concurrent.TimeUnit;
 //        tags = { "@CloseBluSaving" },
 
 //        BluGether
-//        tags = { "@CreateBluGether" },
-        tags = { "@UpdateBluGether" },
-//        tags = { "@CloseBluGether" },
+//        tags = { "@CreateBluGether"},
+//        tags = { "@UpdateBluGether" }     ,
+//        tags = { "@TarikDanaBluGether" },
+//        tags = { "@TambahDanaBluGether" },
+        tags = { "@CloseBluGether" },
 
 //        BluDeposit
 //        tags = { "@CreateBluDeposit" },

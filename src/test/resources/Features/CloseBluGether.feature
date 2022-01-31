@@ -2,7 +2,7 @@ Feature: Close BluGether
 
   @CloseBluGether
   Scenario Outline: Close BluGether
-    Given    Login test <pocket> "Update" no - <no> blu nomor <nomorHandphone> dan password <password>
+    Given    Login test <pocket> "Close" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
     And      Cek saldo awal "saldo awal"
     And      Pockets <pocket>
@@ -10,13 +10,9 @@ Feature: Close BluGether
     And      Klik card blugether creator
 
     And      Close blugether
-    And      Update nama <namaBluGether> blugether
-    And      Update daftar teman <daftarTeman> dengan norek <noRekUndangan>
-    And      Update atur goal <goal> dan tambah jumlah goal <aturJumlahGoal> dan tanggal pencapaian <tanggalPencapaian>
-    And      Klik tombol simpan
-    And      Berada dihalaman update detail blugether
-    And      Berada dihalaman update list blugether
+    And      Berada dihalaman berhasil tutup blugether
 
+    And      Berada dihalaman list blugether
     And      Cek saldo akhir "saldo akhir"
     And      Logout blu <logout>
 
