@@ -13,11 +13,11 @@ Feature: Tambah Dana BluGether
 
     And      Tambah dana blugether
     And      Input jumlah tambah dana <jumlahDanaBlugether>
-    And      Berada dihalaman konfirmasi
+    And      Berada dihalaman konfirmasi tambah dana
     And      Berada dihalaman berhasil tambah dana
-    And      Berada dihalaman detail blugether
-    And      Berada dihalaman list blugether
+    And      Berada dihalaman detail blugether tambah dana
 
+    And      Berada dihalaman list blugether
     And      Cek saldo akhir "saldo akhir"
     And      Cek bluaccount akhir
     And      Cek riwayat akhir

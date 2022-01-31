@@ -12,12 +12,12 @@ Feature: Tarik Dana BluGether
     And      Klik card blugether creator
 
     And      Tarik dana blugether
-    And      Input jumlah Tarik dana <jumlahDanaBlugether>
-    And      Berada dihalaman konfirmasi
+    And      Input jumlah tarik dana <jumlahDanaBlugether>
+    And      Berada dihalaman konfirmasi tarik dana
     And      Berada dihalaman berhasil tarik dana
-    And      Berada dihalaman detail blugether
-    And      Berada dihalaman list blugether
+    And      Berada dihalaman detail blugether tarik dana
 
+    And      Berada dihalaman list blugether
     And      Cek saldo akhir "saldo akhir"
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
