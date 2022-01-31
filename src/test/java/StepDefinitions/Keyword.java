@@ -302,6 +302,7 @@ public class Keyword extends Runner {
 
             // Halaman berhasil menjadi member
             System.out.println("====> Berada dihalaman berhasil menjadi member");
+            StepLib.loadPage("btnKembali");
             FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "btnKembali");
             System.out.println("====> Klik tombol Lihat daftar blugether");
             driver.findElement(pars.getbjectLocator("btnLihatBluGether")).click();

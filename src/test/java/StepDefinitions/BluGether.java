@@ -59,19 +59,19 @@ public class BluGether extends Runner {
 
         // foto halaman tambah teman
         StepLib.loadPage("lblTambahTeman");
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahTeman");
 
         // cari member
         System.out.println("====> cari member dengan nomor rekening : " + norek);
         driver.findElement(pars.getbjectLocator("lblCariMember")).sendKeys(norek);
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahTeman");
 
         // pilih member
         System.out.println("====> Pilih member");
         driver.findElement(pars.getbjectLocator("btnBaris1")).click();
 
         // foto saat undangan sudah di klik
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnUndang");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTambahTeman");
         System.out.println("====> Klik undang member");
         driver.findElement(pars.getbjectLocator("btnUndang")).click();
 
