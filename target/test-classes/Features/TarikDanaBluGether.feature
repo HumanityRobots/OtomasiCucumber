@@ -12,17 +12,17 @@ Feature: Tarik Dana BluGether
     And      Klik card blugether creator
 
     And      Tarik dana blugether
-    And      Input jumlah tarik dana atau tambah dana <jumlahDanaBlugether>
-    And      Berada dihalaman konfirmasi tarik dana
-    And      Berada dihalaman berhasil tarik dana
+    And      Input nominal tarik dana <jumlahTarikDana>
+    And      Berada dihalaman konfirmasi tarik dana atau tambah dana
+    And      Berada dihalaman berhasil tarik dana atau tambah dana
     And      Berada dihalaman detail blugether tarik dana
-
     And      Berada dihalaman list blugether
+
     And      Cek saldo akhir "saldo akhir"
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
     And      Logout blu <logout>
 
     Examples:
-      | no | nomorHandphone | password    | pocket      | jumlahDanaBlugether |  logout                 |
-      | 1  | 082211220027   | Password123!| bluGether   | 10000               |  Masuk dengan Akun Lain |
+      | no | nomorHandphone | password    | pocket      | jumlahTarikDana |  logout                 |
+      | 1  | 082211220027   | Password123!| bluGether   | 20000           |  Masuk dengan Akun Lain |

@@ -10,13 +10,11 @@ Feature: Tambah Dana BluGether
     And      Pockets <pocket>
     And      Berada dihalaman list blugether
     And      Klik card blugether creator
-
     And      Tambah dana blugether
     And      Input nominal tambah dana <jumlahTambahDana>
     And      Berada dihalaman konfirmasi tarik dana atau tambah dana
     And      Berada dihalaman berhasil tarik dana atau tambah dana
     And      Berada dihalaman detail blugether tambah dana
-
     And      Berada dihalaman list blugether
     And      Cek saldo akhir "saldo akhir"
     And      Cek bluaccount akhir

@@ -422,6 +422,7 @@ public class BluGether extends Runner {
     @When("^Berada dihalaman detail blugether tambah dana$")
     public void berada_dihalaman_detail_blugether_tambah_dana() throws Throwable {
         // foto halaman detail
+        System.out.println("====> Berada dihalaman detail blugether");
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblDanaSaatIni");
 
         // foto riwayat transaksi
@@ -448,13 +449,28 @@ public class BluGether extends Runner {
     @When("^Tarik dana blugether$")
     public void tarik_dana_blugether() throws Throwable {
         // foto halaman detail blugether
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
+        StepLib.loadPage("lblTarikDana");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblTarikDana");
 
         // klik tombol tarik dana
-        driver.findElement(pars.getbjectLocator("")).click();
+        driver.findElement(pars.getbjectLocator("lblTarikDana")).click();
 
         // foto halaman tarik dana
-        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanListBlugether");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
+    }
+
+    @When("^Input nominal tarik dana (.*)$")
+    public void input_nominal_tarik_dana(String jumlahDanaTarik) throws Throwable {
+        // input nominal tambah dana
+        System.out.println("====> Input nominal tambah dana : " + jumlahDanaTarik);
+        driver.findElement(pars.getbjectLocator("lblJumlah")).sendKeys(jumlahDanaTarik);
+
+        // foto halaman tambah dana
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
+
+        // klik tombol lanjut
+        System.out.println("====> Klik tombol lanjut");
+        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
     }
 
     @When("^Berada dihalaman detail blugether tarik dana$")

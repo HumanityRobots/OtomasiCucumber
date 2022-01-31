@@ -40,9 +40,9 @@ import java.util.concurrent.TimeUnit;
 //        BluGether
 //        tags = { "@CreateBluGether"},
 //        tags = { "@UpdateBluGether" },
-        tags = { "@TambahDanaBluGether" },
+//        tags = { "@TambahDanaBluGether" },
 //        tags = { "@TarikDanaBluGether" },
-//        tags = { "@CloseBluGether" },
+        tags = { "@CloseBluGether" },
 
 //        BluDeposit
 //        tags = { "@CreateBluDeposit" },
