@@ -23,4 +23,4 @@ Feature: Tambah Dana BluGether
 
     Examples:
       | no | nomorHandphone | password    | pocket      | jumlahTambahDana    |  logout                 |
-      | 1  | 082211220027   | Password123!| bluGether   | 10000               |  Masuk dengan Akun Lain |
+      | 1  | 082211220027   | Password123!| bluGether   | 20000               |  Masuk dengan Akun Lain |

@@ -17,5 +17,5 @@ Feature: Close BluGether
     And      Logout blu <logout>
 
     Examples:
-      | no | nomorHandphone | password    |  pocket      | namaBluGether   |   goal   | aturJumlahGoal | tanggalPencapaian | daftarTeman  |  noRekUndangan  |   logout                 |
-      | 1  | 082211220027   | Password123!|  bluGether   | Blugether 2     |    ya    |   100000       |                   |     ya       |   000000002983  |   Masuk dengan Akun Lain |
+      | no | nomorHandphone | password    |  pocket      |    logout                 |
+      | 1  | 082211220027   | Password123!|  bluGether   |    Masuk dengan Akun Lain |

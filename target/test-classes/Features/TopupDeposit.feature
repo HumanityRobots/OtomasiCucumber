@@ -1,10 +1,11 @@
-Feature: Create BluDeposit
+Feature: Topup Deposit
 
-  @CreateBluDeposit
-  Scenario Outline: create blu deposit 1
+  @TopupDeposit
+  Scenario Outline: Topup Deposit
     Given    Login test <pocket> "Create" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
     And      Cek saldo awal "saldo awal"
+    And      Cek limit <search> "limit awal"
     And      Cek bluaccount sebelum
     And      Cek riwayat awal
     And      Pockets <pocket>
@@ -12,9 +13,10 @@ Feature: Create BluDeposit
     And      Tambah bludeposit
     And      Masukkan nama bludeposit <namaBluDeposit>
     And      Masukkan nominal <nominal> bludeposit
+    And      Klik tombol lanjut
     And      Tentukan tipe bludeposit <tipeDeposit>
     And      Tentukan Tenor <tenor>
-    And      Klik tombol buka bludeposit dan klik lanjut
+    And      Klik tombol bludeposit dan klik lanjut
     And      Berada dihalaman bludeposit dan klik kembali ke daftar bludeposit
     And      Berada dihalaman list bluDeposit
     And      Klik card bludeposit
@@ -24,8 +26,9 @@ Feature: Create BluDeposit
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
     And      Cek notifikasi
+    And      Cek limit <search> "limit akhir"
     And      Logout blu <logout>
 
     Examples:
-    | no | nomorHandphone | password     |     pocket     | namaBluDeposit  | nominal   | tenor | tipeDeposit | logout                  |
-    | 1  | 082211220045   | Password123! |   bluDeposit   |  Bludepsosit 1  | 1000000   |   4   |   ARO+      | Masuk dengan Akun Lain  |
+      | no | nomorHandphone | password     |search |     pocket     | namaBluDeposit  | nominal | tenor | tipeDeposit | logout |
+      | 1  | 082211220045   | Password123! | limit |   bluDeposit   |  Bludepsosit 1  |         |       |             |        |

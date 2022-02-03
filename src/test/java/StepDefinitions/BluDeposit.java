@@ -24,58 +24,122 @@ public class BluDeposit extends Runner {
 // create bludeposit
     @When("^Berada dihalaman list bluDeposit$")
     public void berada_dihalaman_list_bludeposit() throws Throwable {
-
+        System.out.println("====> Berada dihalaman list bludeposit");
+        StepLib.loadPage("lblHalamanDaftarBluDeposit");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanDaftarBluDeposit");
     }
 
     @When("^Tambah bludeposit$")
     public void tambah_bludeposit() throws Throwable {
-
+        System.out.println("====> Klik tombol tambah bludeposit");
+        driver.findElement(pars.getbjectLocator("btnTambahBluDeposit")).click();
     }
 
     @When("^Masukkan nama bludeposit (.*)$")
-    public void masukkan_nama_bludeposit() throws Throwable {
+    public void masukkan_nama_bludeposit(String namaBluDeposit) throws Throwable {
+        System.out.println("====> Berada dihalaman input nama & nominal bludeposit");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
 
+        System.out.println("====> Input nama bludeposit : " + namaBluDeposit);
+        driver.findElement(pars.getbjectLocator("lblNamaBluDeposit")).click();
+        driver.findElement(pars.getbjectLocator("EditNamaBluDeposit")).sendKeys(namaBluDeposit);
     }
 
     @When("^Masukkan nominal (.*) bludeposit$")
-    public void masukkan_nominal_bludeposit() throws Throwable {
+    public void masukkan_nominal_bludeposit(String nominalBluDeposit) throws Throwable {
+
+        System.out.println("====> Input nominal bludeposit : " + nominalBluDeposit);
+        driver.findElement(pars.getbjectLocator("lblNominalBluDeposit")).click();
+        driver.findElement(pars.getbjectLocator("EditNominalBluDeposit")).sendKeys(nominalBluDeposit);
 
         // lanjut
+        System.out.println("====> Klik lanjut");
+        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
+        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
     }
 
     @When("^Tentukan tipe bludeposit (.*)$")
-    public void tentukan_tipe_bludeposit() throws Throwable {
+    public void tentukan_tipe_bludeposit(String typeDeposit) throws Throwable {
+        System.out.println("====> Tentukan tipe bluDeposit");
+        StepLib.loadPage("typeDeposit");
 
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnBukaBluDeposit");
+
+        System.out.println("====> Klik tipe bludeposit");
+        driver.findElement(pars.getbjectLocator("typeDeposit")).click();
+
+        switch (typeDeposit) {
+            case "Non ARO" :
+                System.out.println("====> Klik tipe : " + typeDeposit);
+                driver.findElement(pars.getbjectLocator("typeNonARO")).click();
+                break;
+            case "ARO" :
+                System.out.println("====> Klik tipe : " + typeDeposit);
+                driver.findElement(pars.getbjectLocator("typeARO")).click();
+                break;
+            case "ARO+" :
+                System.out.println("====> Klik tipe : " + typeDeposit);
+                driver.findElement(pars.getbjectLocator("typeARO")).click();
+                break;
+            default :
+                System.out.println("====> Tipe tidak terdaftar");
+                break;
+        }
     }
 
     @When("^Tentukan Tenor (.*)$")
-    public void tentukan_tenor() throws Throwable {
+    public void tentukan_tenor(String tenor) throws Throwable {
+        // tentukan tenor
+        System.out.println("====> Tentukan Tenor = " + tenor);
 
     }
 
     @When("^Klik tombol buka bludeposit dan klik lanjut$")
     public void klik_tombol_buka_bludeposit_dan_klik_lanjut() throws Throwable {
+        // klik buka bludeposit
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnBukaBluDeposit");
+        driver.findElement(pars.getbjectLocator("btnBukaBluDeposit")).click();
 
+        // klik lanjut
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
+        driver.findElement(pars.getbjectLocator("btnLanjut")).click();
     }
 
     @When("^Berada dihalaman bludeposit dan klik kembali ke daftar bludeposit$")
     public void berada_dihalaman_bludepoist_dan_klik_kembali_ke_daftar_bludeposit() throws Throwable {
+        StepLib.loadPage("btnKembaliKeBluDeposit");
+        System.out.println("====> Berada dihalaman berhasil tambah bludeposit");
 
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnKembaliKeBluDeposit");
+        System.out.println("====> Klik tombol kembali ke daftar bludeposit");
+        driver.findElement(pars.getbjectLocator("btnKembaliKeBluDeposit")).click();
     }
 
     @When("^Klik card bludeposit$")
     public void klik_card_bludeposit() throws Throwable {
-
+        System.out.println("====> Klik tombol card bludeposit");
+        driver.findElement(pars.getbjectLocator("cardBluDeposit")).click();
     }
 
     @When("^Berada dihalaman detail bludeposit$")
     public void berada_dihalaman_detail_bludeposit() throws Throwable {
-
+        System.out.println("====> Berada dihalaman detail bludeposit");
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanDetailDeposit");
     }
 
     @When("^Cek riwayat transaksi bludeposit$")
     public void cek_riwayat_transaksi_bludeposit() throws Throwable {
+        StepLib.loadPage("btnMore");
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
 
+        // klik riwayat transaksi
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblLihatRiwayatTransaksi");
+        driver.findElement(pars.getbjectLocator("lblLihatRiwayatTransaksi")).click();
+
+        // foto halaman riwayat transaksi
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblHalamanRiwayatTransaksi");
+        StepLib.timePage("lblHalamanRiwayatTransaksi");
     }
 
 
