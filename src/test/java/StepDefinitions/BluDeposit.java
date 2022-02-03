@@ -22,8 +22,69 @@ public class BluDeposit extends Runner {
 
 
 // create bludeposit
+    @When("^Berada dihalaman list bluDeposit$")
+    public void berada_dihalaman_list_bludeposit() throws Throwable {
+
+    }
+
+    @When("^Tambah bludeposit$")
+    public void tambah_bludeposit() throws Throwable {
+
+    }
+
+    @When("^Masukkan nama bludeposit (.*)$")
+    public void masukkan_nama_bludeposit() throws Throwable {
+
+    }
+
+    @When("^Masukkan nominal (.*) bludeposit$")
+    public void masukkan_nominal_bludeposit() throws Throwable {
+
+        // lanjut
+    }
+
+    @When("^Tentukan tipe bludeposit (.*)$")
+    public void tentukan_tipe_bludeposit() throws Throwable {
+
+    }
+
+    @When("^Tentukan Tenor (.*)$")
+    public void tentukan_tenor() throws Throwable {
+
+    }
+
+    @When("^Klik tombol buka bludeposit dan klik lanjut$")
+    public void klik_tombol_buka_bludeposit_dan_klik_lanjut() throws Throwable {
+
+    }
+
+    @When("^Berada dihalaman bludeposit dan klik kembali ke daftar bludeposit$")
+    public void berada_dihalaman_bludepoist_dan_klik_kembali_ke_daftar_bludeposit() throws Throwable {
+
+    }
+
+    @When("^Klik card bludeposit$")
+    public void klik_card_bludeposit() throws Throwable {
+
+    }
+
+    @When("^Berada dihalaman detail bludeposit$")
+    public void berada_dihalaman_detail_bludeposit() throws Throwable {
+
+    }
+
+    @When("^Cek riwayat transaksi bludeposit$")
+    public void cek_riwayat_transaksi_bludeposit() throws Throwable {
+
+    }
+
+
+
+
 
 // Update Type Deposit
+
+
 
 // Topup Deposit
 

@@ -13,10 +13,9 @@ Feature: Create BluDeposit
     And      Tambah bludeposit
     And      Masukkan nama bludeposit <namaBluDeposit>
     And      Masukkan nominal <nominal> bludeposit
-    And      Klik tombol lanjut
     And      Tentukan tipe bludeposit <tipeDeposit>
     And      Tentukan Tenor <tenor>
-    And      Klik tombol bludeposit dan klik lanjut
+    And      Klik tombol buka bludeposit dan klik lanjut
     And      Berada dihalaman bludeposit dan klik kembali ke daftar bludeposit
     And      Berada dihalaman list bluDeposit
     And      Klik card bludeposit
@@ -30,5 +29,5 @@ Feature: Create BluDeposit
     And      Logout blu <logout>
 
     Examples:
-    | no | nomorHandphone | password     |search |     pocket     | namaBluDeposit  | nominal | tenor | tipeDeposit | logout |
-    | 1  | 082211220045   | Password123! | limit |   bluDeposit   |  Bludepsosit 1  |         |       |             |        |
+    | no | nomorHandphone | password     |search |     pocket     | namaBluDeposit  | nominal   | tenor | tipeDeposit | logout                  |
+    | 1  | 082211220045   | Password123! | limit |   bluDeposit   |  Bludepsosit 1  | 1000000   |   4   |   ARO+      | Masuk dengan Akun Lain  |
