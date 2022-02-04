@@ -69,22 +69,17 @@ public class BluDeposit extends Runner {
         System.out.println("====> Klik tipe bludeposit");
         driver.findElement(pars.getbjectLocator("typeDeposit")).click();
 
-        switch (typeDeposit) {
-            case "Non ARO" :
-                System.out.println("====> Klik tipe : " + typeDeposit);
-                driver.findElement(pars.getbjectLocator("typeNonARO")).click();
-                break;
-            case "ARO" :
-                System.out.println("====> Klik tipe : " + typeDeposit);
-                driver.findElement(pars.getbjectLocator("typeARO")).click();
-                break;
-            case "ARO+" :
-                System.out.println("====> Klik tipe : " + typeDeposit);
-                driver.findElement(pars.getbjectLocator("typeARO")).click();
-                break;
-            default :
-                System.out.println("====> Tipe tidak terdaftar");
-                break;
+        if (typeDeposit.equalsIgnoreCase("ARO")) {
+            System.out.println("====> Klik tipe : " + typeDeposit);
+            driver.findElement(pars.getbjectLocator("typeARO")).click();
+        } else if (typeDeposit.equalsIgnoreCase("NON ARO")) {
+            System.out.println("====> Klik tipe : " + typeDeposit);
+            driver.findElement(pars.getbjectLocator("typeNonARO")).click();
+        } else if (typeDeposit.equalsIgnoreCase("ARO+")) {
+            System.out.println("====> Klik tipe : " + typeDeposit);
+            driver.findElement(pars.getbjectLocator("typeARO")).click();
+        } else {
+            System.out.println("====> Tipe tidak terdaftar");
         }
     }
 

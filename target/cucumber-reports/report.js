@@ -55,23 +55,27 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
+  "line": 12,
+  "name": "Tambah bludeposit",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "Masukkan nama bludeposit \u003cnamaBluDeposit\u003e",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "Masukkan nominal \u003cnominal\u003e bludeposit",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "Tentukan tipe bludeposit \u003ctipeDeposit\u003e",
+  "keyword": "And "
+});
+formatter.examples({
   "comments": [
-    {
-      "line": 12,
-      "value": "#    And      Tambah bludeposit"
-    },
-    {
-      "line": 13,
-      "value": "#    And      Masukkan nama bludeposit \u003cnamaBluDeposit\u003e"
-    },
-    {
-      "line": 14,
-      "value": "#    And      Masukkan nominal \u003cnominal\u003e bludeposit"
-    },
-    {
-      "line": 15,
-      "value": "#    And      Tentukan tipe bludeposit \u003ctipeDeposit\u003e"
-    },
     {
       "line": 16,
       "value": "#    And      Tentukan Tenor \u003ctenor\u003e"
@@ -87,48 +91,40 @@ formatter.step({
     {
       "line": 19,
       "value": "#    And      Berada dihalaman list bluDeposit"
+    },
+    {
+      "line": 20,
+      "value": "#    And      Klik card bludeposit"
+    },
+    {
+      "line": 21,
+      "value": "#    And      Berada dihalaman detail bludeposit"
+    },
+    {
+      "line": 22,
+      "value": "#    And      Cek riwayat transaksi bludeposit"
+    },
+    {
+      "line": 23,
+      "value": "#    And      Cek saldo akhir \"saldo akhir\""
+    },
+    {
+      "line": 24,
+      "value": "#    And      Cek bluaccount akhir"
+    },
+    {
+      "line": 25,
+      "value": "#    And      Cek riwayat akhir"
+    },
+    {
+      "line": 26,
+      "value": "#    And      Cek notifikasi"
+    },
+    {
+      "line": 27,
+      "value": "#    And      Logout blu \u003clogout\u003e"
     }
   ],
-  "line": 20,
-  "name": "Klik card bludeposit",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 21,
-  "name": "Berada dihalaman detail bludeposit",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 22,
-  "name": "Cek riwayat transaksi bludeposit",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 23,
-  "name": "Cek saldo akhir \"saldo akhir\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "Cek bluaccount akhir",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 25,
-  "name": "Cek riwayat akhir",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "Cek notifikasi",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "Logout blu \u003clogout\u003e",
-  "keyword": "And "
-});
-formatter.examples({
   "line": 29,
   "name": "",
   "description": "",
@@ -139,7 +135,6 @@ formatter.examples({
         "no",
         "nomorHandphone",
         "password",
-        "search",
         "pocket",
         "namaBluDeposit",
         "nominal",
@@ -155,7 +150,6 @@ formatter.examples({
         "1",
         "082211220045",
         "Password123!",
-        "limit",
         "bluDeposit",
         "Bludepsosit 1",
         "1000000",
@@ -190,7 +184,7 @@ formatter.step({
     0,
     1,
     2,
-    4
+    3
   ],
   "keyword": "Given "
 });
@@ -217,7 +211,7 @@ formatter.step({
   "line": 10,
   "name": "Pockets bluDeposit",
   "matchedColumns": [
-    4
+    3
   ],
   "keyword": "And "
 });
@@ -227,79 +221,31 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "comments": [
-    {
-      "line": 12,
-      "value": "#    And      Tambah bludeposit"
-    },
-    {
-      "line": 13,
-      "value": "#    And      Masukkan nama bludeposit \u003cnamaBluDeposit\u003e"
-    },
-    {
-      "line": 14,
-      "value": "#    And      Masukkan nominal \u003cnominal\u003e bludeposit"
-    },
-    {
-      "line": 15,
-      "value": "#    And      Tentukan tipe bludeposit \u003ctipeDeposit\u003e"
-    },
-    {
-      "line": 16,
-      "value": "#    And      Tentukan Tenor \u003ctenor\u003e"
-    },
-    {
-      "line": 17,
-      "value": "#    And      Klik tombol buka bludeposit dan klik lanjut"
-    },
-    {
-      "line": 18,
-      "value": "#    And      Berada dihalaman bludeposit dan klik kembali ke daftar bludeposit"
-    },
-    {
-      "line": 19,
-      "value": "#    And      Berada dihalaman list bluDeposit"
-    }
-  ],
-  "line": 20,
-  "name": "Klik card bludeposit",
+  "line": 12,
+  "name": "Tambah bludeposit",
   "keyword": "And "
 });
 formatter.step({
-  "line": 21,
-  "name": "Berada dihalaman detail bludeposit",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 22,
-  "name": "Cek riwayat transaksi bludeposit",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 23,
-  "name": "Cek saldo akhir \"saldo akhir\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "Cek bluaccount akhir",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 25,
-  "name": "Cek riwayat akhir",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "Cek notifikasi",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "Logout blu Masuk dengan Akun Lain",
+  "line": 13,
+  "name": "Masukkan nama bludeposit Bludepsosit 1",
   "matchedColumns": [
-    9
+    4
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "Masukkan nominal 1000000 bludeposit",
+  "matchedColumns": [
+    5
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "Tentukan tipe bludeposit ARO+",
+  "matchedColumns": [
+    7
   ],
   "keyword": "And "
 });
@@ -329,14 +275,14 @@ formatter.match({
   "location": "Keyword.loginBlu(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 53127391200,
+  "duration": 53967727500,
   "status": "passed"
 });
 formatter.match({
   "location": "Keyword.homescreenBlu()"
 });
 formatter.result({
-  "duration": 14089585200,
+  "duration": 13225228600,
   "status": "passed"
 });
 formatter.match({
@@ -349,80 +295,60 @@ formatter.match({
   "location": "Keyword.pockets(String)"
 });
 formatter.result({
-  "duration": 10709520200,
+  "duration": 11178149500,
   "status": "passed"
 });
 formatter.match({
   "location": "BluDeposit.berada_dihalaman_list_bludeposit()"
 });
 formatter.result({
-  "duration": 4870502100,
+  "duration": 5194710200,
   "status": "passed"
 });
 formatter.match({
-  "location": "BluDeposit.klik_card_bludeposit()"
+  "location": "BluDeposit.tambah_bludeposit()"
 });
 formatter.result({
-  "duration": 344735500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "BluDeposit.berada_dihalaman_detail_bludeposit()"
-});
-formatter.result({
-  "duration": 6436659700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "BluDeposit.cek_riwayat_transaksi_bludeposit()"
-});
-formatter.result({
-  "duration": 15063267200,
+  "duration": 384592600,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "saldo akhir",
+      "val": "Bludepsosit 1",
+      "offset": 25
+    }
+  ],
+  "location": "BluDeposit.masukkan_nama_bludeposit(String)"
+});
+formatter.result({
+  "duration": 5809893600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1000000",
       "offset": 17
     }
   ],
-  "location": "Keyword.cek_saldo_akhir(String)"
+  "location": "BluDeposit.masukkan_nominal_bludeposit(String)"
 });
 formatter.result({
-  "duration": 13809759700,
+  "duration": 8653808000,
   "status": "passed"
-});
-formatter.match({
-  "location": "Keyword.cekBluaccountAkhir()"
-});
-formatter.result({
-  "duration": 5309522100,
-  "error_message": "org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-2138S88\u0027, ip: \u0027172.17.123.241\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {appActivity: com.bcadigital.blu.MainActi..., appPackage: com.bcadigital.blu.uat, autoWebView: true, chromedriverExecutable: C:\\Users\\NB01\\OneDrive\\Docu..., databaseEnabled: false, desired: {appActivity: com.bcadigital.blu.MainActi..., appPackage: com.bcadigital.blu.uat, autoWebView: true, chromedriverExecutable: C:\\Users\\NB01\\OneDrive\\Docu..., deviceName: Realme, noReset: true, platformName: android, udid: 48a33036}, deviceApiLevel: 30, deviceManufacturer: realme, deviceModel: RMX1971, deviceName: 48a33036, deviceScreenDensity: 480, deviceScreenSize: 1080x2340, deviceUDID: 48a33036, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 96, takesScreenshot: true, udid: 48a33036, viewportRect: {height: 2036, left: 0, top: 96, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: 7d96ef02-9024-4794-b774-c1342bd7d8b4\n*** Element info: {Using\u003dxpath, value\u003d//../android.widget.TextView[@text\u003d\"bluAccount\"]/following-sibling::android.view.ViewGroup}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)\r\n\tat io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)\r\n\tat StepDefinitions.Keyword.cekBluaccountAkhir(Keyword.java:215)\r\n\tat ✽.And Cek bluaccount akhir(CreateBluDeposit.feature:24)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "Keyword.cek_riwayat_akhir()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Keyword.cek_notifikasi()"
-});
-formatter.result({
-  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Masuk dengan Akun Lain",
-      "offset": 11
+      "val": "ARO+",
+      "offset": 25
     }
   ],
-  "location": "Keyword.logout_blu(String)"
+  "location": "BluDeposit.tentukan_tipe_bludeposit(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 6646379400,
+  "status": "passed"
 });
 });

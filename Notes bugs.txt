@@ -1,0 +1,7 @@
+NOTE BUGS*
+
+- Belum bisa klik sesuai nama
+- Nomor file masih random
+- Tanggal belum bisa otomatis
+- Tenor belum bisa otomatis
+- Tipe deposit belum bisa otomatis

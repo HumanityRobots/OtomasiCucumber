@@ -254,7 +254,6 @@ public class Keyword extends Runner {
         driver.findElement(pars.getbjectLocator("lblInbox")).isDisplayed();
         FunctionalLib.takeSnapShot(driver,capturePath, featureName, intScenarioNum, "lblInbox");
         System.out.println("====> Klik notifikasi");
-        StepLib.loadPage("btnNotifikasiBlugetherBaru");
         driver.findElement(pars.getbjectLocator("btnNotifikasiBlugetherBaru")).click();
 
         try {
