@@ -11,11 +11,9 @@ Feature: Update Type Deposit
     And      Berada dihalaman list bluDeposit
     And      Klik card bludeposit
     And      Berada dihalaman detail bludeposit
-
     And      Cek pengaturan bludeposit
     And      Update type bludeposit <tipeDeposit>
     And      Berada dihalaman detail bludeposit
-
     And      Cek saldo akhir "saldo akhir"
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
@@ -23,5 +21,5 @@ Feature: Update Type Deposit
     And      Logout blu <logout>
 
     Examples:
-      | no | nomorHandphone | password     |     pocket      | tipeDeposit | logout                  |
-      | 1  | 082211220027   | Password123! |    bluDeposit   |  ARO+       | Masuk dengan Akun Lain  |
+      | no | nomorHandphone | password     |     pocket      |  logout                  |
+      | 1  | 082211220027   | Password123! |    bluDeposit   |  Masuk dengan Akun Lain  |

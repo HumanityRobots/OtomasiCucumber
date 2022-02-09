@@ -9,19 +9,15 @@ Feature: Disburse BluDeposit
     And      Cek bluaccount sebelum
     And      Cek riwayat awal
     And      Pockets <pocket>
-    And      Berada dihalaman list bluDeposit
-    And      Tambah bludeposit
-    And      Masukkan nama bludeposit <namaBluDeposit>
-    And      Masukkan nominal <nominal> bludeposit
-    And      Klik tombol lanjut
-    And      Tentukan tipe bludeposit <tipeDeposit>
-    And      Tentukan Tenor <tenor>
-    And      Klik tombol bludeposit dan klik lanjut
-    And      Berada dihalaman bludeposit dan klik kembali ke daftar bludeposit
+
+    #Progress
     And      Berada dihalaman list bluDeposit
     And      Klik card bludeposit
     And      Berada dihalaman detail bludeposit
-    And      Cek riwayat transaksi bludeposit
+    And      Cek cairkan dana sekarang
+    And      Berada dihalaman berhasil cairkan dana
+    And      Berada dihalaman list bluDeposit
+
     And      Cek saldo akhir "saldo akhir"
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
