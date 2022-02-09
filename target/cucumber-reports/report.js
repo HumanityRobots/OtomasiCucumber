@@ -1,28 +1,28 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("CreateBluDeposit.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("UpdateTypeDeposit.feature");
 formatter.feature({
   "line": 1,
-  "name": "Create BluDeposit",
+  "name": "Update Type Deposit",
   "description": "",
-  "id": "create-bludeposit",
+  "id": "update-type-deposit",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
   "line": 4,
-  "name": "create blu deposit 1",
+  "name": "Update type deposit",
   "description": "",
-  "id": "create-bludeposit;create-blu-deposit-1",
+  "id": "update-type-deposit;update-type-deposit",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 3,
-      "name": "@CreateBluDeposit"
+      "name": "@UpdateTypeDeposit"
     }
   ]
 });
 formatter.step({
   "line": 5,
-  "name": "Login test \u003cpocket\u003e \"Create\" no - \u003cno\u003e blu nomor \u003cnomorHandphone\u003e dan password \u003cpassword\u003e",
+  "name": "Login test \u003cpocket\u003e \"Update\" no - \u003cno\u003e blu nomor \u003cnomorHandphone\u003e dan password \u003cpassword\u003e",
   "keyword": "Given "
 });
 formatter.step({
@@ -31,20 +31,21 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "comments": [
-    {
-      "line": 7,
-      "value": "#    And      Cek saldo awal \"saldo awal\""
-    },
-    {
-      "line": 8,
-      "value": "#    And      Cek bluaccount sebelum"
-    },
-    {
-      "line": 9,
-      "value": "#    And      Cek riwayat awal"
-    }
-  ],
+  "line": 7,
+  "name": "Cek saldo awal \"saldo awal\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "Cek bluaccount sebelum",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "Cek riwayat awal",
+  "keyword": "And "
+});
+formatter.step({
   "line": 10,
   "name": "Pockets \u003cpocket\u003e",
   "keyword": "And "
@@ -56,85 +57,66 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "Tambah bludeposit",
+  "name": "Klik card bludeposit",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "Masukkan nama bludeposit \u003cnamaBluDeposit\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 14,
-  "name": "Masukkan nominal \u003cnominal\u003e bludeposit",
+  "name": "Berada dihalaman detail bludeposit",
   "keyword": "And "
 });
 formatter.step({
   "line": 15,
-  "name": "Tentukan tipe bludeposit \u003ctipeDeposit\u003e",
+  "name": "Cek pengaturan bludeposit",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Update type bludeposit \u003ctypeBludepositUpdate\u003e",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "Berada dihalaman detail bludeposit",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "Cek saldo akhir \"saldo akhir\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "Cek bluaccount akhir",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 21,
+  "name": "Cek riwayat akhir",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "Cek notifikasi",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 23,
+  "name": "Logout blu \u003clogout\u003e",
   "keyword": "And "
 });
 formatter.examples({
-  "comments": [
-    {
-      "line": 16,
-      "value": "#    And      Tentukan Tenor \u003ctenor\u003e"
-    },
-    {
-      "line": 17,
-      "value": "#    And      Klik tombol buka bludeposit dan klik lanjut"
-    },
-    {
-      "line": 18,
-      "value": "#    And      Berada dihalaman bludeposit dan klik kembali ke daftar bludeposit"
-    },
-    {
-      "line": 19,
-      "value": "#    And      Berada dihalaman list bluDeposit"
-    },
-    {
-      "line": 20,
-      "value": "#    And      Klik card bludeposit"
-    },
-    {
-      "line": 21,
-      "value": "#    And      Berada dihalaman detail bludeposit"
-    },
-    {
-      "line": 22,
-      "value": "#    And      Cek riwayat transaksi bludeposit"
-    },
-    {
-      "line": 23,
-      "value": "#    And      Cek saldo akhir \"saldo akhir\""
-    },
-    {
-      "line": 24,
-      "value": "#    And      Cek bluaccount akhir"
-    },
-    {
-      "line": 25,
-      "value": "#    And      Cek riwayat akhir"
-    },
-    {
-      "line": 26,
-      "value": "#    And      Cek notifikasi"
-    },
-    {
-      "line": 27,
-      "value": "#    And      Logout blu \u003clogout\u003e"
-    }
-  ],
-  "line": 29,
+  "line": 25,
   "name": "",
   "description": "",
-  "id": "create-bludeposit;create-blu-deposit-1;",
+  "id": "update-type-deposit;update-type-deposit;",
   "rows": [
     {
       "cells": [
         "no",
         "nomorHandphone",
         "password",
+        "search",
         "pocket",
         "namaBluDeposit",
         "nominal",
@@ -142,49 +124,50 @@ formatter.examples({
         "tipeDeposit",
         "logout"
       ],
-      "line": 30,
-      "id": "create-bludeposit;create-blu-deposit-1;;1"
+      "line": 26,
+      "id": "update-type-deposit;update-type-deposit;;1"
     },
     {
       "cells": [
         "1",
-        "082211220045",
+        "082211220027",
         "Password123!",
+        "limit",
         "bluDeposit",
         "Bludepsosit 1",
-        "1000000",
-        "4",
-        "ARO+",
-        "Masuk dengan Akun Lain"
+        "",
+        "",
+        "",
+        ""
       ],
-      "line": 31,
-      "id": "create-bludeposit;create-blu-deposit-1;;2"
+      "line": 27,
+      "id": "update-type-deposit;update-type-deposit;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 31,
-  "name": "create blu deposit 1",
+  "line": 27,
+  "name": "Update type deposit",
   "description": "",
-  "id": "create-bludeposit;create-blu-deposit-1;;2",
+  "id": "update-type-deposit;update-type-deposit;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 3,
-      "name": "@CreateBluDeposit"
+      "name": "@UpdateTypeDeposit"
     }
   ]
 });
 formatter.step({
   "line": 5,
-  "name": "Login test bluDeposit \"Create\" no - 1 blu nomor 082211220045 dan password Password123!",
+  "name": "Login test bluDeposit \"Update\" no - 1 blu nomor 082211220027 dan password Password123!",
   "matchedColumns": [
     0,
     1,
     2,
-    3
+    4
   ],
   "keyword": "Given "
 });
@@ -194,24 +177,25 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "comments": [
-    {
-      "line": 7,
-      "value": "#    And      Cek saldo awal \"saldo awal\""
-    },
-    {
-      "line": 8,
-      "value": "#    And      Cek bluaccount sebelum"
-    },
-    {
-      "line": 9,
-      "value": "#    And      Cek riwayat awal"
-    }
-  ],
+  "line": 7,
+  "name": "Cek saldo awal \"saldo awal\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "Cek bluaccount sebelum",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "Cek riwayat awal",
+  "keyword": "And "
+});
+formatter.step({
   "line": 10,
   "name": "Pockets bluDeposit",
   "matchedColumns": [
-    3
+    4
   ],
   "keyword": "And "
 });
@@ -222,30 +206,54 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "Tambah bludeposit",
+  "name": "Klik card bludeposit",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "Masukkan nama bludeposit Bludepsosit 1",
-  "matchedColumns": [
-    4
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 14,
-  "name": "Masukkan nominal 1000000 bludeposit",
-  "matchedColumns": [
-    5
-  ],
+  "name": "Berada dihalaman detail bludeposit",
   "keyword": "And "
 });
 formatter.step({
   "line": 15,
-  "name": "Tentukan tipe bludeposit ARO+",
+  "name": "Cek pengaturan bludeposit",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Update type bludeposit \u003ctypeBludepositUpdate\u003e",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "Berada dihalaman detail bludeposit",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "Cek saldo akhir \"saldo akhir\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "Cek bluaccount akhir",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 21,
+  "name": "Cek riwayat akhir",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "Cek notifikasi",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 23,
+  "name": "Logout blu ",
   "matchedColumns": [
-    7
+    9
   ],
   "keyword": "And "
 });
@@ -256,7 +264,7 @@ formatter.match({
       "offset": 11
     },
     {
-      "val": "Create",
+      "val": "Update",
       "offset": 23
     },
     {
@@ -264,7 +272,7 @@ formatter.match({
       "offset": 36
     },
     {
-      "val": "082211220045",
+      "val": "082211220027",
       "offset": 48
     },
     {
@@ -275,14 +283,41 @@ formatter.match({
   "location": "Keyword.loginBlu(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 53967727500,
+  "duration": 52138391100,
   "status": "passed"
 });
 formatter.match({
   "location": "Keyword.homescreenBlu()"
 });
 formatter.result({
-  "duration": 13225228600,
+  "duration": 10440883800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "saldo awal",
+      "offset": 16
+    }
+  ],
+  "location": "Keyword.cek_saldo_awal(String)"
+});
+formatter.result({
+  "duration": 7660330400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.cekBluaccountSebelum()"
+});
+formatter.result({
+  "duration": 10329719300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Keyword.cek_riwayat_awal()"
+});
+formatter.result({
+  "duration": 15920718900,
   "status": "passed"
 });
 formatter.match({
@@ -295,60 +330,87 @@ formatter.match({
   "location": "Keyword.pockets(String)"
 });
 formatter.result({
-  "duration": 11178149500,
+  "duration": 11761510400,
   "status": "passed"
 });
 formatter.match({
   "location": "BluDeposit.berada_dihalaman_list_bludeposit()"
 });
 formatter.result({
-  "duration": 5194710200,
+  "duration": 4825273000,
   "status": "passed"
 });
 formatter.match({
-  "location": "BluDeposit.tambah_bludeposit()"
+  "location": "BluDeposit.klik_card_bludeposit()"
 });
 formatter.result({
-  "duration": 384592600,
+  "duration": 890076300,
   "status": "passed"
+});
+formatter.match({
+  "location": "BluDeposit.berada_dihalaman_detail_bludeposit()"
+});
+formatter.result({
+  "duration": 4442734100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BluDeposit.cek_pengaturan_bludeposit()"
+});
+formatter.result({
+  "duration": 14403605100,
+  "status": "passed"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({
+  "location": "BluDeposit.berada_dihalaman_detail_bludeposit()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Bludepsosit 1",
-      "offset": 25
-    }
-  ],
-  "location": "BluDeposit.masukkan_nama_bludeposit(String)"
-});
-formatter.result({
-  "duration": 5809893600,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1000000",
+      "val": "saldo akhir",
       "offset": 17
     }
   ],
-  "location": "BluDeposit.masukkan_nominal_bludeposit(String)"
+  "location": "Keyword.cek_saldo_akhir(String)"
 });
 formatter.result({
-  "duration": 8653808000,
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.match({
+  "location": "Keyword.cekBluaccountAkhir()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "Keyword.cek_riwayat_akhir()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "Keyword.cek_notifikasi()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "ARO+",
-      "offset": 25
+      "val": "",
+      "offset": 11
     }
   ],
-  "location": "BluDeposit.tentukan_tipe_bludeposit(String)"
+  "location": "Keyword.logout_blu(String)"
 });
 formatter.result({
-  "duration": 6646379400,
-  "status": "passed"
+  "status": "skipped"
 });
 });

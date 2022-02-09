@@ -45,8 +45,8 @@ import java.util.concurrent.TimeUnit;
 //        tags = { "@CloseBluGether" },
 
 //        BluDeposit
-        tags = { "@CreateBluDeposit" },
-//        tags = { "@UpdateTypeDeposit" },
+//        tags = { "@CreateBluDeposit" },
+        tags = { "@UpdateTypeDeposit" },
 //        tags = { "@TopupDeposit" },
 //        tags = { "@DisburseBluDeposit" },
 

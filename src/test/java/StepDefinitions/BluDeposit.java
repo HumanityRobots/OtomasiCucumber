@@ -38,6 +38,7 @@ public class BluDeposit extends Runner {
     @When("^Masukkan nama bludeposit (.*)$")
     public void masukkan_nama_bludeposit(String namaBluDeposit) throws Throwable {
         System.out.println("====> Berada dihalaman input nama & nominal bludeposit");
+        StepLib.loadPage("btnLanjut");
         FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnLanjut");
 
         System.out.println("====> Input nama bludeposit : " + namaBluDeposit);
@@ -77,7 +78,7 @@ public class BluDeposit extends Runner {
             driver.findElement(pars.getbjectLocator("typeNonARO")).click();
         } else if (typeDeposit.equalsIgnoreCase("ARO+")) {
             System.out.println("====> Klik tipe : " + typeDeposit);
-            driver.findElement(pars.getbjectLocator("typeARO")).click();
+            driver.findElement(pars.getbjectLocator("typeARO+")).click();
         } else {
             System.out.println("====> Tipe tidak terdaftar");
         }
@@ -142,7 +143,47 @@ public class BluDeposit extends Runner {
 
 
 // Update Type Deposit
+@When("^Cek pengaturan bludeposit$")
+public void cek_pengaturan_bludeposit() throws Throwable {
+    StepLib.loadPage("btnMore");
+    driver.findElement(pars.getbjectLocator("btnMore")).click();
 
+    // klik pengaturan bludeposit
+    FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBludeposit");
+    driver.findElement(pars.getbjectLocator("lblPengaturanBludeposit")).click();
+
+    // foto halaman riwayat transaksi
+    FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+    StepLib.timePage("btnSimpan");
+}
+
+    @When("^Update type bludeposit (.*)$")
+    public void cek_pengaturan_bludeposit(String typeDeposit) throws Throwable {
+        System.out.println("====> Tentukan tipe bluDeposit update");
+        StepLib.loadPage("typeDeposit");
+
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnBukaBluDeposit");
+
+        System.out.println("====> Klik tipe bludeposit");
+        driver.findElement(pars.getbjectLocator("typeDeposit")).click();
+
+        if (typeDeposit.equalsIgnoreCase("ARO")) {
+            System.out.println("====> Klik tipe : " + typeDeposit);
+            driver.findElement(pars.getbjectLocator("typeARO")).click();
+        } else if (typeDeposit.equalsIgnoreCase("NON ARO")) {
+            System.out.println("====> Klik tipe : " + typeDeposit);
+            driver.findElement(pars.getbjectLocator("typeNonARO")).click();
+        } else if (typeDeposit.equalsIgnoreCase("ARO+")) {
+            System.out.println("====> Klik tipe : " + typeDeposit);
+            driver.findElement(pars.getbjectLocator("typeARO+")).click();
+        } else {
+            System.out.println("====> Tipe tidak terdaftar");
+        }
+
+        // Klik simpan
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+        driver.findElement(pars.getbjectLocator("btnSimpan")).click();
+    }
 
 
 // Topup Deposit

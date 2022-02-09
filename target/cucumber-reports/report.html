@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 4, 2022 09:12:49 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 9, 2022 09:57:14 AM</span>
 				</a>
 			</li>
 			<li>
@@ -73,6 +73,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -85,7 +86,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@CreateBluDeposit</a></li>
+					<li><a href='#'>@UpdateTypeDeposit</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -163,10 +164,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='58.824%'><span class='strong'>10</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='41.176%'>7</span> others
 				</div>
 			</div>
 		</div>
@@ -182,30 +183,30 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Create BluDeposit</span>
-						<span class='test-time'>Feb 4, 2022 09:12:49 AM</span>
+						<span class='test-name'>Update Type Deposit</span>
+						<span class='test-time'>Feb 9, 2022 09:57:14 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 1m 45s+243ms</span>
+	<span class='duration right label'>0h 2m 13s+19ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">create blu deposit 1</span>
+		<span class="desc-text">Update type deposit</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class='category-list'>
-				<span class='category label white-text'>@CreateBluDeposit</span>
+				<span class='category label white-text'>@UpdateTypeDeposit</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">create blu deposit 1</span>
+			<span class="bdd-step-name">Update type deposit</span>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given Login test bluDeposit "Create" no - 1 blu nomor 082211220045 dan password Password123!</span>
+						<span class="bdd-step-name">Given Login test bluDeposit "Update" no - 1 blu nomor 082211220027 dan password Password123!</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='5' class='node when pass' status='pass'><b>When</b>
@@ -213,28 +214,64 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='6' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Pockets bluDeposit</span>
+						<span class="bdd-step-name">And Cek saldo awal "saldo awal"</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='7' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Berada dihalaman list bluDeposit</span>
+						<span class="bdd-step-name">And Cek bluaccount sebelum</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='8' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Tambah bludeposit</span>
+						<span class="bdd-step-name">And Cek riwayat awal</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='9' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Masukkan nama bludeposit Bludepsosit 1</span>
+						<span class="bdd-step-name">And Pockets bluDeposit</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='10' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Masukkan nominal 1000000 bludeposit</span>
+						<span class="bdd-step-name">And Berada dihalaman list bluDeposit</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='11' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Tentukan tipe bludeposit ARO+</span>
+						<span class="bdd-step-name">And Klik card bludeposit</span>
 							<div class='pre'>passed</div>
+					</li>
+					<li test-id='12' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Berada dihalaman detail bludeposit</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='13' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Cek pengaturan bludeposit</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='14' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Update type bludeposit <typeBludepositUpdate></span>
+							<div class='pre'>undefined</div>
+					</li>
+					<li test-id='15' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Berada dihalaman detail bludeposit</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='16' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Cek saldo akhir "saldo akhir"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='17' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Cek bluaccount akhir</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='18' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Cek riwayat akhir</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='19' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Cek notifikasi</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='20' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Logout blu</span>
+							<div class='pre'>skipped</div>
 					</li>
 				</ul>
 		</li>
@@ -294,7 +331,7 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@CreateBluDeposit</span>
+						<span class='category-name'>@UpdateTypeDeposit</span>
 						<span class='category-status right'>
 							<span class='label pass'>1</span>
 						</span>
@@ -317,8 +354,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 4, 2022 09:12:49 AM</td>
-										<td class='linked' test-id='3'>Create BluDeposit.create blu deposit 1.create blu deposit 1</td>
+										<td>Feb 9, 2022 09:57:14 AM</td>
+										<td class='linked' test-id='3'>Update Type Deposit.Update type deposit.Update type deposit</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -359,25 +396,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>8</div>
+					<div class='panel-lead'>17</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 4, 2022 09:12:49 AM</div>
+					<div class='panel-lead'>Feb 9, 2022 09:57:14 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 4, 2022 09:14:37 AM</div>
+			 		<div class='panel-lead'>Feb 9, 2022 09:59:29 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>108,075ms</div>
+					<div class='panel-lead'>135,107ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -393,7 +430,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@CreateBluDeposit</td>
+							<td>@UpdateTypeDeposit</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -431,14 +468,14 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 8,
+				passGrandChild: 10,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 7,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 7,
 			};
 		</script>
 		
