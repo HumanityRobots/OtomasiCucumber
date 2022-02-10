@@ -4,14 +4,13 @@ Feature: Topup Deposit
   Scenario Outline: Topup Deposit
     Given    Login test <pocket> "Create" no - <no> blu nomor <nomorHandphone> dan password <password>
     When     Homescreen blu
-    And      Cek saldo awal "saldo awal"
-    And      Cek bluaccount sebelum
-    And      Cek riwayat awal
+#    And      Cek saldo awal "saldo awal"
+#    And      Cek bluaccount sebelum
+#    And      Cek riwayat awal
     And      Pockets <pocket>
     And      Berada dihalaman list bluDeposit
     And      Klik card bludeposit
     And      Berada dihalaman detail bludeposit
-    And      Cek pengaturan bludeposit
 
     # progress
     And      Klik topup dana blueposit

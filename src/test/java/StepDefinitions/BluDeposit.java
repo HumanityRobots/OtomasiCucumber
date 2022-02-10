@@ -143,19 +143,19 @@ public class BluDeposit extends Runner {
 
 
 // Update Type Deposit
-@When("^Cek pengaturan bludeposit$")
-public void cek_pengaturan_bludeposit() throws Throwable {
-    StepLib.loadPage("btnMore");
-    driver.findElement(pars.getbjectLocator("btnMore")).click();
+    @When("^Cek pengaturan bludeposit$")
+    public void cek_pengaturan_bludeposit() throws Throwable {
+        StepLib.loadPage("btnMore");
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
 
-    // klik pengaturan bludeposit
-    FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBludeposit");
-    driver.findElement(pars.getbjectLocator("lblPengaturanBludeposit")).click();
+        // klik pengaturan bludeposit
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBludeposit");
+        driver.findElement(pars.getbjectLocator("lblPengaturanBludeposit")).click();
 
-    // foto halaman riwayat transaksi
-    FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
-    StepLib.timePage("btnSimpan");
-}
+        // foto halaman riwayat transaksi
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+        StepLib.timePage("btnSimpan");
+    }
 
     @When("^Update type bludeposit (.*)$")
     public void cek_pengaturan_bludeposit(String typeDeposit) throws Throwable {
@@ -186,9 +186,93 @@ public void cek_pengaturan_bludeposit() throws Throwable {
     }
 
 
+
 // Topup Deposit
+    @When("^Klik topup dana blueposit$")
+    public void klik_topup_dana_blueposit() throws Throwable {
+        StepLib.loadPage("btnMore");
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
+
+        // klik pengaturan bludeposit
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBludeposit");
+        driver.findElement(pars.getbjectLocator("lblPengaturanBludeposit")).click();
+
+        // foto halaman riwayat transaksi
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+        StepLib.timePage("btnSimpan");
+    }
+
+    @When("^Input topup dana (.*)$")
+    public void  input_topup_dana(String topupdana) throws Throwable {
+        StepLib.loadPage("btnMore");
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
+
+        // klik pengaturan bludeposit
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBludeposit");
+        driver.findElement(pars.getbjectLocator("lblPengaturanBludeposit")).click();
+
+        // foto halaman riwayat transaksi
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+        StepLib.timePage("btnSimpan");
+    }
+
+    @When("^Berada dihalaman berhasil topup dana$")
+    public void berada_dihalaman_berhasil_topup_dana() throws Throwable {
+        StepLib.loadPage("btnMore");
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
+
+        // klik pengaturan bludeposit
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBludeposit");
+        driver.findElement(pars.getbjectLocator("lblPengaturanBludeposit")).click();
+
+        // foto halaman riwayat transaksi
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+        StepLib.timePage("btnSimpan");
+    }
+
+    @When("^Kembali ke halaman list bludeposit$")
+    public void kembali_ke_halaman_list_bludeposit() throws Throwable {
+        StepLib.loadPage("btnMore");
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
+
+        // klik pengaturan bludeposit
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBludeposit");
+        driver.findElement(pars.getbjectLocator("lblPengaturanBludeposit")).click();
+
+        // foto halaman riwayat transaksi
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+        StepLib.timePage("btnSimpan");
+    }
+
 
 // Disburse Deposit
+    @When("^Cek cairkan dana sekarang$")
+    public void cek_cairkan_dana_sekarang() throws Throwable {
+        StepLib.loadPage("btnMore");
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
+
+        // klik pengaturan bludeposit
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBludeposit");
+        driver.findElement(pars.getbjectLocator("lblPengaturanBludeposit")).click();
+
+        // foto halaman riwayat transaksi
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+        StepLib.timePage("btnSimpan");
+    }
+
+    @When("^Berada dihalaman berhasil cairkan dana$")
+    public void berada_dihalaman_berhasil_cairkan_dana() throws Throwable {
+        StepLib.loadPage("btnMore");
+        driver.findElement(pars.getbjectLocator("btnMore")).click();
+
+        // klik pengaturan bludeposit
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "lblPengaturanBludeposit");
+        driver.findElement(pars.getbjectLocator("lblPengaturanBludeposit")).click();
+
+        // foto halaman riwayat transaksi
+        FunctionalLib.takeSnapShot(driver, capturePath, featureName, intScenarioNum, "btnSimpan");
+        StepLib.timePage("btnSimpan");
+    }
 
 
 

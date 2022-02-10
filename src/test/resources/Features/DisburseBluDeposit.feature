@@ -9,15 +9,15 @@ Feature: Disburse BluDeposit
     And      Cek bluaccount sebelum
     And      Cek riwayat awal
     And      Pockets <pocket>
-
-    #Progress
     And      Berada dihalaman list bluDeposit
     And      Klik card bludeposit
     And      Berada dihalaman detail bludeposit
+
+    #Progress
     And      Cek cairkan dana sekarang
     And      Berada dihalaman berhasil cairkan dana
-    And      Berada dihalaman list bluDeposit
 
+    And      Berada dihalaman list bluDeposit
     And      Cek saldo akhir "saldo akhir"
     And      Cek bluaccount akhir
     And      Cek riwayat akhir
